@@ -98,7 +98,7 @@
 #define HAVE_UNISTD_H 1
 
 /* Define to 1 if C++ thread header is usable */
-#define HAVE_WORKING_THREAD 1
+/* #undef HAVE_WORKING_THREAD */
 
 /* Define to 1 if the system has the type `_Bool'. */
 #define HAVE__BOOL 1

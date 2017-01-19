@@ -123,8 +123,8 @@ am__append_3 = cudd/test_cudd.test \
 am__append_5 = dddmp/libdddmp.la
 #am__append_6 = $(cplusplus_sources)
 am__append_7 = cplusplus/libobj.la
-#am__append_8 = doc/cudd.pdf doc/cudd.aux doc/cudd.idx doc/cudd.ilg doc/cudd.ind \
-#  doc/cudd.log doc/cudd.out doc/cudd.toc
+am__append_8 = doc/cudd.pdf doc/cudd.aux doc/cudd.idx doc/cudd.ilg doc/cudd.ind \
+  doc/cudd.log doc/cudd.out doc/cudd.toc
 
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -670,15 +670,15 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/wbh/Projects/cudd-3.0.0/build-aux/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/bohanw/win17/598_verif/Projects/cudd-3.0.0/build-aux/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
 AS = as
-AUTOCONF = ${SHELL} /home/wbh/Projects/cudd-3.0.0/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/wbh/Projects/cudd-3.0.0/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/wbh/Projects/cudd-3.0.0/build-aux/missing automake-1.14
-AWK = mawk
+AUTOCONF = ${SHELL} /home/bohanw/win17/598_verif/Projects/cudd-3.0.0/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/bohanw/win17/598_verif/Projects/cudd-3.0.0/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/bohanw/win17/598_verif/Projects/cudd-3.0.0/build-aux/missing automake-1.14
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -Wall -Wextra -g -O3
@@ -692,16 +692,16 @@ CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
-DOXYGEN = 
+DOXYGEN = doxygen
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
-EGREP = /bin/grep -E
+EGREP = /usr/bin/grep -E
 EXEEXT = 
-FGREP = /bin/grep -F
-GREP = /bin/grep
+FGREP = /usr/bin/grep -F
+GREP = /usr/bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -715,10 +715,10 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINDEX = 
-MAKEINFO = ${SHELL} /home/wbh/Projects/cudd-3.0.0/build-aux/missing makeinfo
+MAKEINDEX = makeindex
+MAKEINFO = ${SHELL} /home/bohanw/win17/598_verif/Projects/cudd-3.0.0/build-aux/missing makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = /bin/mkdir -p
+MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
 NMEDIT = 
 OBJDUMP = objdump
@@ -733,17 +733,17 @@ PACKAGE_TARNAME = cudd
 PACKAGE_URL = 
 PACKAGE_VERSION = 3.0.0
 PATH_SEPARATOR = :
-PDFLATEX = 
+PDFLATEX = pdflatex
 RANLIB = ranlib
-SED = /bin/sed
+SED = /usr/bin/sed
 SET_MAKE = 
-SHELL = /bin/bash
+SHELL = /bin/sh
 STRIP = strip
 VERSION = 3.0.0
-abs_builddir = /home/wbh/Projects/cudd-3.0.0
-abs_srcdir = /home/wbh/Projects/cudd-3.0.0
-abs_top_builddir = /home/wbh/Projects/cudd-3.0.0
-abs_top_srcdir = /home/wbh/Projects/cudd-3.0.0
+abs_builddir = /home/bohanw/win17/598_verif/Projects/cudd-3.0.0
+abs_srcdir = /home/bohanw/win17/598_verif/Projects/cudd-3.0.0
+abs_top_builddir = /home/bohanw/win17/598_verif/Projects/cudd-3.0.0
+abs_top_srcdir = /home/bohanw/win17/598_verif/Projects/cudd-3.0.0
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -773,7 +773,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/wbh/Projects/cudd-3.0.0/build-aux/install-sh
+install_sh = ${SHELL} /home/bohanw/win17/598_verif/Projects/cudd-3.0.0/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -997,10 +997,10 @@ $(srcdir)/config.h.in:  $(am__configure_deps)
 
 distclean-hdr:
 	-rm -f config.h stamp-h1
-#Doxyfile: $(top_builddir)/config.status $(srcdir)/Doxyfile.in
-#	cd $(top_builddir) && $(SHELL) ./config.status $@
-#doc/cudd.tex: $(top_builddir)/config.status $(top_srcdir)/doc/cudd.tex.in
-#	cd $(top_builddir) && $(SHELL) ./config.status $@
+Doxyfile: $(top_builddir)/config.status $(srcdir)/Doxyfile.in
+	cd $(top_builddir) && $(SHELL) ./config.status $@
+doc/cudd.tex: $(top_builddir)/config.status $(top_srcdir)/doc/cudd.tex.in
+	cd $(top_builddir) && $(SHELL) ./config.status $@
 dddmp/exp/test1.sh: $(top_builddir)/config.status $(top_srcdir)/dddmp/exp/test1.sh.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 dddmp/exp/test2.sh: $(top_builddir)/config.status $(top_srcdir)/dddmp/exp/test2.sh.in
@@ -3021,7 +3021,7 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
-clean-local:
+#clean-local:
 clean: clean-am
 
 clean-am: clean-checkPROGRAMS clean-generic clean-libLTLIBRARIES \
@@ -3144,14 +3144,14 @@ nanotrav/test_ntrv.test: nanotrav/test_ntrv.test.in Makefile
 	$(do_subst) $< > $@
 	chmod +x $@
 
-#doc/cudd.pdf: doc/cudd.tex $(top_srcdir)/doc/phase.pdf
-#	@if $(AM_V_P); then dest='2>&1'; else dest='> /dev/null 2>&1'; fi; \
-#	cd doc && eval "$(PDFLATEX) cudd $${dest}" && \
-#	eval "$(MAKEINDEX) cudd $${dest}" && \
-#	eval "$(PDFLATEX) cudd $${dest}" && \
-#	eval "$(PDFLATEX) cudd $${dest}"
+doc/cudd.pdf: doc/cudd.tex $(top_srcdir)/doc/phase.pdf
+	@if $(AM_V_P); then dest='2>&1'; else dest='> /dev/null 2>&1'; fi; \
+	cd doc && eval "$(PDFLATEX) cudd $${dest}" && \
+	eval "$(MAKEINDEX) cudd $${dest}" && \
+	eval "$(PDFLATEX) cudd $${dest}" && \
+	eval "$(PDFLATEX) cudd $${dest}"
 
-doc/cudd.pdf:
+#doc/cudd.pdf:
 
 dist-hook:
 	rm -rf `find $(distdir) -name .svn`
@@ -3160,14 +3160,14 @@ dist-hook:
 
 all: html/index.html doc/cudd.pdf
 
-#html/index.html: Doxyfile $(lib_LTLIBRARIES)
-#	@if $(AM_V_P); then dest='2>&1'; else dest='> /dev/null 2>&1'; fi; \
-#	eval "$(DOXYGEN) $< $${dest}"
+html/index.html: Doxyfile $(lib_LTLIBRARIES)
+	@if $(AM_V_P); then dest='2>&1'; else dest='> /dev/null 2>&1'; fi; \
+	eval "$(DOXYGEN) $< $${dest}"
 
-#clean-local:
-#	rm -rf html doxygen_sqlite3.db
+clean-local:
+	rm -rf html doxygen_sqlite3.db
 
-html/index.html:
+#html/index.html:
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

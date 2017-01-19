@@ -81,15 +81,14 @@ int main (int argc, char *argv[])
 */
 
     tmp = Cudd_bddAnd(gbm, x[0], Cudd_Not(x[1]));
-   f = tmp;
     Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f);
- 
+    //Cudd_RecursiveDeref(gbm,f);
+    f = tmp;
 
     tmp = Cudd_bddAnd(gbm, x[2],f);
-    f = tmp;
     Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f);
+    //Cudd_RecursiveDeref(gbm,f);
+    f = tmp;
 
     f = Cudd_BddToAdd(gbm, f);                          /*Convert BDD to ADD for display purpose*/
     print_dd (gbm, f, 2,4);                    /*Print the DD to standard output*/
