@@ -5,7 +5,7 @@
 #include <time.h>
 #include <math.h>
 #include <stdlib.h>
-#include "cudd/cudd.h"
+#include "../cudd/cudd.h"
 
 /**
  * Print a dd summary
@@ -42,15 +42,32 @@ void write_dd (DdManager *gbm, DdNode *dd, char** inames, char** onames, char* f
 }
 
 
+DdNode*  bddAndFour(DdManager *gbm, DdNode *arr[], int val0, int val1, int val2, int val3) 
+{
+    DdNode *res;
+    DdNode *var, *tmp;
+    int i;
+    res = Cudd_ReadOne(gbm);
+    Cudd_Ref(res);
+    for(i = 3; i>=0;i--) 
+    {
+	var = Cudd_bddIthVar(gbm,i);
+	tmp = Cudd_bddAnd(gbm,arr[i],res);
+	Cudd_Ref(tmp);
+	Cudd_RecursiveDeref(gbm,res);
+	res = tmp;
+    }
+    return res;
+}
 
 
 int main (int argc, char *argv[])
 {
     DdManager *gbm;         /* Global BDD manager. */
     char filename[30];      /* File name for output file */
-    DdNode *f,*tmp,*tmp_neg, *f1, *f2, *f3;
+    DdNode *f,*tmp,*tmp_neg, *f1, *f2, *f3, *f4, *f5, *f6;
     DdNode *x[3];
-    char * inames[3] = { "x0", "x1","x2" };     /* Names for input variables */
+    char * inames[4] = { "x0", "x1","x2","x3" };     /* Names for input variables */
     char * onames[1] = { "f" };          /* Name for output variable */
 
     /* Initialize the bdd manager with default options */
@@ -58,71 +75,20 @@ int main (int argc, char *argv[])
     
     /*Create a new BDD variable*/
     /* each new variable is put at the new of the current order */
-    for (int i=0;i<3;i++) {
+    for (int i=0;i<4;i++) {
         x[i] = Cudd_bddNewVar(gbm);
     }
+
     f = Cudd_bddNewVar(gbm);
     
-    f1 = Cudd_bddNewVar(gbm);
-    f2 = Cudd_bddNewVar(gbm);
-    f3 = Cudd_bddNewVar(gbm);
     /* ordering = x < y */
+    int prod1[4], prod2[4], prod3[4], prod5[4], prod6[4];
 
-    //f = Cudd_ReadOne(gbm);
-    //Cudd_Ref(f);
-
-    /*
-    tmp = Cudd_bddAnd(gbm, x[0],x[2]);
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f);
-    f= tmp;
-
-    tmp_neg = Cudd_Not(x[1]);
-    tmp = Cudd_bddAnd(gbm,tmp_neg,f);
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f);
-    f = tmp;
-
-*/
-
-    /* f1 = x0x1*/
-    tmp = Cudd_bddAnd(gbm, x[0], x[1]);
-    f1 = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f1);
- 
-
-    /*f2 = x0x1'x2*/
-    
-    tmp = Cudd_bddAnd(gbm, x[0], x[2]);
-   f2 = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f2);
- 
-
-    /*f3=x0x1x2'*/
-    tmp = Cudd_bddAnd(gbm, x[1], x[2]);
-    f3 = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f3);
- 
-
-   
-    /* Create majority function*/
-
-    tmp = Cudd_bddOr(gbm, f1, f2);
-    f = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f);
-
-    tmp = Cudd_bddOr(gbm, f, f3);
-    f = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f);
+    f = bddAndFour(gbm,x,);
 
     f = Cudd_BddToAdd(gbm, f);                          /*Convert BDD to ADD for display purpose*/
-    print_dd (gbm, f, 3,8);                    /*Print the DD to standard output*/
-    sprintf(filename, "./dot/bdd2.dot");                /*Write .dot filename to a string*/
+    print_dd (gbm, f, 2,4);                    /*Print the DD to standard output*/
+    sprintf(filename, "./dot/bdd3.dot");                /*Write .dot filename to a string*/
     write_dd(gbm, f, (char **)inames, (char **)onames, filename);   /*Write the resulting cascade DD to a file*/
     printf("Number of Nodes = %d\n",Cudd_DagSize(f));
 

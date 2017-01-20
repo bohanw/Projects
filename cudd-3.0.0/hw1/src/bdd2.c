@@ -5,7 +5,7 @@
 #include <time.h>
 #include <math.h>
 #include <stdlib.h>
-#include "cudd/cudd.h"
+#include "../cudd/cudd.h"
 
 /**
  * Print a dd summary
