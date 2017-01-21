@@ -64,7 +64,6 @@ int main (int argc, char *argv[])
 
 
 
-
     /* f1 = x0x1*/
     tmp = Cudd_bddAnd(gbm, x[0], x[1]);
     f1 = tmp;
