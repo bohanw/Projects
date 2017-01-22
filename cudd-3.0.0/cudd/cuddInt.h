@@ -73,7 +73,7 @@
 /* These definitions work for CUDD_VALUE_TYPE == double */
 #define DD_ONE_VAL		(1.0)
 #define DD_ZERO_VAL		(0.0)
-#define DD_EPSILON		(1.0e-12)
+#define DD_EPSILON		(1.0e-12)DdNode
 
 /* The definitions of +/- infinity in terms of HUGE_VAL work on
 ** the DECstations and on many other combinations of OS/compiler.
@@ -242,6 +242,7 @@ typedef struct Move Move;
 typedef struct IndexKey IndexKey;
 typedef struct DdQueueItem DdQueueItem;
 typedef struct DdLevelQueue DdLevelQueue;
+typedef struct DdNode DdNode;
 
 /*---------------------------------------------------------------------------*/
 /* Stucture declarations                                                     */
@@ -266,7 +267,7 @@ struct DdNode {
 	CUDD_VALUE_TYPE value;	/**< for constant (terminal) nodes */
 	DdChildren kids;	/**< for internal nodes */
     } type;			/**< terminal or internal */
-};
+} ;
 
 /**
  * @brief CUDD generator.

@@ -49,63 +49,91 @@ int main (int argc, char *argv[])
 {
     DdManager *gbm;         /* Global BDD manager. */
     char filename[30];      /* File name for output file */
-    DdNode *f,*tmp,*tmp_neg, *f1, *f2;
+    DdNode *f,*tmp,*var, *f1, *f2;
     DdNode *x[3];
     char * inames[3] = { "x0", "x1","x2" };     /* Names for input variables */
     char * onames[1] = { "f" };          /* Name for output variable */
-
     /* Initialize the bdd manager with default options */
     gbm = Cudd_Init(0,0,CUDD_UNIQUE_SLOTS,CUDD_CACHE_SLOTS,0);
     
     /*Create a new BDD variable*/
     /* each new variable is put at the new of the current order */
-    for (int i=0;i<3;i++) {
-        x[i] = Cudd_bddNewVar(gbm);
-    }
-
-
-    f = Cudd_ReadOne(gbm);
+   // for (int i=0;i<3;i++) {
+    //    x[i] = Cudd_bddNewVar(gbm);
+    //}
     
+    //x[0] = Cudd_bddNewVar(gbm);
+    //x[2] = Cudd_bddNewVar(gbm);
+    //x[1] = Cudd_bddNewVar(gbm);
+
+    var = Cudd_bddIthVar(gbm,0);
+    x[0] = var;
+    var = Cudd_bddIthVar(gbm,1);
+    x[2] = var;
+    var = Cudd_bddIthVar(gbm,2);
+    x[1] = var;
+
+
+    f = Cudd_ReadOne(gbm); 
     Cudd_Ref(f);
     /* f1 = x0x1*/
     
     tmp = Cudd_bddAnd(gbm, x[0],Cudd_Not(x[1]));
     f1 = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f1);
+    Cudd_Ref(f1);
+    Cudd_RecursiveDeref(gbm,tmp);
  
     
     tmp = Cudd_bddAnd(gbm, f1, x[2]);
      f1 = tmp;
-
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f1);
+    Cudd_Ref(f1);
+    Cudd_RecursiveDeref(gbm,tmp);
 
 
     tmp = Cudd_bddAnd(gbm, Cudd_Not(x[0]), Cudd_Not(x[1]));
     f2 = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f2);
+    Cudd_Ref(f2);
+    Cudd_RecursiveDeref(gbm,tmp);
 
     tmp = Cudd_bddAnd(gbm, f2, Cudd_Not(x[2]));
     f2 = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm,f2);
+    Cudd_Ref(f2);
+    Cudd_RecursiveDeref(gbm,tmp);
 
 
     tmp = Cudd_bddOr(gbm, f1, f2);
     f = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm, f);
+    Cudd_Ref(f);
+    Cudd_RecursiveDeref(gbm, tmp);
 
+    /*
+     *Attempt to define perm array and reorder using ShuffleHeap
 
+     */
+/*
+    int perm[3];
+    
+    perm[0] = 0;
+    perm[1] = 2;
+    perm[2] = 1;
+   
+    
+    
+    &(perm) = 0;
+    &(perm+1) = 2;
+    &(perm+2) = 1;
+    */
+    int isShuffle;
+   // isShuffle = Cudd_ShuffleHeap(gbm, perm);
+    //Cudd_Ref(f);
+    
     f = Cudd_BddToAdd(gbm, f);                          /*Convert BDD to ADD for display purpose*/
     print_dd (gbm, f, 3,8);                    /*Print the DD to standard output*/
-    sprintf(filename, "./dot/bdd4.dot");                /*Write .dot filename to a string*/
+    sprintf(filename, "./dot/bdd5.dot");                /*Write .dot filename to a string*/
     write_dd(gbm, f, (char **)inames, (char **)onames, filename);   /*Write the resulting cascade DD to a file*/
     printf("Number of Nodes = %d\n",Cudd_DagSize(f));
 
-    Cudd_RecursiveDeref(gbm,f);        /* Explicit Dereference */
+    //Cudd_RecursiveDeref(gbm,f);        /* Explicit Dereference */
     Cudd_Quit(gbm);
     return 0;
 }
