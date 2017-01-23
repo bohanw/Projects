@@ -1,0 +1,83 @@
+digraph "DD" {
+size = "7.5,10"
+center = true;
+edge [dir = none];
+{ node [shape = plaintext];
+  edge [style = invis];
+  "CONST NODES" [style = invis];
+" x0 " -> " x1 " -> " x2 " -> " x3 " -> " x4 " -> " x5 " -> "CONST NODES"; 
+}
+{ rank = same; node [shape = box]; edge [style = invis];
+"  bdd  "; }
+{ rank = same; " x0 ";
+"0x80a";
+}
+{ rank = same; " x1 ";
+"0x809";
+"0x804";
+}
+{ rank = same; " x2 ";
+"0x808";
+"0x7ff";
+"0x803";
+"0x805";
+}
+{ rank = same; " x3 ";
+"0x7fe";
+"0x801";
+"0x807";
+"0x806";
+"0x802";
+}
+{ rank = same; " x4 ";
+"0x7ef";
+"0x800";
+"0x7fd";
+}
+{ rank = same; " x5 ";
+"0x7eb";
+"0x7ec";
+}
+{ rank = same; "CONST NODES";
+{ node [shape = box]; "0x791";
+"0x790";
+}
+}
+"  bdd  " -> "0x80a" [style = solid];
+"0x80a" -> "0x804";
+"0x80a" -> "0x809" [style = dashed];
+"0x809" -> "0x805";
+"0x809" -> "0x808" [style = dashed];
+"0x804" -> "0x7ff";
+"0x804" -> "0x803" [style = dashed];
+"0x808" -> "0x806";
+"0x808" -> "0x807" [style = dashed];
+"0x7ff" -> "0x7fe";
+"0x7ff" -> "0x7ef" [style = dashed];
+"0x803" -> "0x801";
+"0x803" -> "0x802" [style = dashed];
+"0x805" -> "0x791";
+"0x805" -> "0x7ef" [style = dashed];
+"0x7fe" -> "0x7fd";
+"0x7fe" -> "0x791" [style = dashed];
+"0x801" -> "0x800";
+"0x801" -> "0x7ef" [style = dashed];
+"0x807" -> "0x791";
+"0x807" -> "0x7eb" [style = dashed];
+"0x806" -> "0x791";
+"0x806" -> "0x790" [style = dashed];
+"0x802" -> "0x791";
+"0x802" -> "0x7ef" [style = dashed];
+"0x7ef" -> "0x7eb";
+"0x7ef" -> "0x791" [style = dashed];
+"0x800" -> "0x7ec";
+"0x800" -> "0x791" [style = dashed];
+"0x7fd" -> "0x791";
+"0x7fd" -> "0x7eb" [style = dashed];
+"0x7eb" -> "0x790";
+"0x7eb" -> "0x791" [style = dashed];
+"0x7ec" -> "0x791";
+"0x7ec" -> "0x790" [style = dashed];
+"0x791" [label = "0"];
+"0x790" [label = "1"];
+}

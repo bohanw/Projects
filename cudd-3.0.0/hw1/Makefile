@@ -1,4 +1,4 @@
-NAME = bdd5
+NAME = bdd3_sra
 CUDD_LIBS = ../cudd/.libs
 C_SRC = ./src/$(NAME).c
 C_BIN = ./src/$(NAME)

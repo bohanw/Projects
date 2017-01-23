@@ -48,7 +48,7 @@ int main (int argc, char *argv[])
 {
     DdManager *gbm;         /* Global BDD manager. */
     char filename[30];      /* File name for output file */
-    DdNode *f,*tmp,*tmp_neg, *f1, *f2;
+    DdNode *f,*tmp,*tmp_neg, *f1, *f2, *cofactor;
     DdNode *x[3];
     char * inames[3] = { "x0", "x1","x2" };     /* Names for input variables */
     char * onames[1] = { "f" };          /* Name for output variable */
@@ -96,7 +96,6 @@ int main (int argc, char *argv[])
     f = tmp;
     Cudd_Ref(tmp);
     Cudd_RecursiveDeref(gbm, f);
-
 
     f = Cudd_BddToAdd(gbm, f);                          /*Convert BDD to ADD for display purpose*/
     print_dd (gbm, f, 3,8);                    /*Print the DD to standard output*/
