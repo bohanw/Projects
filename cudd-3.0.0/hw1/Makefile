@@ -1,4 +1,4 @@
-NAME = bdd3_sra
+NAME = hw1_2b
 CUDD_LIBS = ../cudd/.libs
 C_SRC = ./src/$(NAME).c
 C_BIN = ./src/$(NAME)
@@ -15,7 +15,7 @@ run:
 
 
 d2pdf:
-	dot -Tpdf $(DOT) > $ $(NAME)_new.pdf
+	dot -Tpdf $(DOT) > $ $(NAME).pdf
 
 pdf:
 	gnome-open $(PDF)

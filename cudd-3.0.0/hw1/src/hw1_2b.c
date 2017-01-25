@@ -1,5 +1,4 @@
 
-
 #include <sys/types.h>
 #include <sys/time.h>
 #include <stdio.h>
@@ -77,15 +76,120 @@ DdNode*  bddAndSix(DdManager *gbm, DdNode *arr[], int val0, int val1, int val2, 
     return res;
 }
 
+/*
+ * Perform reachability analysis on the given C(source vertices) and edge
+ * relation, find all reachable states
+ */
+DdNode* performReachabilibty(DdManager *gbm, DdNode *edgeRelation, DdNode * srcVertex,  DdNode *vars[])
+{
+    DdNode * R, *N, *proj, *C, *I;
+    DdNode *s[3], *t[3];
+		
+	DdNode *tmp;
+	//Assign s and t from variable arrays
+	//x[6] -> [s2,s1,s0,t2,t1,t0]]
+	for(int i = 0; i< 3;i++)
+	{
+		s[i] = vars[i];
+		t[i] = vars[i+3];
 
+	}
+
+	proj = Cudd_ReadOne(gbm);
+	Cudd_Ref(proj);
+        R = Cudd_ReadOne(gbm);
+	Cudd_Ref(R);
+	
+	//Construct projection function
+	for (int i = 2;i>=0;i--)
+	{
+		tmp = Cudd_bddAnd(gbm, proj, s[i]);
+		Cudd_Ref(tmp);
+		Cudd_RecursiveDeref(gbm, proj);
+		proj = tmp;
+
+	}
+    C = srcVertex;
+    Cudd_Ref(C);
+    Cudd_RecursiveDeref(gbm,C); 
+
+    N = C;
+    R = N;
+
+    tmp = Cudd_bddSwapVariables(gbm, R,s,t,3);
+    R = tmp;
+    Cudd_Ref(tmp);
+    Cudd_RecursiveDeref(gbm,R);
+
+	while(1) {
+	   I = Cudd_bddAndAbstract(gbm, C, edgeRelation,proj);
+
+	    //update N and swap vars
+	   tmp =  Cudd_bddSwapVariables(gbm, N, s,t,3);
+	   N = tmp;
+	   Cudd_Ref(tmp);
+	   Cudd_RecursiveDeref(gbm,N);
+
+	   //Update unreached node
+	   N = Cudd_bddAnd(gbm, I, Cudd_Not(R));
+	   Cudd_Ref(N);
+
+	   //Update reachable set
+	   tmp = Cudd_bddOr(gbm, R,I);
+	   R = tmp;
+	   Cudd_Ref(tmp);
+	   Cudd_RecursiveDeref(gbm,R);
+	
+	 // Check if there are nodes not reached yet
+	 // break the loop if unreached set is empty
+	 if(Cudd_CountPathsToNonZero(N) == 0.0) {
+
+		printf("EXIT LOOP\n");
+		break;
+	 } 
+	 else {
+		 tmp = Cudd_bddSwapVariables(gbm, N, t,s,3);
+		 N = tmp;
+		 Cudd_Ref(tmp);
+		 Cudd_RecursiveDeref(gbm,N);
+		 C = N;
+	
+	 }
+	}
+
+	return R;
+
+}		
+
+
+
+int checkProp(DdManager *gbm, DdNode * reachable, DdNode* prop)
+{
+    DdNode * tmp = Cudd_bddAnd(gbm, reachable, Cudd_Not(prop));
+    Cudd_Ref(tmp);
+	if(Cudd_CountPathsToNonZero(tmp) == 0.0){
+		printf("prop violated\n");
+		return 0;
+	} else {
+		printf("prop not violated\n");
+		return 0;
+	}
+	
+}
 int main (int argc, char *argv[])
 {
     DdManager *gbm;         /* Global BDD manager. */
     char filename[30];      /* File name for output file */
     DdNode *bdd,*tmp,*var;
     DdNode *x[6];
-    DdNode *f0, *f1, *f2, *f3, *f4, *f5, *f6, *f7,*f8, *f9, *f10, *f11, *f12, *f13;
-    char * inames[6] = { "x0", "x1","x2","x3","x4","x5" };     /* Names for input variables */
+
+    DdNode *s[3], *t[3];
+    DdNode *f[14];
+
+    //Source set
+    DdNode *C1, *R1,*C2, *R2, *p;
+    
+    char * inames[6] = { "s2", "s1","s0","t2","t1","t0" };     /* Names for input variables */
     char * onames[1] = { "bdd" };          /* Name for output variable */
 
     /* Initialize the bdd manager with default options */
@@ -96,135 +200,109 @@ int main (int argc, char *argv[])
     for (int i=0;i<=5;i++) {
         x[i] = Cudd_bddNewVar(gbm);
     }
-
-
-    f0 = bddAndSix(gbm,x,0,0,0,0,0,1);
-    f1 = bddAndSix(gbm,x,0,0,0,0,1,1); 
-    f2 = bddAndSix(gbm,x,0,0,1,0,0,0);
-    f3 = bddAndSix(gbm,x,0,0,1,0,0,1);
-    f4 = bddAndSix(gbm,x,0,0,1,0,1,0);
-    f5 = bddAndSix(gbm,x,0,0,1,0,1,1);
-    f6 = bddAndSix(gbm,x,0,1,0,0,1,1);
-   f7= bddAndSix(gbm,x,0,1,0,1,1,1);
-   f8 = bddAndSix(gbm,x,1,1,0,0,1,1);
-   f9 = bddAndSix(gbm,x,1,1,0,1,1,1);
-   f10 = bddAndSix(gbm,x,1,0,0,0,1,1);
-   f11 = bddAndSix(gbm,x,1,0,1,0,1,1);
-   f12 = bddAndSix(gbm,x,1,0,1,1,1,0);
-   f13 = bddAndSix(gbm,x,1,1,1,1,0,1);
+   
 
     /*
-    tmp = Cudd_bddOr(gbm, f1, f2);
-    f = tmp;
-    Cudd_Ref(tmp);
-    Cudd_RecursiveDeref(gbm, f);*/
-    tmp = Cudd_bddOr(gbm, f0,f1);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
+    * Construct edge relationship
+    */
 
-    tmp = Cudd_bddOr(gbm, bdd,f2);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
+    f[0] = bddAndSix(gbm,x,0,0,0,0,0,1);
+    f[1] = bddAndSix(gbm,x,0,0,0,0,1,1); 
+    f[2] = bddAndSix(gbm,x,0,0,1,0,0,0);
+    f[3] = bddAndSix(gbm,x,0,0,1,0,0,1);
+    f[4] = bddAndSix(gbm,x,0,0,1,0,1,0);
+    f[5] = bddAndSix(gbm,x,0,0,1,0,1,1);
+    f[6] = bddAndSix(gbm,x,0,1,0,0,1,1);
+    f[7] = bddAndSix(gbm,x,0,1,0,1,1,1);
+    f[8] = bddAndSix(gbm,x,1,1,0,0,1,1);
+    f[9] = bddAndSix(gbm,x,1,1,0,1,1,1);
+    f[10] = bddAndSix(gbm,x,1,0,0,0,1,1);
+    f[11] = bddAndSix(gbm,x,1,0,1,0,1,1);
+    f[12] = bddAndSix(gbm,x,1,0,1,1,1,0);
+    f[13] = bddAndSix(gbm,x,1,1,1,1,0,1);
+    
+   tmp = Cudd_bddOr(gbm, f[0], f[1]);
+   bdd = tmp;
+   Cudd_Ref(tmp);
+   Cudd_RecursiveDeref(gbm, bdd);
 
-    tmp = Cudd_bddOr(gbm, bdd,f3);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
+   for(int k = 2; k < 14; k++){
+	 tmp = Cudd_bddOr(gbm, bdd, f[k]);
+	 bdd = tmp;
+	 Cudd_Ref(tmp);
+	 Cudd_RecursiveDeref(gbm, bdd);
 
-    tmp = Cudd_bddOr(gbm, bdd,f4);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
+   }
 
+ 
+  //plot C1(s)
+  /*
+   * BDD for vertex set C1
+   */
+   C1 = Cudd_Not(x[0]);
+   Cudd_Ref(C1);
+   Cudd_RecursiveDeref(gbm, C1);
 
-    tmp = Cudd_bddOr(gbm, bdd,f5);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
+   /*
+    * BDD for vertex set C2
+    */
+   C2 = Cudd_bddOr(gbm, x[0],x[1]);
+   Cudd_Ref(C2);
 
+   tmp = Cudd_bddAnd(gbm, x[2], C2);
+   C2 = tmp;
+   Cudd_Ref(tmp);
+   Cudd_RecursiveDeref(gbm, C2);
 
+   /* 
+    * property test for Quesiton 3
+    */ 
+   tmp = Cudd_bddAnd(gbm, x[0], Cudd_Not(x[1]));
+   p = tmp;
+   Cudd_Ref(tmp);
+   Cudd_RecursiveDeref(gbm, p);
 
-    tmp = Cudd_bddOr(gbm, bdd,f6);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
+   tmp  = Cudd_bddAnd(gbm, p,Cudd_Not(x[2]));
+   p = tmp;
+   Cudd_Ref(tmp);
+   Cudd_RecursiveDeref(gbm, p);
 
-    tmp = Cudd_bddOr(gbm, bdd,f6);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
-
-    tmp = Cudd_bddOr(gbm, bdd,f7);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
-
-    tmp = Cudd_bddOr(gbm, bdd,f8);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
-
-    tmp = Cudd_bddOr(gbm, bdd,f9);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
-
-    tmp = Cudd_bddOr(gbm, bdd,f10);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
+  /*
+   * Run reachability test
+   */
+   R1 = performReachabilibty(gbm, bdd, C1,x);
+   R2 =  performReachabilibty(gbm, bdd, C2, x);
 
 
-
-    tmp = Cudd_bddOr(gbm, bdd,f11);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
-
-    tmp = Cudd_bddOr(gbm, bdd,f12);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
-
-    tmp = Cudd_bddOr(gbm, bdd,f13);
-    bdd = tmp;
-    //bdd = Cudd_ReadOne(gbm);
-    Cudd_Ref(bdd);
-    Cudd_RecursiveDeref(gbm,bdd);
+  
+   int n = checkProp(gbm, R1, Cudd_Not(p));
+   int m = checkProp(gbm, R2, Cudd_Not(p));
 
 
+   /*
+    * Print reachable set to terminal 
+    * and to PDF for display purpose
+    *
+    */
 
-/*
-    for(int k = 0;k<=2;k++) {
-	tmp = Cudd_bddOr(gbm,f[k], bdd);
-	Cudd_Ref(tmp);
-	Cudd_RecursiveDeref(gbm,bdd);
-	bdd = tmp;
+    R1 = Cudd_BddToAdd(gbm, R1);
 
-    }*/
+    print_dd(gbm, R1, 6,4);
+    printf("Number of Nodes = %d\n",Cudd_DagSize(R1));
+    Cudd_RecursiveDeref(gbm,R1);
+
+    print_dd(gbm, R2, 6,4);
+    printf("Number of Nodes = %d\n",Cudd_DagSize(R2));
+    Cudd_RecursiveDeref(gbm,R2);
+
 
     bdd = Cudd_BddToAdd(gbm, bdd);                          /*Convert BDD to ADD for display purpose*/
     print_dd (gbm, bdd, 6,4);                    /*Print the DD to standard output*/
-    sprintf(filename, "./dot/hw1_2b.dot");                /*Write .dot filename to a string*/
+    sprintf(filename, "./dot/hw1_2b_2.dot");                /*Write .dot filename to a string*/
     write_dd(gbm, bdd, (char **)inames, (char **)onames, filename);   /*Write the resulting cascade DD to a file*/
     printf("Number of Nodes = %d\n",Cudd_DagSize(bdd));
-
     Cudd_RecursiveDeref(gbm,bdd);        /* Explicit Dereference */
+
     Cudd_Quit(gbm);
     return 0;
 }

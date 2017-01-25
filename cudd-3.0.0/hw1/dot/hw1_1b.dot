@@ -1,0 +1,38 @@
+digraph "DD" {
+size = "7.5,10"
+center = true;
+edge [dir = none];
+{ node [shape = plaintext];
+  edge [style = invis];
+  "CONST NODES" [style = invis];
+" x0 " -> " x1 " -> " x2 " -> "CONST NODES"; 
+}
+{ rank = same; node [shape = box]; edge [style = invis];
+"  f  "; }
+{ rank = same; " x0 ";
+"0x20";
+}
+{ rank = same; " x1 ";
+"0x1e";
+"0x1f";
+}
+{ rank = same; " x2 ";
+"0x1d";
+}
+{ rank = same; "CONST NODES";
+{ node [shape = box]; "0x11";
+"0x10";
+}
+}
+"  f  " -> "0x20" [style = solid];
+"0x20" -> "0x1e";
+"0x20" -> "0x1f" [style = dashed];
+"0x1e" -> "0x10";
+"0x1e" -> "0x1d" [style = dashed];
+"0x1f" -> "0x1d";
+"0x1f" -> "0x11" [style = dashed];
+"0x1d" -> "0x10";
+"0x1d" -> "0x11" [style = dashed];
+"0x11" [label = "0"];
+"0x10" [label = "1"];
+}
