@@ -1,0 +1,1 @@
+IndDefRules.uo: IndDefRules.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui InductiveDefinition.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolSyntax.ui 

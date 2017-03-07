@@ -1,0 +1,1 @@
+finite_mapSyntax.uo: finite_mapSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui finite_mapTheory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/pairSyntax.ui 

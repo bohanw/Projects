@@ -1,0 +1,1 @@
+realSyntax.uo: realSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Abbrev.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbint.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbnum.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/numSyntax.ui realTheory.ui 

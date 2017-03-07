@@ -1,0 +1,1 @@
+mlibClauseset.uo: mlibClauseset.ui mlibCanon.ui mlibClause.ui mlibLiteralnet.ui mlibMatch.ui mlibRewrite.ui mlibStream.ui mlibSubst.ui mlibSubsume.ui mlibTerm.ui mlibTermnet.ui mlibTermorder.ui mlibThm.ui mlibUnits.ui mlibUseful.ui 

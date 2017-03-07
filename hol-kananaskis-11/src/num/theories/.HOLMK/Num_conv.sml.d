@@ -1,0 +1,1 @@
+Num_conv.uo: Num_conv.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbnum.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Literal.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui arithmeticTheory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui numSyntax.ui numeralTheory.ui 

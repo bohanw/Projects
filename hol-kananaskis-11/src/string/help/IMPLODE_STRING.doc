@@ -1,0 +1,3 @@
+\THEOREM IMPLODE_STRING string
+|- ∀clist. IMPLODE clist = FOLDR STRING "" clist
+\ENDTHEOREM

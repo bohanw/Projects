@@ -1,0 +1,3 @@
+\THEOREM string_ge_def string
+|- ∀s1 s2. s1 ≥ s2 ⇔ s2 ≤ s1
+\ENDTHEOREM

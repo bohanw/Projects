@@ -1,0 +1,8 @@
+\THEOREM LEX_CONG pair
+|- ∀R1 R2 v1 v2 R1' R2' v1' v2'.
+     (v1 = v1') ∧ (v2 = v2') ∧
+     (∀a b c d. (v1' = (a,b)) ∧ (v2' = (c,d)) ⇒ (R1 a c ⇔ R1' a c)) ∧
+     (∀a b c d.
+        (v1' = (a,b)) ∧ (v2' = (c,d)) ∧ (a = c) ⇒ (R2 b d ⇔ R2' b d)) ⇒
+     ((R1 LEX R2) v1 v2 ⇔ (R1' LEX R2') v1' v2')
+\ENDTHEOREM

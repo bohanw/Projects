@@ -1,0 +1,3 @@
+\THEOREM isAlphaNum_def string
+|- ∀c. isAlphaNum c ⇔ isAlpha c ∨ isDigit c
+\ENDTHEOREM

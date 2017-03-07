@@ -1,0 +1,1 @@
+satCommonTools.uo: /home/wbh/Downloads/hol-kananaskis-11/sigobj/Drule.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Globals.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolSyntax.ui satTheory.ui 

@@ -1,0 +1,3 @@
+\THEOREM symmetric_LEX pair
+|- symmetric R1 ∧ symmetric R2 ⇒ symmetric (R1 LEX R2)
+\ENDTHEOREM

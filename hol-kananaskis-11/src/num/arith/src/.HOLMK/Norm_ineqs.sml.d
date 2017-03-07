@@ -1,0 +1,1 @@
+Norm_ineqs.uo: Norm_ineqs.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbint.ui Arith_cons.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui Norm_arith.ui Norm_bool.ui RJBConv.ui Term_coeffs.ui Thm_convs.ui 

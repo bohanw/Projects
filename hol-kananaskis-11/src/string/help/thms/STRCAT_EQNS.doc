@@ -1,0 +1,4 @@
+\THEOREM STRCAT_EQNS string
+|- (STRCAT "" s = s) ∧ (STRCAT s "" = s) ∧
+   (STRCAT (STRING c s1) s2 = STRING c (STRCAT s1 s2))
+\ENDTHEOREM

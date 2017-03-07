@@ -1,0 +1,3 @@
+\THEOREM ORD_BOUND string
+|- ∀c. ORD c < 256
+\ENDTHEOREM

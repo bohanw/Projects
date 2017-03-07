@@ -1,0 +1,3 @@
+\THEOREM isGraph_def string
+|- ∀c. isGraph c ⇔ isPrint c ∧ ¬isSpace c
+\ENDTHEOREM

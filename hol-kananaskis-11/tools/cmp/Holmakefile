@@ -1,0 +1,20 @@
+.PHONY: all
+
+all: cmp.exe
+
+ifdef POLY
+cmp.exe: cmp.sml
+	$(POLYC) $< -o $@
+
+EXTRA_CLEANS = cmp.exe
+
+else
+
+OPTIONS = NO_OVERLAY
+
+cmp.exe: mosmlcmp.uo cmp.uo
+	$(MOSMLC) -standalone -o $@ $<
+
+EXTRA_CLEANS: cmp.exe
+
+endif

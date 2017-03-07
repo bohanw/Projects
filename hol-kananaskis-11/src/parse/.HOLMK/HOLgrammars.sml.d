@@ -1,0 +1,1 @@
+HOLgrammars.uo: HOLgrammars.ui 

@@ -1,0 +1,3 @@
+\THEOREM TOCHAR_def string
+|- TOCHAR (STRING c "") = c
+\ENDTHEOREM

@@ -1,0 +1,3 @@
+\THEOREM IMPLODE_EQ_EMPTYSTRING string
+|- ((IMPLODE l = "") ⇔ (l = "")) ∧ (("" = IMPLODE l) ⇔ (l = ""))
+\ENDTHEOREM

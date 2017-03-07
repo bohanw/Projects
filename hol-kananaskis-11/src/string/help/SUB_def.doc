@@ -1,0 +1,3 @@
+\THEOREM SUB_def string
+|- ∀s n. SUB (s,n) = EL n s
+\ENDTHEOREM

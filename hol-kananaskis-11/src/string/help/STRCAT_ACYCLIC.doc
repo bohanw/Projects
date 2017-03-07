@@ -1,0 +1,4 @@
+\THEOREM STRCAT_ACYCLIC string
+|- ∀s s1.
+     ((s = STRCAT s s1) ⇔ (s1 = "")) ∧ ((s = STRCAT s1 s) ⇔ (s1 = ""))
+\ENDTHEOREM

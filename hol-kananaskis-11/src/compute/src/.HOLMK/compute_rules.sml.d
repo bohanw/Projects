@@ -1,0 +1,1 @@
+compute_rules.uo: compute_rules.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Abbrev.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Conv.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Drule.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolTheory.ui 

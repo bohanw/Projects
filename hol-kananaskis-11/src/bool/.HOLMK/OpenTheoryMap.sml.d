@@ -1,0 +1,1 @@
+OpenTheoryMap.uo: OpenTheoryMap.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Coding.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Theory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/TheoryDelta.ui 

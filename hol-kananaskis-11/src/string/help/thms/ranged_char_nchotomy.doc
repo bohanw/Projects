@@ -1,0 +1,3 @@
+\THEOREM ranged_char_nchotomy string
+|- ∀c. ∃n. (c = CHR n) ∧ n < 256
+\ENDTHEOREM

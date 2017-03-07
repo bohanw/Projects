@@ -1,0 +1,3 @@
+\THEOREM CHAR_INDUCT_THM string
+|- ∀P. (∀n. n < 256 ⇒ P (CHR n)) ⇒ ∀c. P c
+\ENDTHEOREM

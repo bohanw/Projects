@@ -1,0 +1,3 @@
+\THEOREM FORALL_UNCURRY pair
+|- $! (UNCURRY f) ⇔ $! ($! o f)
+\ENDTHEOREM

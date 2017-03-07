@@ -1,0 +1,3 @@
+\THEOREM isLower_def string
+|- ∀c. isLower c ⇔ 97 ≤ ORD c ∧ ORD c ≤ 122
+\ENDTHEOREM

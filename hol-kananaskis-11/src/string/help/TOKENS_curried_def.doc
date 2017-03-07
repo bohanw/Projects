@@ -1,0 +1,3 @@
+\THEOREM TOKENS_curried_def string
+|- ∀x x1. TOKENS x x1 = TOKENS_tupled (x,x1)
+\ENDTHEOREM

@@ -1,0 +1,1 @@
+Sup_Inf.uo: Sup_Inf.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbint.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui Rationals.ui 

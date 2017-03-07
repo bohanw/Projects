@@ -1,0 +1,1 @@
+ThmSetData.uo: ThmSetData.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/DB.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Theory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/TheoryDelta.ui 

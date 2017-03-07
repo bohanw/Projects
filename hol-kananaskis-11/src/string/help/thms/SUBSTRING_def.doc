@@ -1,0 +1,3 @@
+\THEOREM SUBSTRING_def string
+|- ∀s i n. SUBSTRING (s,i,n) = SEG n i s
+\ENDTHEOREM

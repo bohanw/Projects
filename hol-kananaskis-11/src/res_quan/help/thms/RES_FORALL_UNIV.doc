@@ -1,0 +1,3 @@
+\THEOREM RES_FORALL_UNIV res_quan
+|- ∀p. RES_FORALL pred_set$UNIV p ⇔ $! p
+\ENDTHEOREM

@@ -1,0 +1,1 @@
+Theory.ui: /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbnum.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Portable.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui TheoryDelta.uo /home/wbh/Downloads/hol-kananaskis-11/sigobj/Thm.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui 

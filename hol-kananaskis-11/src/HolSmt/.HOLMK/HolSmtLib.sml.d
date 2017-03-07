@@ -1,0 +1,1 @@
+HolSmtLib.uo: HolSmtLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Abbrev.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui SolverSpec.uo /home/wbh/Downloads/hol-kananaskis-11/sigobj/Tactical.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Thm.ui Yices.uo Z3.uo /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolSyntax.ui 

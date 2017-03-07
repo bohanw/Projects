@@ -1,0 +1,5 @@
+\THEOREM string_lt_def string
+|- (∀s. s < "" ⇔ F) ∧ (∀s c. "" < STRING c s ⇔ T) ∧
+   ∀s2 s1 c2 c1.
+     STRING c1 s1 < STRING c2 s2 ⇔ c1 < c2 ∨ (c1 = c2) ∧ s1 < s2
+\ENDTHEOREM

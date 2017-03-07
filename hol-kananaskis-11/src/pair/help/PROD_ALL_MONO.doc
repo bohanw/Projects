@@ -1,0 +1,5 @@
+\THEOREM PROD_ALL_MONO pair
+|- (∀x. P x ⇒ P' x) ∧ (∀y. Q y ⇒ Q' y) ⇒
+   PROD_ALL P Q p ⇒
+   PROD_ALL P' Q' p
+\ENDTHEOREM

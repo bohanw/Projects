@@ -1,0 +1,3 @@
+\THEOREM pair_CASES pair
+|- ∀x. ∃q r. x = (q,r)
+\ENDTHEOREM

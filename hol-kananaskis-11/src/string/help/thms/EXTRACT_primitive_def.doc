@@ -1,0 +1,8 @@
+\THEOREM EXTRACT_primitive_def string
+|- EXTRACT =
+   WFREC (@R. WF R)
+     (λEXTRACT a.
+        case a of
+          (s,i,NONE) => I (SUBSTRING (s,i,STRLEN s − i))
+        | (s,i,SOME n) => I (SUBSTRING (s,i,n)))
+\ENDTHEOREM

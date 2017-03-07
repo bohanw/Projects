@@ -1,0 +1,1 @@
+Satisfy.uo: Satisfy.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui Sequence.ui Trace.ui Unify.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/liteLib.ui 

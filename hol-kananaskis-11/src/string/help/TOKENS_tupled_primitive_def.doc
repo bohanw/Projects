@@ -1,0 +1,21 @@
+\THEOREM TOKENS_tupled_primitive_def string
+|- TOKENS_tupled =
+   WFREC
+     (@R.
+        WF R ∧
+        (∀t h P l r.
+           ((l,r) = SPLITP P (STRING h t)) ∧ NULL l ⇒
+           R (P,TL r) (P,STRING h t)) ∧
+        ∀t h P l r.
+          ((l,r) = SPLITP P (STRING h t)) ∧ ¬NULL l ⇒
+          R (P,r) (P,STRING h t))
+     (λTOKENS_tupled a.
+        case a of
+          (P,"") => I []
+        | (P,STRING h t) =>
+            I
+              (let (l,r) = SPLITP P (STRING h t)
+               in
+                 if NULL l then TOKENS_tupled (P,TL r)
+                 else l::TOKENS_tupled (P,r)))
+\ENDTHEOREM

@@ -1,0 +1,3 @@
+\THEOREM PROD_ALL_THM pair
+|- PROD_ALL P Q (x,y) ⇔ P x ∧ Q y
+\ENDTHEOREM

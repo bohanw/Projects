@@ -1,0 +1,4 @@
+\THEOREM STRCAT_def string
+|- (∀l. STRCAT "" l = l) ∧
+   ∀l1 l2 h. STRCAT (STRING h l1) l2 = STRING h (STRCAT l1 l2)
+\ENDTHEOREM

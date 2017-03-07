@@ -1,0 +1,3 @@
+\THEOREM isSpace_def string
+|- ∀c. isSpace c ⇔ (ORD c = 32) ∨ 9 ≤ ORD c ∧ ORD c ≤ 13
+\ENDTHEOREM

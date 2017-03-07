@@ -1,0 +1,3 @@
+\THEOREM EXPLODE_ONTO string
+|- ∀cs. ∃s. cs = EXPLODE s
+\ENDTHEOREM

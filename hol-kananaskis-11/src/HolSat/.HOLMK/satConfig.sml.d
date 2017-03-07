@@ -1,0 +1,1 @@
+satConfig.uo: satConfig.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Abbrev.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Globals.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui SatSolvers.uo /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolSyntax.ui 

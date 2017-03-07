@@ -1,0 +1,3 @@
+\THEOREM isAscii_def string
+|- ∀c. isAscii c ⇔ ORD c ≤ 127
+\ENDTHEOREM

@@ -1,0 +1,6 @@
+\THEOREM isHexDigit_def string
+|- ∀c.
+     isHexDigit c ⇔
+     48 ≤ ORD c ∧ ORD c ≤ 57 ∨ 97 ≤ ORD c ∧ ORD c ≤ 102 ∨
+     65 ≤ ORD c ∧ ORD c ≤ 70
+\ENDTHEOREM

@@ -1,0 +1,3 @@
+\THEOREM IMPLODE_11 string
+|- (IMPLODE cs1 = IMPLODE cs2) ⇔ (cs1 = cs2)
+\ENDTHEOREM

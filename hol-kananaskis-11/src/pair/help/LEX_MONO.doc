@@ -1,0 +1,5 @@
+\THEOREM LEX_MONO pair
+|- (∀x y. R1 x y ⇒ R2 x y) ∧ (∀x y. R3 x y ⇒ R4 x y) ⇒
+   (R1 LEX R3) x y ⇒
+   (R2 LEX R4) x y
+\ENDTHEOREM

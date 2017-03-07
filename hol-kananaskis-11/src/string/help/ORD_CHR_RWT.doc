@@ -1,0 +1,3 @@
+\THEOREM ORD_CHR_RWT string
+|- ∀r. r < 256 ⇒ (ORD (CHR r) = r)
+\ENDTHEOREM
