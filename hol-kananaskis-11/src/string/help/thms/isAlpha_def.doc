@@ -1,0 +1,3 @@
+\THEOREM isAlpha_def string
+|- ∀c. isAlpha c ⇔ isLower c ∨ isUpper c
+\ENDTHEOREM

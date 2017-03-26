@@ -1,0 +1,8 @@
+\THEOREM isPREFIX_DEF string
+|- ∀s1 s2.
+     s1 ≼ s2 ⇔
+     case (DEST_STRING s1,DEST_STRING s2) of
+       (NONE,v1) => T
+     | (SOME v2,NONE) => F
+     | (SOME (c1,t1),SOME (c2,t2)) => (c1 = c2) ∧ t1 ≼ t2
+\ENDTHEOREM

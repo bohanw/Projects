@@ -1,0 +1,6 @@
+\THEOREM PROD_ALL_CONG pair
+|- ∀p p' P P' Q Q'.
+     (p = p') ∧ (∀x y. (p' = (x,y)) ⇒ (P x ⇔ P' x)) ∧
+     (∀x y. (p' = (x,y)) ⇒ (Q y ⇔ Q' y)) ⇒
+     (PROD_ALL P Q p ⇔ PROD_ALL P' Q' p')
+\ENDTHEOREM

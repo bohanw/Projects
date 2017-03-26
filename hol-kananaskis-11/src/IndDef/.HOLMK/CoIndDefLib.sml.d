@@ -1,0 +1,1 @@
+CoIndDefLib.uo: CoIndDefLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui IndDefLib.ui InductiveDefinition.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lexis.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/liteLib.ui 

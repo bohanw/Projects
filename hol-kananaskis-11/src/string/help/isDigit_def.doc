@@ -1,0 +1,3 @@
+\THEOREM isDigit_def string
+|- ∀c. isDigit c ⇔ 48 ≤ ORD c ∧ ORD c ≤ 57
+\ENDTHEOREM

@@ -1,0 +1,1 @@
+dep_rewrite.uo: dep_rewrite.ui Drule.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui Ho_Rewrite.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui Rsyntax.ui Tactical.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Thm.ui boolLib.uo 

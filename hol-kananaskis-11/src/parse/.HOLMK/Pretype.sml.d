@@ -1,0 +1,1 @@
+Pretype.uo: Pretype.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lexis.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Portable.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui optmonad.ui parse_type.ui 

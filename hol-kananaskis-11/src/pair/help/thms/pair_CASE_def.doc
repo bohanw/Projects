@@ -1,0 +1,3 @@
+\THEOREM pair_CASE_def pair
+|- ∀p f. pair_CASE p f = f (FST p) (SND p)
+\ENDTHEOREM

@@ -1,0 +1,3 @@
+\THEOREM STRLEN_EQ_0 string
+|- ∀l. (STRLEN l = 0) ⇔ (l = "")
+\ENDTHEOREM

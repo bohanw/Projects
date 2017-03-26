@@ -1,0 +1,3 @@
+\THEOREM CHAR_EQ_THM string
+|- ∀c1 c2. (c1 = c2) ⇔ (ORD c1 = ORD c2)
+\ENDTHEOREM

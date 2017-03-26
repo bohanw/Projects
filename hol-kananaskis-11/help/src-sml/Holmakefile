@@ -1,0 +1,69 @@
+OPTIONS = NO_OVERLAY
+EXTRA_CLEANS = Doc2Html.exe Doc2Tex.exe Doc2Txt.exe makebase.exe \
+               Lexer.lex.sml Parser.grm-sig.sml Parser.grm.sml
+MLYACCLIB = $(protect $(HOLDIR)/tools/mlyacc/mlyacclib/)
+MLYACCLIB_UIS = $(patsubst %,MLY_%.ui,base-sig join lrtable parser2 stream)
+BASIS02 = $(if $(HAVE_BASIS2002),,$(dprot $(SIGOBJ)/basis2002.uo))
+
+all: makebase.exe Doc2Html.exe Doc2Tex.exe Doc2Txt.exe
+
+makebase.exe : runmakebase.uo MyDatabase.uo Htmlsigs.uo Parser.grm.uo Parsspec.uo Printbase.uo makebase.uo Symbolic.uo
+	$(HOLMOSMLC) -I $(MLYACCLIB) $(MLYACCLIB_UIS) -o makebase.exe MyDatabase.uo runmakebase.uo
+
+Doc2Html.exe : runDoc2Html.uo Doc2Html.uo ParseDoc.uo Symbolic.uo Flash.uo
+	$(HOLMOSMLC) -o Doc2Html.exe runDoc2Html.uo
+
+Doc2Tex.exe : runDoc2Tex.uo Doc2Tex.uo ParseDoc.uo Symbolic.uo Flash.uo
+	$(HOLMOSMLC) -o Doc2Tex.exe runDoc2Tex.uo
+
+Doc2Txt.exe: runDoc2Txt.uo Doc2Txt.uo ParseDoc.uo Symbolic.uo Flash.uo
+	$(HOLMOSMLC) -o Doc2Txt.exe runDoc2Txt.uo
+
+Lexer.lex.sml: Lexer.lex
+	$(protect $(HOLDIR)/tools/mllex/mllex.exe) $<
+
+Parser.grm-sig.sml Parser.grm.sml: Parser.grm
+	$(protect $(HOLDIR)/tools/mlyacc/src/mlyacc.exe) $<
+	$(MV) Parser.grm.sig Parser.grm-sig.sml
+
+MyWord32.uo MyWord32.ui: MyWord32.sml
+	$(MOSMLC) -c -toplevel $<
+
+MySML90.uo MySML90.ui: MySML90.sml
+	$(MOSMLC) -c -toplevel $<
+
+MyDatabase.uo MyDatabase.ui: MyDatabase.sml MyDatabase-sig.ui
+	$(MOSMLC) -c -toplevel MyDatabase-sig.ui $<
+
+MyDatabase-sig.uo MyDatabase-sig.ui: MyDatabase-sig.sml
+	$(MOSMLC) -c -toplevel $<
+
+HOLPage.uo: HOLPage.sml MyDatabase.ui $(BASIS02)
+	$(HOLMOSMLC) -c MyDatabase.ui $<
+
+Htmlsigs.uo: Htmlsigs.sml Htmlsigs.ui MyDatabase.ui
+	$(HOLMOSMLC) -c MyDatabase.ui $<
+
+Htmlsigs.ui: Htmlsigs.sig MyDatabase.ui $(BASIS02)
+	$(MOSMLC) -c MyDatabase.ui $<
+
+Parsspec.uo: Parsspec.sml Parser.grm.uo Lexer.lex.ui MySML90.ui MyDatabase.ui
+	$(MOSMLC) -c -I $(MLYACCLIB) $(MLYACCLIB_UIS) Parser.grm.ui Lexer.lex.ui MySML90.ui MyDatabase.ui $<
+
+Parser.grm-sig.ui Parser.grm-sig.uo: Parser.grm-sig.sml Asynt.uo
+	$(MOSMLC) -toplevel -c -I $(MLYACCLIB) $(MLYACCLIB_UIS) $<
+
+Parser.grm.uo: Parser.grm.sml Parser.grm-sig.ui
+	$(MOSMLC) -toplevel -c -I $(MLYACCLIB) $(MLYACCLIB_UIS) Parser.grm-sig.ui $<
+
+Lexer.lex.ui Lexer.lex.uo: Lexer.lex.sml Parser.grm-sig.ui
+	$(HOLMOSMLC) -toplevel -c Parser.grm-sig.ui $<
+
+makebase.uo: makebase.sml MyDatabase.ui Symbolic.ui Htmlsigs.ui Parsspec.uo Keepers.uo Printbase.uo HOLPage.uo
+	$(HOLMOSMLC) -I $(protect $(SIGOBJ)) -c MyDatabase.ui $<
+
+Printbase.ui: Printbase.sig MyDatabase.ui
+	$(MOSMLC) -c MyDatabase.ui $<
+
+Printbase.uo: Printbase.sml MyDatabase.ui
+	$(MOSMLC) -c MyDatabase.ui $<

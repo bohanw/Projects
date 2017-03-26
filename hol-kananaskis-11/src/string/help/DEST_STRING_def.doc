@@ -1,0 +1,4 @@
+\THEOREM DEST_STRING_def string
+|- (DEST_STRING "" = NONE) ∧
+   ∀c rst. DEST_STRING (STRING c rst) = SOME (c,rst)
+\ENDTHEOREM

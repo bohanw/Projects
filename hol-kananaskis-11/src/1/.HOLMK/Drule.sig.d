@@ -1,0 +1,1 @@
+Drule.ui: Abbrev.ui 

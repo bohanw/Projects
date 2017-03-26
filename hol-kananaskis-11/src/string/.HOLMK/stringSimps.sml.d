@@ -1,0 +1,1 @@
+stringSimps.uo: stringSimps.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/BasicProvers.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/simpLib.ui stringLib.ui stringTheory.ui 

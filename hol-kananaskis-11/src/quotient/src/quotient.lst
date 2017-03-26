@@ -1,0 +1,445 @@
+Theory: quotient
+
+Parents:
+    quantHeuristics
+    res_quan
+    rich_list
+
+Term constants:
+    -->                :(α -> γ) -> (β -> δ) -> (γ -> β) -> α -> δ
+    ===>               :(α -> α -> bool) ->
+                        (β -> β -> bool) -> (α -> β) -> (α -> β) -> bool
+    ?!!                :(α -> bool) -> bool
+    EQUIV              :(α -> α -> bool) -> bool
+    PARTIAL_EQUIV      :(α -> α -> bool) -> bool
+    QUOTIENT           :(α -> α -> bool) -> (α -> β) -> (β -> α) -> bool
+    RES_EXISTS_EQUIV   :(α -> α -> bool) -> (α -> bool) -> bool
+    respects           :(α -> α -> β) -> α -> β
+
+Definitions:
+    ?!!
+      |- ∀P. $?!! P ⇔ $?! P
+    EQUIV_def
+      |- ∀E. EQUIV E ⇔ ∀x y. E x y ⇔ (E x = E y)
+    FUN_MAP
+      |- ∀f g. f --> g = (λh x. g (h (f x)))
+    FUN_REL
+      |- ∀R1 R2 f g. (R1 ===> R2) f g ⇔ ∀x y. R1 x y ⇒ R2 (f x) (g y)
+    PARTIAL_EQUIV_def
+      |- ∀R.
+           PARTIAL_EQUIV R ⇔
+           (∃x. R x x) ∧ ∀x y. R x y ⇔ R x x ∧ R y y ∧ (R x = R y)
+    QUOTIENT_def
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇔
+           (∀a. abs (rep a) = a) ∧ (∀a. R (rep a) (rep a)) ∧
+           ∀r s. R r s ⇔ R r r ∧ R s s ∧ (abs r = abs s)
+    RES_EXISTS_EQUIV_DEF
+      |- RES_EXISTS_EQUIV =
+         (λR P.
+            (∃x::respects R. P x) ∧ ∀x y::respects R. P x ∧ P y ⇒ R x y)
+    respects_def
+      |- respects = W
+
+Theorems:
+    ABSTRACT_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f.
+               f =
+               (rep1 --> abs2)
+                 (RES_ABSTRACT (respects R1) ((abs1 --> rep2) f))
+    ABSTRACT_RES_ABSTRACT
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 f g.
+             (R1 ===> R2) f g ⇒
+             (R1 ===> R2) f (RES_ABSTRACT (respects R1) g)
+    APPLY_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f x. f x = abs2 ((abs1 --> rep2) f (rep1 x))
+    APPLY_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f g x y. (R1 ===> R2) f g ∧ R1 x y ⇒ R2 (f x) (g y)
+    COND_PRS
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀a b c.
+             (if a then b else c) = abs (if a then rep b else rep c)
+    COND_RSP
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀a1 a2 b1 b2 c1 c2.
+             (a1 ⇔ a2) ∧ R b1 b2 ∧ R c1 c2 ⇒
+             R (if a1 then b1 else c1) (if a2 then b2 else c2)
+    CONJ_IMPLIES
+      |- ∀P P' Q Q'. (P ⇒ Q) ∧ (P' ⇒ Q') ⇒ P ∧ P' ⇒ Q ∧ Q'
+    C_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀R3 abs3 rep3.
+               QUOTIENT R3 abs3 rep3 ⇒
+               ∀f x y.
+                 combin$C f x y =
+                 abs3
+                   (combin$C ((abs1 --> abs2 --> rep3) f) (rep2 x)
+                      (rep1 y))
+    C_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀R3 abs3 rep3.
+               QUOTIENT R3 abs3 rep3 ⇒
+               ∀f1 f2 x1 x2 y1 y2.
+                 (R1 ===> R2 ===> R3) f1 f2 ∧ R2 x1 x2 ∧ R1 y1 y2 ⇒
+                 R3 (combin$C f1 x1 y1) (combin$C f2 x2 y2)
+    DISJ_IMPLIES
+      |- ∀P P' Q Q'. (P ⇒ Q) ∧ (P' ⇒ Q') ⇒ P ∨ P' ⇒ Q ∨ Q'
+    EQUALS_EQUIV_IMPLIES
+      |- ∀R. EQUIV R ⇒ R a1 a2 ∧ R b1 b2 ⇒ (a1 = b1) ⇒ R a2 b2
+    EQUALS_IMPLIES
+      |- ∀P P' Q Q'. (P = Q) ∧ (P' = Q') ⇒ (P = P') ⇒ (Q = Q')
+    EQUALS_PRS
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒ ∀x y. (x = y) ⇔ R (rep x) (rep y)
+    EQUALS_RSP
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀x1 x2 y1 y2. R x1 x2 ∧ R y1 y2 ⇒ (R x1 y1 ⇔ R x2 y2)
+    EQUIV_IMP_PARTIAL_EQUIV
+      |- ∀R. EQUIV R ⇒ PARTIAL_EQUIV R
+    EQUIV_REFL_SYM_TRANS
+      |- ∀R.
+           (∀x y. R x y ⇔ (R x = R y)) ⇔
+           (∀x. R x x) ∧ (∀x y. R x y ⇒ R y x) ∧
+           ∀x y z. R x y ∧ R y z ⇒ R x z
+    EQUIV_RES_ABSTRACT_LEFT
+      |- ∀R1 R2 f1 f2 x1 x2.
+           R2 (f1 x1) (f2 x2) ∧ R1 x1 x1 ⇒
+           R2 (RES_ABSTRACT (respects R1) f1 x1) (f2 x2)
+    EQUIV_RES_ABSTRACT_RIGHT
+      |- ∀R1 R2 f1 f2 x1 x2.
+           R2 (f1 x1) (f2 x2) ∧ R1 x2 x2 ⇒
+           R2 (f1 x1) (RES_ABSTRACT (respects R1) f2 x2)
+    EQUIV_RES_EXISTS
+      |- ∀E P. EQUIV E ⇒ (RES_EXISTS (respects E) P ⇔ $? P)
+    EQUIV_RES_EXISTS_UNIQUE
+      |- ∀E P. EQUIV E ⇒ (RES_EXISTS_UNIQUE (respects E) P ⇔ $?! P)
+    EQUIV_RES_FORALL
+      |- ∀E P. EQUIV E ⇒ (RES_FORALL (respects E) P ⇔ $! P)
+    EQ_IMPLIES
+      |- ∀P Q. (P ⇔ Q) ⇒ P ⇒ Q
+    EXISTS_PRS
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀f. $? f ⇔ RES_EXISTS (respects R) ((abs --> I) f)
+    EXISTS_REGULAR
+      |- ∀P Q. (∀x. P x ⇒ Q x) ⇒ $? P ⇒ $? Q
+    EXISTS_UNIQUE_PRS
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀f. $?! f ⇔ RES_EXISTS_EQUIV R ((abs --> I) f)
+    EXISTS_UNIQUE_REGULAR
+      |- ∀P E Q.
+           (∀x. P x ⇒ respects E x ∧ Q x) ∧
+           (∀x y. respects E x ∧ Q x ∧ respects E y ∧ Q y ⇒ E x y) ⇒
+           $?! P ⇒
+           RES_EXISTS_EQUIV E Q
+    FORALL_PRS
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀f. $! f ⇔ RES_FORALL (respects R) ((abs --> I) f)
+    FORALL_REGULAR
+      |- ∀P Q. (∀x. P x ⇒ Q x) ⇒ $! P ⇒ $! Q
+    FUN_MAP_I
+      |- I --> I = I
+    FUN_MAP_THM
+      |- ∀f g h x. (f --> g) h x = g (h (f x))
+    FUN_QUOTIENT
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             QUOTIENT (R1 ===> R2) (rep1 --> abs2) (abs1 --> rep2)
+    FUN_REL_EQ
+      |- $= ===> $= = $=
+    FUN_REL_EQUALS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f g.
+               respects (R1 ===> R2) f ∧ respects (R1 ===> R2) g ⇒
+               (((rep1 --> abs2) f = (rep1 --> abs2) g) ⇔
+                ∀x y. R1 x y ⇒ R2 (f x) (g y))
+    FUN_REL_EQ_REL
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f g.
+               (R1 ===> R2) f g ⇔
+               respects (R1 ===> R2) f ∧ respects (R1 ===> R2) g ∧
+               ((rep1 --> abs2) f = (rep1 --> abs2) g)
+    FUN_REL_IMP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f g.
+               respects (R1 ===> R2) f ∧ respects (R1 ===> R2) g ∧
+               ((rep1 --> abs2) f = (rep1 --> abs2) g) ⇒
+               ∀x y. R1 x y ⇒ R2 (f x) (g y)
+    FUN_REL_MP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f g x y. (R1 ===> R2) f g ∧ R1 x y ⇒ R2 (f x) (g y)
+    IDENTITY_EQUIV
+      |- EQUIV $=
+    IDENTITY_QUOTIENT
+      |- QUOTIENT $= I I
+    IMP_IMPLIES
+      |- ∀P P' Q Q'. (Q ⇒ P) ∧ (P' ⇒ Q') ⇒ (P ⇒ P') ⇒ Q ⇒ Q'
+    IN_FUN
+      |- ∀f g s x. x ∈ (f --> g) s ⇔ g (f x ∈ s)
+    IN_RESPECTS
+      |- ∀R x. x ∈ respects R ⇔ R x x
+    I_PRS
+      |- ∀R abs rep. QUOTIENT R abs rep ⇒ ∀e. I e = abs (I (rep e))
+    I_RSP
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒ ∀e1 e2. R e1 e2 ⇒ R (I e1) (I e2)
+    K_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀x y. K x y = abs1 (K (rep1 x) (rep2 y))
+    K_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀x1 x2 y1 y2. R1 x1 x2 ∧ R2 y1 y2 ⇒ R1 (K x1 y1) (K x2 y2)
+    LAMBDA_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f. (λx. f x) = (rep1 --> abs2) (λx. rep2 (f (abs1 x)))
+    LAMBDA_PRS1
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f. (λx. f x) = (rep1 --> abs2) (λx. (abs1 --> rep2) f x)
+    LAMBDA_REP_ABS_RSP
+      |- ∀REL1 abs1 rep1 REL2 abs2 rep2 f1 f2.
+           ((∀r r'. REL1 r r' ⇒ REL1 r (rep1 (abs1 r'))) ∧
+            ∀r r'. REL2 r r' ⇒ REL2 r (rep2 (abs2 r'))) ∧
+           (REL1 ===> REL2) f1 f2 ⇒
+           (REL1 ===> REL2) f1 ((abs1 --> rep2) ((rep1 --> abs2) f2))
+    LAMBDA_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f1 f2.
+               (R1 ===> R2) f1 f2 ⇒ (R1 ===> R2) (λx. f1 x) (λy. f2 y)
+    LEFT_RES_EXISTS_REGULAR
+      |- ∀P R Q. (∀x. R x ⇒ Q x ⇒ P x) ⇒ RES_EXISTS R Q ⇒ $? P
+    LEFT_RES_FORALL_REGULAR
+      |- ∀P R Q. (∀x. R x ∧ (Q x ⇒ P x)) ⇒ RES_FORALL R Q ⇒ $! P
+    LET_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f x. LET f x = abs2 (LET ((abs1 --> rep2) f) (rep1 x))
+    LET_RES_ABSTRACT
+      |- ∀r lam v. v ∈ r ⇒ (LET (RES_ABSTRACT r lam) v = LET lam v)
+    LET_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f g x y.
+               (R1 ===> R2) f g ∧ R1 x y ⇒ R2 (LET f x) (LET g y)
+    NOT_IMPLIES
+      |- ∀P Q. (Q ⇒ P) ⇒ ¬P ⇒ ¬Q
+    QUOTIENT_ABS_REP
+      |- ∀R abs rep. QUOTIENT R abs rep ⇒ ∀a. abs (rep a) = a
+    QUOTIENT_REL
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀r s. R r s ⇔ R r r ∧ R s s ∧ (abs r = abs s)
+    QUOTIENT_REL_ABS
+      |- ∀R abs rep. QUOTIENT R abs rep ⇒ ∀r s. R r s ⇒ (abs r = abs s)
+    QUOTIENT_REL_ABS_EQ
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀r s. R r r ⇒ R s s ⇒ (R r s ⇔ (abs r = abs s))
+    QUOTIENT_REL_REP
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒ ∀a b. R (rep a) (rep b) ⇔ (a = b)
+    QUOTIENT_REP_ABS
+      |- ∀R abs rep. QUOTIENT R abs rep ⇒ ∀r. R r r ⇒ R (rep (abs r)) r
+    QUOTIENT_REP_REFL
+      |- ∀R abs rep. QUOTIENT R abs rep ⇒ ∀a. R (rep a) (rep a)
+    QUOTIENT_SYM
+      |- ∀R abs rep. QUOTIENT R abs rep ⇒ ∀x y. R x y ⇒ R y x
+    QUOTIENT_TRANS
+      |- ∀R abs rep. QUOTIENT R abs rep ⇒ ∀x y z. R x y ∧ R y z ⇒ R x z
+    REP_ABS_RSP
+      |- ∀REL abs rep.
+           QUOTIENT REL abs rep ⇒
+           ∀x1 x2. REL x1 x2 ⇒ REL x1 (rep (abs x2))
+    RESPECTS
+      |- ∀R x. respects R x ⇔ R x x
+    RESPECTS_MP
+      |- ∀R1 R2 f x y. respects (R1 ===> R2) f ∧ R1 x y ⇒ R2 (f x) (f y)
+    RESPECTS_REP_ABS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 f x.
+             respects (R1 ===> R2) f ∧ R1 x x ⇒
+             R2 (f (rep1 (abs1 x))) (f x)
+    RESPECTS_THM
+      |- ∀R1 R2 f.
+           respects (R1 ===> R2) f ⇔ ∀x y. R1 x y ⇒ R2 (f x) (f y)
+    RESPECTS_o
+      |- ∀R1 R2 R3 f g.
+           respects (R2 ===> R3) f ∧ respects (R1 ===> R2) g ⇒
+           respects (R1 ===> R3) (f o g)
+    RES_ABSTRACT_ABSTRACT
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 f g.
+             (R1 ===> R2) f g ⇒
+             (R1 ===> R2) (RES_ABSTRACT (respects R1) f) g
+    RES_ABSTRACT_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f1 f2.
+               (R1 ===> R2) f1 f2 ⇒
+               (R1 ===> R2) (RES_ABSTRACT (respects R1) f1)
+                 (RES_ABSTRACT (respects R1) f2)
+    RES_EXISTS_EQUIV
+      |- ∀R m.
+           RES_EXISTS_EQUIV R m ⇔
+           (∃x::respects R. m x) ∧ ∀x y::respects R. m x ∧ m y ⇒ R x y
+    RES_EXISTS_EQUIV_RSP
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀f g.
+             (R ===> $<=>) f g ⇒
+             (RES_EXISTS_EQUIV R f ⇔ RES_EXISTS_EQUIV R g)
+    RES_EXISTS_PRS
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀P f.
+             RES_EXISTS P f ⇔ RES_EXISTS ((abs --> I) P) ((abs --> I) f)
+    RES_EXISTS_REGULAR
+      |- ∀P Q R. (∀x. R x ⇒ P x ⇒ Q x) ⇒ RES_EXISTS R P ⇒ RES_EXISTS R Q
+    RES_EXISTS_RSP
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀f g.
+             (R ===> $<=>) f g ⇒
+             (RES_EXISTS (respects R) f ⇔ RES_EXISTS (respects R) g)
+    RES_EXISTS_UNIQUE_REGULAR
+      |- ∀P R Q.
+           (∀x. P x ⇒ Q x) ∧
+           (∀x y. respects R x ∧ Q x ∧ respects R y ∧ Q y ⇒ R x y) ⇒
+           RES_EXISTS_UNIQUE (respects R) P ⇒
+           RES_EXISTS_EQUIV R Q
+    RES_EXISTS_UNIQUE_REGULAR_SAME
+      |- ∀R P Q.
+           (R ===> $<=>) P Q ⇒
+           RES_EXISTS_UNIQUE (respects R) P ⇒
+           RES_EXISTS_EQUIV R Q
+    RES_EXISTS_UNIQUE_RESPECTS_REGULAR
+      |- ∀R P. RES_EXISTS_UNIQUE (respects R) P ⇒ RES_EXISTS_EQUIV R P
+    RES_FORALL_PRS
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀P f.
+             RES_FORALL P f ⇔ RES_FORALL ((abs --> I) P) ((abs --> I) f)
+    RES_FORALL_REGULAR
+      |- ∀P Q R. (∀x. R x ⇒ P x ⇒ Q x) ⇒ RES_FORALL R P ⇒ RES_FORALL R Q
+    RES_FORALL_RSP
+      |- ∀R abs rep.
+           QUOTIENT R abs rep ⇒
+           ∀f g.
+             (R ===> $<=>) f g ⇒
+             (RES_FORALL (respects R) f ⇔ RES_FORALL (respects R) g)
+    RIGHT_RES_EXISTS_REGULAR
+      |- ∀P R Q. (∀x. R x ∧ (P x ⇒ Q x)) ⇒ $? P ⇒ RES_EXISTS R Q
+    RIGHT_RES_FORALL_REGULAR
+      |- ∀P R Q. (∀x. R x ⇒ P x ⇒ Q x) ⇒ $! P ⇒ RES_FORALL R Q
+    W_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f x.
+               W f x = abs2 (W ((abs1 --> abs1 --> rep2) f) (rep1 x))
+    W_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f1 f2 x1 x2.
+               (R1 ===> R1 ===> R2) f1 f2 ∧ R1 x1 x2 ⇒
+               R2 (W f1 x1) (W f2 x2)
+    literal_case_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f x.
+               literal_case f x =
+               abs2 (literal_case ((abs1 --> rep2) f) (rep1 x))
+    literal_case_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀f g x y.
+               (R1 ===> R2) f g ∧ R1 x y ⇒
+               R2 (literal_case f x) (literal_case g y)
+    o_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀R3 abs3 rep3.
+               QUOTIENT R3 abs3 rep3 ⇒
+               ∀f g.
+                 f o g =
+                 (rep1 --> abs3) ((abs2 --> rep3) f o (abs1 --> rep2) g)
+    o_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀R3 abs3 rep3.
+               QUOTIENT R3 abs3 rep3 ⇒
+               ∀f1 f2 g1 g2.
+                 (R2 ===> R3) f1 f2 ∧ (R1 ===> R2) g1 g2 ⇒
+                 (R1 ===> R3) (f1 o g1) (f2 o g2)

@@ -1,0 +1,3 @@
+\THEOREM TRANSLATE_def string
+|- ∀f s. TRANSLATE f s = CONCAT (MAP f s)
+\ENDTHEOREM

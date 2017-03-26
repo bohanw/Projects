@@ -1,0 +1,1 @@
+folTools.ui: /home/wbh/Downloads/hol-kananaskis-11/sigobj/Abbrev.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Thm.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui folMapping.ui mlibMeter.ui mlibSolver.ui mlibStream.ui mlibTerm.ui mlibThm.ui mlibUseful.ui 

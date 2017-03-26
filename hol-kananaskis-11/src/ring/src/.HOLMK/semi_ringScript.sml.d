@@ -1,0 +1,1 @@
+semi_ringScript.uo: /home/wbh/Downloads/hol-kananaskis-11/sigobj/BasicProvers.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Datatype.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui abs_tools.uo /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui 

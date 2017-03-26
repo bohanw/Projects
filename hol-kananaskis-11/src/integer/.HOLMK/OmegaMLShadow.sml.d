@@ -1,0 +1,1 @@
+OmegaMLShadow.uo: OmegaMLShadow.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbint.ui CooperMath.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/PIntMap.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui intSyntax.ui 

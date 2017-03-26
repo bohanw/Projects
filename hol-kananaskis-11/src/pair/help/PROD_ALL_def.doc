@@ -1,0 +1,3 @@
+\THEOREM PROD_ALL_def pair
+|- ∀P Q p. PROD_ALL P Q p ⇔ P (FST p) ∧ Q (SND p)
+\ENDTHEOREM

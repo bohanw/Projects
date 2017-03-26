@@ -1,0 +1,1 @@
+OmegaShell.uo: OmegaShell.ui CSimp.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Canon.ui CooperMath.ui CooperSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui OmegaMath.ui OmegaSimple.ui OmegaSymbolic.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui intSyntax.ui integerTheory.ui 

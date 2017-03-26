@@ -1,0 +1,1 @@
+ConseqConvScript.uo: Conv.ui Drule.ui Ho_Rewrite.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui Rewrite.ui Tactic.ui Tactical.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolTheory.ui 

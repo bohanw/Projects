@@ -1,0 +1,3 @@
+\THEOREM STRLEN_THM string
+|- (STRLEN "" = 0) ∧ ∀h t. STRLEN (STRING h t) = SUC (STRLEN t)
+\ENDTHEOREM

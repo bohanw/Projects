@@ -1,0 +1,1 @@
+ParseDatatype.uo: ParseDatatype.ui CharSet.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui Parse.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Portable.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui base_tokens.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/locn.ui parse_type.ui qbuf.ui 

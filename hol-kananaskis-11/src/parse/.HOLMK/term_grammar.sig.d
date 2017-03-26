@@ -1,0 +1,1 @@
+term_grammar.ui: Absyn.ui Coding.ui HOLgrammars.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Net.ui Overload.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Portable.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui term_pp_types.uo type_grammar.ui 

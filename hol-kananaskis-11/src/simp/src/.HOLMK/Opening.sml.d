@@ -1,0 +1,1 @@
+Opening.uo: Opening.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui Trace.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/liteLib.ui 

@@ -1,0 +1,3 @@
+\THEOREM ELIM_PFORALL_EVAL pair
+|- $! (UNCURRY (λx. P x)) ⇔ ∀x. $! (P x)
+\ENDTHEOREM

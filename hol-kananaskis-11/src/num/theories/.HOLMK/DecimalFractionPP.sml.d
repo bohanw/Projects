@@ -1,0 +1,1 @@
+DecimalFractionPP.uo: DecimalFractionPP.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbnum.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui numSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/term_pp_types.ui 

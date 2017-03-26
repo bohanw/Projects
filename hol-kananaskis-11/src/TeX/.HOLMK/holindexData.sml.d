@@ -1,0 +1,1 @@
+holindexData.uo: holindexData.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/DB.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Redblackmap.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Redblackset.ui 

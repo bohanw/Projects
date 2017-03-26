@@ -1,0 +1,3 @@
+\THEOREM isPREFIX_STRCAT string
+|- ∀s1 s2. s1 ≼ s2 ⇔ ∃s3. s2 = STRCAT s1 s3
+\ENDTHEOREM

@@ -1,0 +1,1 @@
+term_pp_types.uo: /home/wbh/Downloads/hol-kananaskis-11/sigobj/HOLPP.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HOLset.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui type_grammar.ui 

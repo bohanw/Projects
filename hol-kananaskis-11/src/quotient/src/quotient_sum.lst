@@ -1,0 +1,118 @@
+Theory: quotient_sum
+
+Parents:
+    quotient
+
+Term constants:
+    +++              :(α -> α -> bool) ->
+                      (β -> β -> bool) -> α + β -> α + β -> bool
+    SUM_REL_tupled   :(α -> α -> bool) #
+                      (β -> β -> bool) # (α + β) # (α + β) -> bool
+
+Definitions:
+    SUM_REL_curried_def
+      |- ∀x x1 x2 x3. (x +++ x1) x2 x3 ⇔ SUM_REL_tupled (x,x1,x2,x3)
+    SUM_REL_tupled_primitive_def
+      |- SUM_REL_tupled =
+         WFREC (@R. WF R)
+           (λSUM_REL_tupled a.
+              case a of
+                (R1,R2,INL a1,INL a2) => I (R1 a1 a2)
+              | (R1,R2,INL a1,INR b2') => I F
+              | (R1,R2,INR b1,INL a2') => I F
+              | (R1,R2,INR b1,INR b2) => I (R2 b1 b2))
+
+Theorems:
+    INL_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀a. INL a = (abs1 ++ abs2) (INL (rep1 a))
+    INL_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀a1 a2. R1 a1 a2 ⇒ (R1 +++ R2) (INL a1) (INL a2)
+    INR_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀b. INR b = (abs1 ++ abs2) (INR (rep2 b))
+    INR_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀b1 b2. R2 b1 b2 ⇒ (R1 +++ R2) (INR b1) (INR b2)
+    ISL_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒ ∀a. ISL a ⇔ ISL ((rep1 ++ rep2) a)
+    ISL_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀a1 a2. (R1 +++ R2) a1 a2 ⇒ (ISL a1 ⇔ ISL a2)
+    ISR_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒ ∀a. ISR a ⇔ ISR ((rep1 ++ rep2) a)
+    ISR_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀a1 a2. (R1 +++ R2) a1 a2 ⇒ (ISR a1 ⇔ ISR a2)
+    SUM_EQUIV
+      |- ∀R1 R2. EQUIV R1 ⇒ EQUIV R2 ⇒ EQUIV (R1 +++ R2)
+    SUM_MAP_PRS
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀R3 abs3 rep3.
+               QUOTIENT R3 abs3 rep3 ⇒
+               ∀R4 abs4 rep4.
+                 QUOTIENT R4 abs4 rep4 ⇒
+                 ∀f g.
+                   f ++ g =
+                   ((rep1 ++ rep3) --> (abs2 ++ abs4))
+                     ((abs1 --> rep2) f ++ (abs3 --> rep4) g)
+    SUM_MAP_RSP
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             ∀R3 abs3 rep3.
+               QUOTIENT R3 abs3 rep3 ⇒
+               ∀R4 abs4 rep4.
+                 QUOTIENT R4 abs4 rep4 ⇒
+                 ∀f1 f2 g1 g2.
+                   (R1 ===> R2) f1 f2 ∧ (R3 ===> R4) g1 g2 ⇒
+                   ((R1 +++ R3) ===> (R2 +++ R4)) (f1 ++ g1) (f2 ++ g2)
+    SUM_QUOTIENT
+      |- ∀R1 abs1 rep1.
+           QUOTIENT R1 abs1 rep1 ⇒
+           ∀R2 abs2 rep2.
+             QUOTIENT R2 abs2 rep2 ⇒
+             QUOTIENT (R1 +++ R2) (abs1 ++ abs2) (rep1 ++ rep2)
+    SUM_REL_EQ
+      |- $= +++ $= = $=
+    SUM_REL_def
+      |- ((R1 +++ R2) (INL a1) (INL a2) ⇔ R1 a1 a2) ∧
+         ((R1 +++ R2) (INR b1) (INR b2) ⇔ R2 b1 b2) ∧
+         ((R1 +++ R2) (INL a1) (INR b2) ⇔ F) ∧
+         ((R1 +++ R2) (INR b1) (INL a2) ⇔ F)
+    SUM_REL_ind
+      |- ∀P.
+           (∀R1 R2 a1 a2. P R1 R2 (INL a1) (INL a2)) ∧
+           (∀R1 R2 b1 b2. P R1 R2 (INR b1) (INR b2)) ∧
+           (∀R1 R2 a1 b2. P R1 R2 (INL a1) (INR b2)) ∧
+           (∀R1 R2 b1 a2. P R1 R2 (INR b1) (INL a2)) ⇒
+           ∀v v1 v2 v3. P v v1 v2 v3

@@ -1,0 +1,3 @@
+\THEOREM IMPLODE_ONTO string
+|- ∀s. ∃cs. s = IMPLODE cs
+\ENDTHEOREM

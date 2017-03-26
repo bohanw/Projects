@@ -1,0 +1,3 @@
+\THEOREM STR_def string
+|- ∀c. STR c = STRING c ""
+\ENDTHEOREM

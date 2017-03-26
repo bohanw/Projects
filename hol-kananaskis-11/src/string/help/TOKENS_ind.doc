@@ -1,0 +1,9 @@
+\THEOREM TOKENS_ind string
+|- ∀P'.
+     (∀P. P' P "") ∧
+     (∀P h t.
+        (∀l r. ((l,r) = SPLITP P (STRING h t)) ∧ NULL l ⇒ P' P (TL r)) ∧
+        (∀l r. ((l,r) = SPLITP P (STRING h t)) ∧ ¬NULL l ⇒ P' P r) ⇒
+        P' P (STRING h t)) ⇒
+     ∀v v1. P' v v1
+\ENDTHEOREM

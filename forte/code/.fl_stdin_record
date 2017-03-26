@@ -1,0 +1,43 @@
+// fl version 6..1 
+// invoked in directory /home/wbh/forte/code
+load "/usr/tmp/FL_INIT_QQIPPo";
+load "steSymReduc.fl"
+;
+load "steSymReduc.fl";
+load "steSymReduc.fl";
+load "steSymReduc.fl";
+load "sum.fl";
+load "sum.fl";
+let x  = 1;
+let y = 2;
+sum x y;
+load "steSymReduc.fl";
+load "steSymReduc.fl";
+let spec = load_exe "./example/dxdx.exe"
+
+
+;
+spec;
+spec;
+let s = load_exe "../example/dxdx.exe"
+;
+s;
+load "../code/steSymReduc.fl";
+load "../code/steSymReduc.fl";
+let s = load_exe "../example/designn.exe";
+s;
+let s = load_exe "../example/designn.exe";
+let a = load_exe "../example/designn.exe";
+a;
+print_fsm a;
+print_fsm s;
+let a = load_exe "../example/dxdx.exe";
+print_fsm s;
+print_fsm a;
+load "sum.fl";
+nexlif2exe "../example/dxdx.exlif";
+nexlif2exe "../example/dxdx.exlif";
+nexlif2exe dxdx.exlif;
+nexlif2exe dxdx.exlif;
+nexlif2exe dxdx.exlif;
+nexlif2exe "./dxdx.exlif";
