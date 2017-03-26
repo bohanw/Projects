@@ -1,0 +1,2920 @@
+.model seqx
+.inputs reset
+.outputs prop
+# OpInst: n25[0:0] = (< X Y)
+.names X_0 Y_0 n25_eq_1 n25_lt_1 n25
+---1 1
+0110 1
+.names X_1 Y_1 n25_eq_2 n25_lt_2 n25_lt_1
+---1 1
+0110 1
+.names X_1 Y_1 n25_eq_2 n25_eq_1
+001 1
+111 1
+.names X_2 Y_2 n25_eq_3 n25_lt_3 n25_lt_2
+---1 1
+0110 1
+.names X_2 Y_2 n25_eq_3 n25_eq_2
+001 1
+111 1
+.names X_3 Y_3 n25_eq_4 n25_lt_4 n25_lt_3
+---1 1
+0110 1
+.names X_3 Y_3 n25_eq_4 n25_eq_3
+001 1
+111 1
+.names X_4 Y_4 n25_eq_5 n25_lt_5 n25_lt_4
+---1 1
+0110 1
+.names X_4 Y_4 n25_eq_5 n25_eq_4
+001 1
+111 1
+.names X_5 Y_5 n25_eq_6 n25_lt_6 n25_lt_5
+---1 1
+0110 1
+.names X_5 Y_5 n25_eq_6 n25_eq_5
+001 1
+111 1
+.names X_6 Y_6 n25_eq_7 n25_lt_7 n25_lt_6
+---1 1
+0110 1
+.names X_6 Y_6 n25_eq_7 n25_eq_6
+001 1
+111 1
+.names X_7 Y_7 n25_eq_8 n25_lt_8 n25_lt_7
+---1 1
+0110 1
+.names X_7 Y_7 n25_eq_8 n25_eq_7
+001 1
+111 1
+.names X_8 Y_8 n25_eq_9 n25_lt_9 n25_lt_8
+---1 1
+0110 1
+.names X_8 Y_8 n25_eq_9 n25_eq_8
+001 1
+111 1
+.names X_9 Y_9 n25_eq_10 n25_lt_10 n25_lt_9
+---1 1
+0110 1
+.names X_9 Y_9 n25_eq_10 n25_eq_9
+001 1
+111 1
+.names X_10 Y_10 n25_eq_11 n25_lt_11 n25_lt_10
+---1 1
+0110 1
+.names X_10 Y_10 n25_eq_11 n25_eq_10
+001 1
+111 1
+.names X_11 Y_11 n25_eq_12 n25_lt_12 n25_lt_11
+---1 1
+0110 1
+.names X_11 Y_11 n25_eq_12 n25_eq_11
+001 1
+111 1
+.names X_12 Y_12 n25_eq_13 n25_lt_13 n25_lt_12
+---1 1
+0110 1
+.names X_12 Y_12 n25_eq_13 n25_eq_12
+001 1
+111 1
+.names X_13 Y_13 n25_eq_14 n25_lt_14 n25_lt_13
+---1 1
+0110 1
+.names X_13 Y_13 n25_eq_14 n25_eq_13
+001 1
+111 1
+.names X_14 Y_14 n25_eq_15 n25_lt_15 n25_lt_14
+---1 1
+0110 1
+.names X_14 Y_14 n25_eq_15 n25_eq_14
+001 1
+111 1
+.names X_15 Y_15 n25_eq_16 n25_lt_16 n25_lt_15
+---1 1
+0110 1
+.names X_15 Y_15 n25_eq_16 n25_eq_15
+001 1
+111 1
+.names X_16 Y_16 n25_eq_17 n25_lt_17 n25_lt_16
+---1 1
+0110 1
+.names X_16 Y_16 n25_eq_17 n25_eq_16
+001 1
+111 1
+.names X_17 Y_17 n25_eq_18 n25_lt_18 n25_lt_17
+---1 1
+0110 1
+.names X_17 Y_17 n25_eq_18 n25_eq_17
+001 1
+111 1
+.names X_18 Y_18 n25_eq_19 n25_lt_19 n25_lt_18
+---1 1
+0110 1
+.names X_18 Y_18 n25_eq_19 n25_eq_18
+001 1
+111 1
+.names X_19 Y_19 n25_eq_20 n25_lt_20 n25_lt_19
+---1 1
+0110 1
+.names X_19 Y_19 n25_eq_20 n25_eq_19
+001 1
+111 1
+.names X_20 Y_20 n25_eq_21 n25_lt_21 n25_lt_20
+---1 1
+0110 1
+.names X_20 Y_20 n25_eq_21 n25_eq_20
+001 1
+111 1
+.names X_21 Y_21 n25_eq_22 n25_lt_22 n25_lt_21
+---1 1
+0110 1
+.names X_21 Y_21 n25_eq_22 n25_eq_21
+001 1
+111 1
+.names X_22 Y_22 n25_eq_23 n25_lt_23 n25_lt_22
+---1 1
+0110 1
+.names X_22 Y_22 n25_eq_23 n25_eq_22
+001 1
+111 1
+.names X_23 Y_23 n25_eq_24 n25_lt_24 n25_lt_23
+---1 1
+0110 1
+.names X_23 Y_23 n25_eq_24 n25_eq_23
+001 1
+111 1
+.names X_24 Y_24 n25_eq_25 n25_lt_25 n25_lt_24
+---1 1
+0110 1
+.names X_24 Y_24 n25_eq_25 n25_eq_24
+001 1
+111 1
+.names X_25 Y_25 n25_eq_26 n25_lt_26 n25_lt_25
+---1 1
+0110 1
+.names X_25 Y_25 n25_eq_26 n25_eq_25
+001 1
+111 1
+.names X_26 Y_26 n25_eq_27 n25_lt_27 n25_lt_26
+---1 1
+0110 1
+.names X_26 Y_26 n25_eq_27 n25_eq_26
+001 1
+111 1
+.names X_27 Y_27 n25_eq_28 n25_lt_28 n25_lt_27
+---1 1
+0110 1
+.names X_27 Y_27 n25_eq_28 n25_eq_27
+001 1
+111 1
+.names X_28 Y_28 n25_eq_29 n25_lt_29 n25_lt_28
+---1 1
+0110 1
+.names X_28 Y_28 n25_eq_29 n25_eq_28
+001 1
+111 1
+.names X_29 Y_29 n25_eq_30 n25_lt_30 n25_lt_29
+---1 1
+0110 1
+.names X_29 Y_29 n25_eq_30 n25_eq_29
+001 1
+111 1
+.names X_30 Y_30 n25_eq_31 n25_lt_31 n25_lt_30
+---1 1
+0110 1
+.names X_30 Y_30 n25_eq_31 n25_eq_30
+001 1
+111 1
+.names X_31 Y_31 n25_eq_32 n25_lt_32 n25_lt_31
+---1 1
+0110 1
+.names X_31 Y_31 n25_eq_32 n25_eq_31
+001 1
+111 1
+.names X_32 Y_32 n25_eq_33 n25_lt_33 n25_lt_32
+---1 1
+0110 1
+.names X_32 Y_32 n25_eq_33 n25_eq_32
+001 1
+111 1
+.names X_33 Y_33 n25_eq_34 n25_lt_34 n25_lt_33
+---1 1
+0110 1
+.names X_33 Y_33 n25_eq_34 n25_eq_33
+001 1
+111 1
+.names X_34 Y_34 n25_eq_35 n25_lt_35 n25_lt_34
+---1 1
+0110 1
+.names X_34 Y_34 n25_eq_35 n25_eq_34
+001 1
+111 1
+.names X_35 Y_35 n25_eq_36 n25_lt_36 n25_lt_35
+---1 1
+0110 1
+.names X_35 Y_35 n25_eq_36 n25_eq_35
+001 1
+111 1
+.names X_36 Y_36 n25_eq_37 n25_lt_37 n25_lt_36
+---1 1
+0110 1
+.names X_36 Y_36 n25_eq_37 n25_eq_36
+001 1
+111 1
+.names X_37 Y_37 n25_eq_38 n25_lt_38 n25_lt_37
+---1 1
+0110 1
+.names X_37 Y_37 n25_eq_38 n25_eq_37
+001 1
+111 1
+.names X_38 Y_38 n25_eq_39 n25_lt_39 n25_lt_38
+---1 1
+0110 1
+.names X_38 Y_38 n25_eq_39 n25_eq_38
+001 1
+111 1
+.names X_39 Y_39 n25_lt_39
+01 1
+.names X_39 Y_39 n25_eq_39
+00 1
+11 1
+
+# OpInst: n35[0:0] = (! n25)
+.names n25 n35
+0 1
+
+.names n35 prop
+0 1
+
+# NSF
+# OpInst: n8[0:0] = (< Y X)
+.names Y_0 X_0 n8_eq_1 n8_lt_1 n8
+---1 1
+0110 1
+.names Y_1 X_1 n8_eq_2 n8_lt_2 n8_lt_1
+---1 1
+0110 1
+.names Y_1 X_1 n8_eq_2 n8_eq_1
+001 1
+111 1
+.names Y_2 X_2 n8_eq_3 n8_lt_3 n8_lt_2
+---1 1
+0110 1
+.names Y_2 X_2 n8_eq_3 n8_eq_2
+001 1
+111 1
+.names Y_3 X_3 n8_eq_4 n8_lt_4 n8_lt_3
+---1 1
+0110 1
+.names Y_3 X_3 n8_eq_4 n8_eq_3
+001 1
+111 1
+.names Y_4 X_4 n8_eq_5 n8_lt_5 n8_lt_4
+---1 1
+0110 1
+.names Y_4 X_4 n8_eq_5 n8_eq_4
+001 1
+111 1
+.names Y_5 X_5 n8_eq_6 n8_lt_6 n8_lt_5
+---1 1
+0110 1
+.names Y_5 X_5 n8_eq_6 n8_eq_5
+001 1
+111 1
+.names Y_6 X_6 n8_eq_7 n8_lt_7 n8_lt_6
+---1 1
+0110 1
+.names Y_6 X_6 n8_eq_7 n8_eq_6
+001 1
+111 1
+.names Y_7 X_7 n8_eq_8 n8_lt_8 n8_lt_7
+---1 1
+0110 1
+.names Y_7 X_7 n8_eq_8 n8_eq_7
+001 1
+111 1
+.names Y_8 X_8 n8_eq_9 n8_lt_9 n8_lt_8
+---1 1
+0110 1
+.names Y_8 X_8 n8_eq_9 n8_eq_8
+001 1
+111 1
+.names Y_9 X_9 n8_eq_10 n8_lt_10 n8_lt_9
+---1 1
+0110 1
+.names Y_9 X_9 n8_eq_10 n8_eq_9
+001 1
+111 1
+.names Y_10 X_10 n8_eq_11 n8_lt_11 n8_lt_10
+---1 1
+0110 1
+.names Y_10 X_10 n8_eq_11 n8_eq_10
+001 1
+111 1
+.names Y_11 X_11 n8_eq_12 n8_lt_12 n8_lt_11
+---1 1
+0110 1
+.names Y_11 X_11 n8_eq_12 n8_eq_11
+001 1
+111 1
+.names Y_12 X_12 n8_eq_13 n8_lt_13 n8_lt_12
+---1 1
+0110 1
+.names Y_12 X_12 n8_eq_13 n8_eq_12
+001 1
+111 1
+.names Y_13 X_13 n8_eq_14 n8_lt_14 n8_lt_13
+---1 1
+0110 1
+.names Y_13 X_13 n8_eq_14 n8_eq_13
+001 1
+111 1
+.names Y_14 X_14 n8_eq_15 n8_lt_15 n8_lt_14
+---1 1
+0110 1
+.names Y_14 X_14 n8_eq_15 n8_eq_14
+001 1
+111 1
+.names Y_15 X_15 n8_eq_16 n8_lt_16 n8_lt_15
+---1 1
+0110 1
+.names Y_15 X_15 n8_eq_16 n8_eq_15
+001 1
+111 1
+.names Y_16 X_16 n8_eq_17 n8_lt_17 n8_lt_16
+---1 1
+0110 1
+.names Y_16 X_16 n8_eq_17 n8_eq_16
+001 1
+111 1
+.names Y_17 X_17 n8_eq_18 n8_lt_18 n8_lt_17
+---1 1
+0110 1
+.names Y_17 X_17 n8_eq_18 n8_eq_17
+001 1
+111 1
+.names Y_18 X_18 n8_eq_19 n8_lt_19 n8_lt_18
+---1 1
+0110 1
+.names Y_18 X_18 n8_eq_19 n8_eq_18
+001 1
+111 1
+.names Y_19 X_19 n8_eq_20 n8_lt_20 n8_lt_19
+---1 1
+0110 1
+.names Y_19 X_19 n8_eq_20 n8_eq_19
+001 1
+111 1
+.names Y_20 X_20 n8_eq_21 n8_lt_21 n8_lt_20
+---1 1
+0110 1
+.names Y_20 X_20 n8_eq_21 n8_eq_20
+001 1
+111 1
+.names Y_21 X_21 n8_eq_22 n8_lt_22 n8_lt_21
+---1 1
+0110 1
+.names Y_21 X_21 n8_eq_22 n8_eq_21
+001 1
+111 1
+.names Y_22 X_22 n8_eq_23 n8_lt_23 n8_lt_22
+---1 1
+0110 1
+.names Y_22 X_22 n8_eq_23 n8_eq_22
+001 1
+111 1
+.names Y_23 X_23 n8_eq_24 n8_lt_24 n8_lt_23
+---1 1
+0110 1
+.names Y_23 X_23 n8_eq_24 n8_eq_23
+001 1
+111 1
+.names Y_24 X_24 n8_eq_25 n8_lt_25 n8_lt_24
+---1 1
+0110 1
+.names Y_24 X_24 n8_eq_25 n8_eq_24
+001 1
+111 1
+.names Y_25 X_25 n8_eq_26 n8_lt_26 n8_lt_25
+---1 1
+0110 1
+.names Y_25 X_25 n8_eq_26 n8_eq_25
+001 1
+111 1
+.names Y_26 X_26 n8_eq_27 n8_lt_27 n8_lt_26
+---1 1
+0110 1
+.names Y_26 X_26 n8_eq_27 n8_eq_26
+001 1
+111 1
+.names Y_27 X_27 n8_eq_28 n8_lt_28 n8_lt_27
+---1 1
+0110 1
+.names Y_27 X_27 n8_eq_28 n8_eq_27
+001 1
+111 1
+.names Y_28 X_28 n8_eq_29 n8_lt_29 n8_lt_28
+---1 1
+0110 1
+.names Y_28 X_28 n8_eq_29 n8_eq_28
+001 1
+111 1
+.names Y_29 X_29 n8_eq_30 n8_lt_30 n8_lt_29
+---1 1
+0110 1
+.names Y_29 X_29 n8_eq_30 n8_eq_29
+001 1
+111 1
+.names Y_30 X_30 n8_eq_31 n8_lt_31 n8_lt_30
+---1 1
+0110 1
+.names Y_30 X_30 n8_eq_31 n8_eq_30
+001 1
+111 1
+.names Y_31 X_31 n8_eq_32 n8_lt_32 n8_lt_31
+---1 1
+0110 1
+.names Y_31 X_31 n8_eq_32 n8_eq_31
+001 1
+111 1
+.names Y_32 X_32 n8_eq_33 n8_lt_33 n8_lt_32
+---1 1
+0110 1
+.names Y_32 X_32 n8_eq_33 n8_eq_32
+001 1
+111 1
+.names Y_33 X_33 n8_eq_34 n8_lt_34 n8_lt_33
+---1 1
+0110 1
+.names Y_33 X_33 n8_eq_34 n8_eq_33
+001 1
+111 1
+.names Y_34 X_34 n8_eq_35 n8_lt_35 n8_lt_34
+---1 1
+0110 1
+.names Y_34 X_34 n8_eq_35 n8_eq_34
+001 1
+111 1
+.names Y_35 X_35 n8_eq_36 n8_lt_36 n8_lt_35
+---1 1
+0110 1
+.names Y_35 X_35 n8_eq_36 n8_eq_35
+001 1
+111 1
+.names Y_36 X_36 n8_eq_37 n8_lt_37 n8_lt_36
+---1 1
+0110 1
+.names Y_36 X_36 n8_eq_37 n8_eq_36
+001 1
+111 1
+.names Y_37 X_37 n8_eq_38 n8_lt_38 n8_lt_37
+---1 1
+0110 1
+.names Y_37 X_37 n8_eq_38 n8_eq_37
+001 1
+111 1
+.names Y_38 X_38 n8_eq_39 n8_lt_39 n8_lt_38
+---1 1
+0110 1
+.names Y_38 X_38 n8_eq_39 n8_eq_38
+001 1
+111 1
+.names Y_39 X_39 n8_lt_39
+01 1
+.names Y_39 X_39 n8_eq_39
+00 1
+11 1
+
+# OpInst: n9[0:0] = (&& reset n8)
+.names reset n8 n9
+11 1
+
+# OpInst: n10[0:0] = (! n8)
+.names n8 n10
+0 1
+
+# NumInst: n11 (val=40'd1099511627775)
+.names n11_0
+1
+.names n11_1
+1
+.names n11_2
+1
+.names n11_3
+1
+.names n11_4
+1
+.names n11_5
+1
+.names n11_6
+1
+.names n11_7
+1
+.names n11_8
+1
+.names n11_9
+1
+.names n11_10
+1
+.names n11_11
+1
+.names n11_12
+1
+.names n11_13
+1
+.names n11_14
+1
+.names n11_15
+1
+.names n11_16
+1
+.names n11_17
+1
+.names n11_18
+1
+.names n11_19
+1
+.names n11_20
+1
+.names n11_21
+1
+.names n11_22
+1
+.names n11_23
+1
+.names n11_24
+1
+.names n11_25
+1
+.names n11_26
+1
+.names n11_27
+1
+.names n11_28
+1
+.names n11_29
+1
+.names n11_30
+1
+.names n11_31
+1
+.names n11_32
+1
+.names n11_33
+1
+.names n11_34
+1
+.names n11_35
+1
+.names n11_36
+1
+.names n11_37
+1
+.names n11_38
+1
+.names n11_39
+1
+
+# OpInst: n12[0:0] = (!= X n11)
+.names X_0 n11_0 n12_neq_xor_0
+10 1
+01 1
+.names X_1 n11_1 n12_neq_xor_1
+10 1
+01 1
+.names X_2 n11_2 n12_neq_xor_2
+10 1
+01 1
+.names X_3 n11_3 n12_neq_xor_3
+10 1
+01 1
+.names X_4 n11_4 n12_neq_xor_4
+10 1
+01 1
+.names X_5 n11_5 n12_neq_xor_5
+10 1
+01 1
+.names X_6 n11_6 n12_neq_xor_6
+10 1
+01 1
+.names X_7 n11_7 n12_neq_xor_7
+10 1
+01 1
+.names X_8 n11_8 n12_neq_xor_8
+10 1
+01 1
+.names X_9 n11_9 n12_neq_xor_9
+10 1
+01 1
+.names X_10 n11_10 n12_neq_xor_10
+10 1
+01 1
+.names X_11 n11_11 n12_neq_xor_11
+10 1
+01 1
+.names X_12 n11_12 n12_neq_xor_12
+10 1
+01 1
+.names X_13 n11_13 n12_neq_xor_13
+10 1
+01 1
+.names X_14 n11_14 n12_neq_xor_14
+10 1
+01 1
+.names X_15 n11_15 n12_neq_xor_15
+10 1
+01 1
+.names X_16 n11_16 n12_neq_xor_16
+10 1
+01 1
+.names X_17 n11_17 n12_neq_xor_17
+10 1
+01 1
+.names X_18 n11_18 n12_neq_xor_18
+10 1
+01 1
+.names X_19 n11_19 n12_neq_xor_19
+10 1
+01 1
+.names X_20 n11_20 n12_neq_xor_20
+10 1
+01 1
+.names X_21 n11_21 n12_neq_xor_21
+10 1
+01 1
+.names X_22 n11_22 n12_neq_xor_22
+10 1
+01 1
+.names X_23 n11_23 n12_neq_xor_23
+10 1
+01 1
+.names X_24 n11_24 n12_neq_xor_24
+10 1
+01 1
+.names X_25 n11_25 n12_neq_xor_25
+10 1
+01 1
+.names X_26 n11_26 n12_neq_xor_26
+10 1
+01 1
+.names X_27 n11_27 n12_neq_xor_27
+10 1
+01 1
+.names X_28 n11_28 n12_neq_xor_28
+10 1
+01 1
+.names X_29 n11_29 n12_neq_xor_29
+10 1
+01 1
+.names X_30 n11_30 n12_neq_xor_30
+10 1
+01 1
+.names X_31 n11_31 n12_neq_xor_31
+10 1
+01 1
+.names X_32 n11_32 n12_neq_xor_32
+10 1
+01 1
+.names X_33 n11_33 n12_neq_xor_33
+10 1
+01 1
+.names X_34 n11_34 n12_neq_xor_34
+10 1
+01 1
+.names X_35 n11_35 n12_neq_xor_35
+10 1
+01 1
+.names X_36 n11_36 n12_neq_xor_36
+10 1
+01 1
+.names X_37 n11_37 n12_neq_xor_37
+10 1
+01 1
+.names X_38 n11_38 n12_neq_xor_38
+10 1
+01 1
+.names X_39 n11_39 n12_neq_xor_39
+10 1
+01 1
+.names n12_neq_xor_39 n12_neq_xor_38 n12_neq_xor_37 n12_neq_xor_36 n12_neq_xor_35 n12_neq_xor_34 n12_neq_xor_33 n12_neq_xor_32 n12_neq_xor_31 n12_neq_xor_30 n12_neq_xor_29 n12_neq_xor_28 n12_neq_xor_27 n12_neq_xor_26 n12_neq_xor_25 n12_neq_xor_24 n12_neq_xor_23 n12_neq_xor_22 n12_neq_xor_21 n12_neq_xor_20 n12_neq_xor_19 n12_neq_xor_18 n12_neq_xor_17 n12_neq_xor_16 n12_neq_xor_15 n12_neq_xor_14 n12_neq_xor_13 n12_neq_xor_12 n12_neq_xor_11 n12_neq_xor_10 n12_neq_xor_9 n12_neq_xor_8 n12_neq_xor_7 n12_neq_xor_6 n12_neq_xor_5 n12_neq_xor_4 n12_neq_xor_3 n12_neq_xor_2 n12_neq_xor_1 n12_neq_xor_0 n12
+---------------------------------------1 1
+--------------------------------------1- 1
+-------------------------------------1-- 1
+------------------------------------1--- 1
+-----------------------------------1---- 1
+----------------------------------1----- 1
+---------------------------------1------ 1
+--------------------------------1------- 1
+-------------------------------1-------- 1
+------------------------------1--------- 1
+-----------------------------1---------- 1
+----------------------------1----------- 1
+---------------------------1------------ 1
+--------------------------1------------- 1
+-------------------------1-------------- 1
+------------------------1--------------- 1
+-----------------------1---------------- 1
+----------------------1----------------- 1
+---------------------1------------------ 1
+--------------------1------------------- 1
+-------------------1-------------------- 1
+------------------1--------------------- 1
+-----------------1---------------------- 1
+----------------1----------------------- 1
+---------------1------------------------ 1
+--------------1------------------------- 1
+-------------1-------------------------- 1
+------------1--------------------------- 1
+-----------1---------------------------- 1
+----------1----------------------------- 1
+---------1------------------------------ 1
+--------1------------------------------- 1
+-------1-------------------------------- 1
+------1--------------------------------- 1
+-----1---------------------------------- 1
+----1----------------------------------- 1
+---1------------------------------------ 1
+--1------------------------------------- 1
+-1-------------------------------------- 1
+1--------------------------------------- 1
+
+# OpInst: n13[0:0] = (|| n10 n12)
+.names n10 n12 n13
+1- 1
+-1 1
+
+# NumInst: n14 (val=40'd1)
+.names n14_0
+1
+.names n14_1
+.names n14_2
+.names n14_3
+.names n14_4
+.names n14_5
+.names n14_6
+.names n14_7
+.names n14_8
+.names n14_9
+.names n14_10
+.names n14_11
+.names n14_12
+.names n14_13
+.names n14_14
+.names n14_15
+.names n14_16
+.names n14_17
+.names n14_18
+.names n14_19
+.names n14_20
+.names n14_21
+.names n14_22
+.names n14_23
+.names n14_24
+.names n14_25
+.names n14_26
+.names n14_27
+.names n14_28
+.names n14_29
+.names n14_30
+.names n14_31
+.names n14_32
+.names n14_33
+.names n14_34
+.names n14_35
+.names n14_36
+.names n14_37
+.names n14_38
+.names n14_39
+
+# OpInst: n15[39:0] = (+ Y n14)
+.names Y_0 n14_0 n15_0
+10 1
+01 1
+.names Y_0 n14_0 n15_carry_0
+11 1
+.names n15_carry_0 Y_1 n14_1 n15_1
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_0 Y_1 n14_1 n15_carry_1
+-11 1
+1-1 1
+11- 1
+.names n15_carry_1 Y_2 n14_2 n15_2
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_1 Y_2 n14_2 n15_carry_2
+-11 1
+1-1 1
+11- 1
+.names n15_carry_2 Y_3 n14_3 n15_3
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_2 Y_3 n14_3 n15_carry_3
+-11 1
+1-1 1
+11- 1
+.names n15_carry_3 Y_4 n14_4 n15_4
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_3 Y_4 n14_4 n15_carry_4
+-11 1
+1-1 1
+11- 1
+.names n15_carry_4 Y_5 n14_5 n15_5
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_4 Y_5 n14_5 n15_carry_5
+-11 1
+1-1 1
+11- 1
+.names n15_carry_5 Y_6 n14_6 n15_6
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_5 Y_6 n14_6 n15_carry_6
+-11 1
+1-1 1
+11- 1
+.names n15_carry_6 Y_7 n14_7 n15_7
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_6 Y_7 n14_7 n15_carry_7
+-11 1
+1-1 1
+11- 1
+.names n15_carry_7 Y_8 n14_8 n15_8
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_7 Y_8 n14_8 n15_carry_8
+-11 1
+1-1 1
+11- 1
+.names n15_carry_8 Y_9 n14_9 n15_9
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_8 Y_9 n14_9 n15_carry_9
+-11 1
+1-1 1
+11- 1
+.names n15_carry_9 Y_10 n14_10 n15_10
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_9 Y_10 n14_10 n15_carry_10
+-11 1
+1-1 1
+11- 1
+.names n15_carry_10 Y_11 n14_11 n15_11
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_10 Y_11 n14_11 n15_carry_11
+-11 1
+1-1 1
+11- 1
+.names n15_carry_11 Y_12 n14_12 n15_12
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_11 Y_12 n14_12 n15_carry_12
+-11 1
+1-1 1
+11- 1
+.names n15_carry_12 Y_13 n14_13 n15_13
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_12 Y_13 n14_13 n15_carry_13
+-11 1
+1-1 1
+11- 1
+.names n15_carry_13 Y_14 n14_14 n15_14
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_13 Y_14 n14_14 n15_carry_14
+-11 1
+1-1 1
+11- 1
+.names n15_carry_14 Y_15 n14_15 n15_15
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_14 Y_15 n14_15 n15_carry_15
+-11 1
+1-1 1
+11- 1
+.names n15_carry_15 Y_16 n14_16 n15_16
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_15 Y_16 n14_16 n15_carry_16
+-11 1
+1-1 1
+11- 1
+.names n15_carry_16 Y_17 n14_17 n15_17
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_16 Y_17 n14_17 n15_carry_17
+-11 1
+1-1 1
+11- 1
+.names n15_carry_17 Y_18 n14_18 n15_18
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_17 Y_18 n14_18 n15_carry_18
+-11 1
+1-1 1
+11- 1
+.names n15_carry_18 Y_19 n14_19 n15_19
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_18 Y_19 n14_19 n15_carry_19
+-11 1
+1-1 1
+11- 1
+.names n15_carry_19 Y_20 n14_20 n15_20
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_19 Y_20 n14_20 n15_carry_20
+-11 1
+1-1 1
+11- 1
+.names n15_carry_20 Y_21 n14_21 n15_21
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_20 Y_21 n14_21 n15_carry_21
+-11 1
+1-1 1
+11- 1
+.names n15_carry_21 Y_22 n14_22 n15_22
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_21 Y_22 n14_22 n15_carry_22
+-11 1
+1-1 1
+11- 1
+.names n15_carry_22 Y_23 n14_23 n15_23
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_22 Y_23 n14_23 n15_carry_23
+-11 1
+1-1 1
+11- 1
+.names n15_carry_23 Y_24 n14_24 n15_24
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_23 Y_24 n14_24 n15_carry_24
+-11 1
+1-1 1
+11- 1
+.names n15_carry_24 Y_25 n14_25 n15_25
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_24 Y_25 n14_25 n15_carry_25
+-11 1
+1-1 1
+11- 1
+.names n15_carry_25 Y_26 n14_26 n15_26
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_25 Y_26 n14_26 n15_carry_26
+-11 1
+1-1 1
+11- 1
+.names n15_carry_26 Y_27 n14_27 n15_27
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_26 Y_27 n14_27 n15_carry_27
+-11 1
+1-1 1
+11- 1
+.names n15_carry_27 Y_28 n14_28 n15_28
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_27 Y_28 n14_28 n15_carry_28
+-11 1
+1-1 1
+11- 1
+.names n15_carry_28 Y_29 n14_29 n15_29
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_28 Y_29 n14_29 n15_carry_29
+-11 1
+1-1 1
+11- 1
+.names n15_carry_29 Y_30 n14_30 n15_30
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_29 Y_30 n14_30 n15_carry_30
+-11 1
+1-1 1
+11- 1
+.names n15_carry_30 Y_31 n14_31 n15_31
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_30 Y_31 n14_31 n15_carry_31
+-11 1
+1-1 1
+11- 1
+.names n15_carry_31 Y_32 n14_32 n15_32
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_31 Y_32 n14_32 n15_carry_32
+-11 1
+1-1 1
+11- 1
+.names n15_carry_32 Y_33 n14_33 n15_33
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_32 Y_33 n14_33 n15_carry_33
+-11 1
+1-1 1
+11- 1
+.names n15_carry_33 Y_34 n14_34 n15_34
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_33 Y_34 n14_34 n15_carry_34
+-11 1
+1-1 1
+11- 1
+.names n15_carry_34 Y_35 n14_35 n15_35
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_34 Y_35 n14_35 n15_carry_35
+-11 1
+1-1 1
+11- 1
+.names n15_carry_35 Y_36 n14_36 n15_36
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_35 Y_36 n14_36 n15_carry_36
+-11 1
+1-1 1
+11- 1
+.names n15_carry_36 Y_37 n14_37 n15_37
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_36 Y_37 n14_37 n15_carry_37
+-11 1
+1-1 1
+11- 1
+.names n15_carry_37 Y_38 n14_38 n15_38
+100 1
+010 1
+001 1
+111 1
+.names n15_carry_37 Y_38 n14_38 n15_carry_38
+-11 1
+1-1 1
+11- 1
+.names n15_carry_38 Y_39 n14_39 n15_39
+100 1
+010 1
+001 1
+111 1
+
+# OpInst: n16=n13 ? n15 : X
+.names n13 n15_0 X_0 n16_0
+11- 1
+0-1 1
+.names n13 n15_1 X_1 n16_1
+11- 1
+0-1 1
+.names n13 n15_2 X_2 n16_2
+11- 1
+0-1 1
+.names n13 n15_3 X_3 n16_3
+11- 1
+0-1 1
+.names n13 n15_4 X_4 n16_4
+11- 1
+0-1 1
+.names n13 n15_5 X_5 n16_5
+11- 1
+0-1 1
+.names n13 n15_6 X_6 n16_6
+11- 1
+0-1 1
+.names n13 n15_7 X_7 n16_7
+11- 1
+0-1 1
+.names n13 n15_8 X_8 n16_8
+11- 1
+0-1 1
+.names n13 n15_9 X_9 n16_9
+11- 1
+0-1 1
+.names n13 n15_10 X_10 n16_10
+11- 1
+0-1 1
+.names n13 n15_11 X_11 n16_11
+11- 1
+0-1 1
+.names n13 n15_12 X_12 n16_12
+11- 1
+0-1 1
+.names n13 n15_13 X_13 n16_13
+11- 1
+0-1 1
+.names n13 n15_14 X_14 n16_14
+11- 1
+0-1 1
+.names n13 n15_15 X_15 n16_15
+11- 1
+0-1 1
+.names n13 n15_16 X_16 n16_16
+11- 1
+0-1 1
+.names n13 n15_17 X_17 n16_17
+11- 1
+0-1 1
+.names n13 n15_18 X_18 n16_18
+11- 1
+0-1 1
+.names n13 n15_19 X_19 n16_19
+11- 1
+0-1 1
+.names n13 n15_20 X_20 n16_20
+11- 1
+0-1 1
+.names n13 n15_21 X_21 n16_21
+11- 1
+0-1 1
+.names n13 n15_22 X_22 n16_22
+11- 1
+0-1 1
+.names n13 n15_23 X_23 n16_23
+11- 1
+0-1 1
+.names n13 n15_24 X_24 n16_24
+11- 1
+0-1 1
+.names n13 n15_25 X_25 n16_25
+11- 1
+0-1 1
+.names n13 n15_26 X_26 n16_26
+11- 1
+0-1 1
+.names n13 n15_27 X_27 n16_27
+11- 1
+0-1 1
+.names n13 n15_28 X_28 n16_28
+11- 1
+0-1 1
+.names n13 n15_29 X_29 n16_29
+11- 1
+0-1 1
+.names n13 n15_30 X_30 n16_30
+11- 1
+0-1 1
+.names n13 n15_31 X_31 n16_31
+11- 1
+0-1 1
+.names n13 n15_32 X_32 n16_32
+11- 1
+0-1 1
+.names n13 n15_33 X_33 n16_33
+11- 1
+0-1 1
+.names n13 n15_34 X_34 n16_34
+11- 1
+0-1 1
+.names n13 n15_35 X_35 n16_35
+11- 1
+0-1 1
+.names n13 n15_36 X_36 n16_36
+11- 1
+0-1 1
+.names n13 n15_37 X_37 n16_37
+11- 1
+0-1 1
+.names n13 n15_38 X_38 n16_38
+11- 1
+0-1 1
+.names n13 n15_39 X_39 n16_39
+11- 1
+0-1 1
+
+# OpInst: n17=n9 ? Y : n16
+.names n9 Y_0 n16_0 n17_0
+11- 1
+0-1 1
+.names n9 Y_1 n16_1 n17_1
+11- 1
+0-1 1
+.names n9 Y_2 n16_2 n17_2
+11- 1
+0-1 1
+.names n9 Y_3 n16_3 n17_3
+11- 1
+0-1 1
+.names n9 Y_4 n16_4 n17_4
+11- 1
+0-1 1
+.names n9 Y_5 n16_5 n17_5
+11- 1
+0-1 1
+.names n9 Y_6 n16_6 n17_6
+11- 1
+0-1 1
+.names n9 Y_7 n16_7 n17_7
+11- 1
+0-1 1
+.names n9 Y_8 n16_8 n17_8
+11- 1
+0-1 1
+.names n9 Y_9 n16_9 n17_9
+11- 1
+0-1 1
+.names n9 Y_10 n16_10 n17_10
+11- 1
+0-1 1
+.names n9 Y_11 n16_11 n17_11
+11- 1
+0-1 1
+.names n9 Y_12 n16_12 n17_12
+11- 1
+0-1 1
+.names n9 Y_13 n16_13 n17_13
+11- 1
+0-1 1
+.names n9 Y_14 n16_14 n17_14
+11- 1
+0-1 1
+.names n9 Y_15 n16_15 n17_15
+11- 1
+0-1 1
+.names n9 Y_16 n16_16 n17_16
+11- 1
+0-1 1
+.names n9 Y_17 n16_17 n17_17
+11- 1
+0-1 1
+.names n9 Y_18 n16_18 n17_18
+11- 1
+0-1 1
+.names n9 Y_19 n16_19 n17_19
+11- 1
+0-1 1
+.names n9 Y_20 n16_20 n17_20
+11- 1
+0-1 1
+.names n9 Y_21 n16_21 n17_21
+11- 1
+0-1 1
+.names n9 Y_22 n16_22 n17_22
+11- 1
+0-1 1
+.names n9 Y_23 n16_23 n17_23
+11- 1
+0-1 1
+.names n9 Y_24 n16_24 n17_24
+11- 1
+0-1 1
+.names n9 Y_25 n16_25 n17_25
+11- 1
+0-1 1
+.names n9 Y_26 n16_26 n17_26
+11- 1
+0-1 1
+.names n9 Y_27 n16_27 n17_27
+11- 1
+0-1 1
+.names n9 Y_28 n16_28 n17_28
+11- 1
+0-1 1
+.names n9 Y_29 n16_29 n17_29
+11- 1
+0-1 1
+.names n9 Y_30 n16_30 n17_30
+11- 1
+0-1 1
+.names n9 Y_31 n16_31 n17_31
+11- 1
+0-1 1
+.names n9 Y_32 n16_32 n17_32
+11- 1
+0-1 1
+.names n9 Y_33 n16_33 n17_33
+11- 1
+0-1 1
+.names n9 Y_34 n16_34 n17_34
+11- 1
+0-1 1
+.names n9 Y_35 n16_35 n17_35
+11- 1
+0-1 1
+.names n9 Y_36 n16_36 n17_36
+11- 1
+0-1 1
+.names n9 Y_37 n16_37 n17_37
+11- 1
+0-1 1
+.names n9 Y_38 n16_38 n17_38
+11- 1
+0-1 1
+.names n9 Y_39 n16_39 n17_39
+11- 1
+0-1 1
+
+.latch n17_0 Y_0 0
+.latch n17_1 Y_1 0
+.latch n17_2 Y_2 0
+.latch n17_3 Y_3 0
+.latch n17_4 Y_4 0
+.latch n17_5 Y_5 0
+.latch n17_6 Y_6 0
+.latch n17_7 Y_7 0
+.latch n17_8 Y_8 0
+.latch n17_9 Y_9 0
+.latch n17_10 Y_10 0
+.latch n17_11 Y_11 0
+.latch n17_12 Y_12 0
+.latch n17_13 Y_13 0
+.latch n17_14 Y_14 0
+.latch n17_15 Y_15 0
+.latch n17_16 Y_16 0
+.latch n17_17 Y_17 0
+.latch n17_18 Y_18 0
+.latch n17_19 Y_19 0
+.latch n17_20 Y_20 0
+.latch n17_21 Y_21 0
+.latch n17_22 Y_22 0
+.latch n17_23 Y_23 0
+.latch n17_24 Y_24 0
+.latch n17_25 Y_25 0
+.latch n17_26 Y_26 0
+.latch n17_27 Y_27 0
+.latch n17_28 Y_28 0
+.latch n17_29 Y_29 0
+.latch n17_30 Y_30 0
+.latch n17_31 Y_31 0
+.latch n17_32 Y_32 0
+.latch n17_33 Y_33 0
+.latch n17_34 Y_34 0
+.latch n17_35 Y_35 0
+.latch n17_36 Y_36 0
+.latch n17_37 Y_37 0
+.latch n17_38 Y_38 0
+.latch n17_39 Y_39 0
+
+
+# NSF
+# NumInst: n20 (val=40'd549755813887)
+.names n20_0
+1
+.names n20_1
+1
+.names n20_2
+1
+.names n20_3
+1
+.names n20_4
+1
+.names n20_5
+1
+.names n20_6
+1
+.names n20_7
+1
+.names n20_8
+1
+.names n20_9
+1
+.names n20_10
+1
+.names n20_11
+1
+.names n20_12
+1
+.names n20_13
+1
+.names n20_14
+1
+.names n20_15
+1
+.names n20_16
+1
+.names n20_17
+1
+.names n20_18
+1
+.names n20_19
+1
+.names n20_20
+1
+.names n20_21
+1
+.names n20_22
+1
+.names n20_23
+1
+.names n20_24
+1
+.names n20_25
+1
+.names n20_26
+1
+.names n20_27
+1
+.names n20_28
+1
+.names n20_29
+1
+.names n20_30
+1
+.names n20_31
+1
+.names n20_32
+1
+.names n20_33
+1
+.names n20_34
+1
+.names n20_35
+1
+.names n20_36
+1
+.names n20_37
+1
+.names n20_38
+1
+.names n20_39
+
+# ExInst: n21 = X [39:1]
+.names X_1 n21_0
+1 1
+.names X_2 n21_1
+1 1
+.names X_3 n21_2
+1 1
+.names X_4 n21_3
+1 1
+.names X_5 n21_4
+1 1
+.names X_6 n21_5
+1 1
+.names X_7 n21_6
+1 1
+.names X_8 n21_7
+1 1
+.names X_9 n21_8
+1 1
+.names X_10 n21_9
+1 1
+.names X_11 n21_10
+1 1
+.names X_12 n21_11
+1 1
+.names X_13 n21_12
+1 1
+.names X_14 n21_13
+1 1
+.names X_15 n21_14
+1 1
+.names X_16 n21_15
+1 1
+.names X_17 n21_16
+1 1
+.names X_18 n21_17
+1 1
+.names X_19 n21_18
+1 1
+.names X_20 n21_19
+1 1
+.names X_21 n21_20
+1 1
+.names X_22 n21_21
+1 1
+.names X_23 n21_22
+1 1
+.names X_24 n21_23
+1 1
+.names X_25 n21_24
+1 1
+.names X_26 n21_25
+1 1
+.names X_27 n21_26
+1 1
+.names X_28 n21_27
+1 1
+.names X_29 n21_28
+1 1
+.names X_30 n21_29
+1 1
+.names X_31 n21_30
+1 1
+.names X_32 n21_31
+1 1
+.names X_33 n21_32
+1 1
+.names X_34 n21_33
+1 1
+.names X_35 n21_34
+1 1
+.names X_36 n21_35
+1 1
+.names X_37 n21_36
+1 1
+.names X_38 n21_37
+1 1
+.names X_39 n21_38
+1 1
+
+# NumInst: n22 (val=1'd0)
+.names n22
+
+# OpInst: n23 = {n22, n21}
+.names n21_0 n23_0
+1 1
+.names n21_1 n23_1
+1 1
+.names n21_2 n23_2
+1 1
+.names n21_3 n23_3
+1 1
+.names n21_4 n23_4
+1 1
+.names n21_5 n23_5
+1 1
+.names n21_6 n23_6
+1 1
+.names n21_7 n23_7
+1 1
+.names n21_8 n23_8
+1 1
+.names n21_9 n23_9
+1 1
+.names n21_10 n23_10
+1 1
+.names n21_11 n23_11
+1 1
+.names n21_12 n23_12
+1 1
+.names n21_13 n23_13
+1 1
+.names n21_14 n23_14
+1 1
+.names n21_15 n23_15
+1 1
+.names n21_16 n23_16
+1 1
+.names n21_17 n23_17
+1 1
+.names n21_18 n23_18
+1 1
+.names n21_19 n23_19
+1 1
+.names n21_20 n23_20
+1 1
+.names n21_21 n23_21
+1 1
+.names n21_22 n23_22
+1 1
+.names n21_23 n23_23
+1 1
+.names n21_24 n23_24
+1 1
+.names n21_25 n23_25
+1 1
+.names n21_26 n23_26
+1 1
+.names n21_27 n23_27
+1 1
+.names n21_28 n23_28
+1 1
+.names n21_29 n23_29
+1 1
+.names n21_30 n23_30
+1 1
+.names n21_31 n23_31
+1 1
+.names n21_32 n23_32
+1 1
+.names n21_33 n23_33
+1 1
+.names n21_34 n23_34
+1 1
+.names n21_35 n23_35
+1 1
+.names n21_36 n23_36
+1 1
+.names n21_37 n23_37
+1 1
+.names n21_38 n23_38
+1 1
+.names n22 n23_39
+1 1
+
+# OpInst: n24[39:0] = (+ n20 n23)
+.names n20_0 n23_0 n24_0
+10 1
+01 1
+.names n20_0 n23_0 n24_carry_0
+11 1
+.names n24_carry_0 n20_1 n23_1 n24_1
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_0 n20_1 n23_1 n24_carry_1
+-11 1
+1-1 1
+11- 1
+.names n24_carry_1 n20_2 n23_2 n24_2
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_1 n20_2 n23_2 n24_carry_2
+-11 1
+1-1 1
+11- 1
+.names n24_carry_2 n20_3 n23_3 n24_3
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_2 n20_3 n23_3 n24_carry_3
+-11 1
+1-1 1
+11- 1
+.names n24_carry_3 n20_4 n23_4 n24_4
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_3 n20_4 n23_4 n24_carry_4
+-11 1
+1-1 1
+11- 1
+.names n24_carry_4 n20_5 n23_5 n24_5
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_4 n20_5 n23_5 n24_carry_5
+-11 1
+1-1 1
+11- 1
+.names n24_carry_5 n20_6 n23_6 n24_6
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_5 n20_6 n23_6 n24_carry_6
+-11 1
+1-1 1
+11- 1
+.names n24_carry_6 n20_7 n23_7 n24_7
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_6 n20_7 n23_7 n24_carry_7
+-11 1
+1-1 1
+11- 1
+.names n24_carry_7 n20_8 n23_8 n24_8
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_7 n20_8 n23_8 n24_carry_8
+-11 1
+1-1 1
+11- 1
+.names n24_carry_8 n20_9 n23_9 n24_9
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_8 n20_9 n23_9 n24_carry_9
+-11 1
+1-1 1
+11- 1
+.names n24_carry_9 n20_10 n23_10 n24_10
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_9 n20_10 n23_10 n24_carry_10
+-11 1
+1-1 1
+11- 1
+.names n24_carry_10 n20_11 n23_11 n24_11
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_10 n20_11 n23_11 n24_carry_11
+-11 1
+1-1 1
+11- 1
+.names n24_carry_11 n20_12 n23_12 n24_12
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_11 n20_12 n23_12 n24_carry_12
+-11 1
+1-1 1
+11- 1
+.names n24_carry_12 n20_13 n23_13 n24_13
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_12 n20_13 n23_13 n24_carry_13
+-11 1
+1-1 1
+11- 1
+.names n24_carry_13 n20_14 n23_14 n24_14
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_13 n20_14 n23_14 n24_carry_14
+-11 1
+1-1 1
+11- 1
+.names n24_carry_14 n20_15 n23_15 n24_15
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_14 n20_15 n23_15 n24_carry_15
+-11 1
+1-1 1
+11- 1
+.names n24_carry_15 n20_16 n23_16 n24_16
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_15 n20_16 n23_16 n24_carry_16
+-11 1
+1-1 1
+11- 1
+.names n24_carry_16 n20_17 n23_17 n24_17
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_16 n20_17 n23_17 n24_carry_17
+-11 1
+1-1 1
+11- 1
+.names n24_carry_17 n20_18 n23_18 n24_18
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_17 n20_18 n23_18 n24_carry_18
+-11 1
+1-1 1
+11- 1
+.names n24_carry_18 n20_19 n23_19 n24_19
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_18 n20_19 n23_19 n24_carry_19
+-11 1
+1-1 1
+11- 1
+.names n24_carry_19 n20_20 n23_20 n24_20
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_19 n20_20 n23_20 n24_carry_20
+-11 1
+1-1 1
+11- 1
+.names n24_carry_20 n20_21 n23_21 n24_21
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_20 n20_21 n23_21 n24_carry_21
+-11 1
+1-1 1
+11- 1
+.names n24_carry_21 n20_22 n23_22 n24_22
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_21 n20_22 n23_22 n24_carry_22
+-11 1
+1-1 1
+11- 1
+.names n24_carry_22 n20_23 n23_23 n24_23
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_22 n20_23 n23_23 n24_carry_23
+-11 1
+1-1 1
+11- 1
+.names n24_carry_23 n20_24 n23_24 n24_24
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_23 n20_24 n23_24 n24_carry_24
+-11 1
+1-1 1
+11- 1
+.names n24_carry_24 n20_25 n23_25 n24_25
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_24 n20_25 n23_25 n24_carry_25
+-11 1
+1-1 1
+11- 1
+.names n24_carry_25 n20_26 n23_26 n24_26
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_25 n20_26 n23_26 n24_carry_26
+-11 1
+1-1 1
+11- 1
+.names n24_carry_26 n20_27 n23_27 n24_27
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_26 n20_27 n23_27 n24_carry_27
+-11 1
+1-1 1
+11- 1
+.names n24_carry_27 n20_28 n23_28 n24_28
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_27 n20_28 n23_28 n24_carry_28
+-11 1
+1-1 1
+11- 1
+.names n24_carry_28 n20_29 n23_29 n24_29
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_28 n20_29 n23_29 n24_carry_29
+-11 1
+1-1 1
+11- 1
+.names n24_carry_29 n20_30 n23_30 n24_30
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_29 n20_30 n23_30 n24_carry_30
+-11 1
+1-1 1
+11- 1
+.names n24_carry_30 n20_31 n23_31 n24_31
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_30 n20_31 n23_31 n24_carry_31
+-11 1
+1-1 1
+11- 1
+.names n24_carry_31 n20_32 n23_32 n24_32
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_31 n20_32 n23_32 n24_carry_32
+-11 1
+1-1 1
+11- 1
+.names n24_carry_32 n20_33 n23_33 n24_33
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_32 n20_33 n23_33 n24_carry_33
+-11 1
+1-1 1
+11- 1
+.names n24_carry_33 n20_34 n23_34 n24_34
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_33 n20_34 n23_34 n24_carry_34
+-11 1
+1-1 1
+11- 1
+.names n24_carry_34 n20_35 n23_35 n24_35
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_34 n20_35 n23_35 n24_carry_35
+-11 1
+1-1 1
+11- 1
+.names n24_carry_35 n20_36 n23_36 n24_36
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_35 n20_36 n23_36 n24_carry_36
+-11 1
+1-1 1
+11- 1
+.names n24_carry_36 n20_37 n23_37 n24_37
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_36 n20_37 n23_37 n24_carry_37
+-11 1
+1-1 1
+11- 1
+.names n24_carry_37 n20_38 n23_38 n24_38
+100 1
+010 1
+001 1
+111 1
+.names n24_carry_37 n20_38 n23_38 n24_carry_38
+-11 1
+1-1 1
+11- 1
+.names n24_carry_38 n20_39 n23_39 n24_39
+100 1
+010 1
+001 1
+111 1
+
+# OpInst: n26[0:0] = (== Y X)
+.names Y_0 X_0 n26_eq_xnor_0
+00 1
+11 1
+.names Y_1 X_1 n26_eq_xnor_1
+00 1
+11 1
+.names Y_2 X_2 n26_eq_xnor_2
+00 1
+11 1
+.names Y_3 X_3 n26_eq_xnor_3
+00 1
+11 1
+.names Y_4 X_4 n26_eq_xnor_4
+00 1
+11 1
+.names Y_5 X_5 n26_eq_xnor_5
+00 1
+11 1
+.names Y_6 X_6 n26_eq_xnor_6
+00 1
+11 1
+.names Y_7 X_7 n26_eq_xnor_7
+00 1
+11 1
+.names Y_8 X_8 n26_eq_xnor_8
+00 1
+11 1
+.names Y_9 X_9 n26_eq_xnor_9
+00 1
+11 1
+.names Y_10 X_10 n26_eq_xnor_10
+00 1
+11 1
+.names Y_11 X_11 n26_eq_xnor_11
+00 1
+11 1
+.names Y_12 X_12 n26_eq_xnor_12
+00 1
+11 1
+.names Y_13 X_13 n26_eq_xnor_13
+00 1
+11 1
+.names Y_14 X_14 n26_eq_xnor_14
+00 1
+11 1
+.names Y_15 X_15 n26_eq_xnor_15
+00 1
+11 1
+.names Y_16 X_16 n26_eq_xnor_16
+00 1
+11 1
+.names Y_17 X_17 n26_eq_xnor_17
+00 1
+11 1
+.names Y_18 X_18 n26_eq_xnor_18
+00 1
+11 1
+.names Y_19 X_19 n26_eq_xnor_19
+00 1
+11 1
+.names Y_20 X_20 n26_eq_xnor_20
+00 1
+11 1
+.names Y_21 X_21 n26_eq_xnor_21
+00 1
+11 1
+.names Y_22 X_22 n26_eq_xnor_22
+00 1
+11 1
+.names Y_23 X_23 n26_eq_xnor_23
+00 1
+11 1
+.names Y_24 X_24 n26_eq_xnor_24
+00 1
+11 1
+.names Y_25 X_25 n26_eq_xnor_25
+00 1
+11 1
+.names Y_26 X_26 n26_eq_xnor_26
+00 1
+11 1
+.names Y_27 X_27 n26_eq_xnor_27
+00 1
+11 1
+.names Y_28 X_28 n26_eq_xnor_28
+00 1
+11 1
+.names Y_29 X_29 n26_eq_xnor_29
+00 1
+11 1
+.names Y_30 X_30 n26_eq_xnor_30
+00 1
+11 1
+.names Y_31 X_31 n26_eq_xnor_31
+00 1
+11 1
+.names Y_32 X_32 n26_eq_xnor_32
+00 1
+11 1
+.names Y_33 X_33 n26_eq_xnor_33
+00 1
+11 1
+.names Y_34 X_34 n26_eq_xnor_34
+00 1
+11 1
+.names Y_35 X_35 n26_eq_xnor_35
+00 1
+11 1
+.names Y_36 X_36 n26_eq_xnor_36
+00 1
+11 1
+.names Y_37 X_37 n26_eq_xnor_37
+00 1
+11 1
+.names Y_38 X_38 n26_eq_xnor_38
+00 1
+11 1
+.names Y_39 X_39 n26_eq_xnor_39
+00 1
+11 1
+.names n26_eq_xnor_39 n26_eq_xnor_38 n26_eq_xnor_37 n26_eq_xnor_36 n26_eq_xnor_35 n26_eq_xnor_34 n26_eq_xnor_33 n26_eq_xnor_32 n26_eq_xnor_31 n26_eq_xnor_30 n26_eq_xnor_29 n26_eq_xnor_28 n26_eq_xnor_27 n26_eq_xnor_26 n26_eq_xnor_25 n26_eq_xnor_24 n26_eq_xnor_23 n26_eq_xnor_22 n26_eq_xnor_21 n26_eq_xnor_20 n26_eq_xnor_19 n26_eq_xnor_18 n26_eq_xnor_17 n26_eq_xnor_16 n26_eq_xnor_15 n26_eq_xnor_14 n26_eq_xnor_13 n26_eq_xnor_12 n26_eq_xnor_11 n26_eq_xnor_10 n26_eq_xnor_9 n26_eq_xnor_8 n26_eq_xnor_7 n26_eq_xnor_6 n26_eq_xnor_5 n26_eq_xnor_4 n26_eq_xnor_3 n26_eq_xnor_2 n26_eq_xnor_1 n26_eq_xnor_0 n26
+1111111111111111111111111111111111111111 1
+
+# OpInst: n27[0:0] = (|| n26 n12)
+.names n26 n12 n27
+1- 1
+-1 1
+
+# OpInst: n28[39:0] = (+ X n14)
+.names X_0 n14_0 n28_0
+10 1
+01 1
+.names X_0 n14_0 n28_carry_0
+11 1
+.names n28_carry_0 X_1 n14_1 n28_1
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_0 X_1 n14_1 n28_carry_1
+-11 1
+1-1 1
+11- 1
+.names n28_carry_1 X_2 n14_2 n28_2
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_1 X_2 n14_2 n28_carry_2
+-11 1
+1-1 1
+11- 1
+.names n28_carry_2 X_3 n14_3 n28_3
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_2 X_3 n14_3 n28_carry_3
+-11 1
+1-1 1
+11- 1
+.names n28_carry_3 X_4 n14_4 n28_4
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_3 X_4 n14_4 n28_carry_4
+-11 1
+1-1 1
+11- 1
+.names n28_carry_4 X_5 n14_5 n28_5
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_4 X_5 n14_5 n28_carry_5
+-11 1
+1-1 1
+11- 1
+.names n28_carry_5 X_6 n14_6 n28_6
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_5 X_6 n14_6 n28_carry_6
+-11 1
+1-1 1
+11- 1
+.names n28_carry_6 X_7 n14_7 n28_7
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_6 X_7 n14_7 n28_carry_7
+-11 1
+1-1 1
+11- 1
+.names n28_carry_7 X_8 n14_8 n28_8
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_7 X_8 n14_8 n28_carry_8
+-11 1
+1-1 1
+11- 1
+.names n28_carry_8 X_9 n14_9 n28_9
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_8 X_9 n14_9 n28_carry_9
+-11 1
+1-1 1
+11- 1
+.names n28_carry_9 X_10 n14_10 n28_10
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_9 X_10 n14_10 n28_carry_10
+-11 1
+1-1 1
+11- 1
+.names n28_carry_10 X_11 n14_11 n28_11
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_10 X_11 n14_11 n28_carry_11
+-11 1
+1-1 1
+11- 1
+.names n28_carry_11 X_12 n14_12 n28_12
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_11 X_12 n14_12 n28_carry_12
+-11 1
+1-1 1
+11- 1
+.names n28_carry_12 X_13 n14_13 n28_13
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_12 X_13 n14_13 n28_carry_13
+-11 1
+1-1 1
+11- 1
+.names n28_carry_13 X_14 n14_14 n28_14
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_13 X_14 n14_14 n28_carry_14
+-11 1
+1-1 1
+11- 1
+.names n28_carry_14 X_15 n14_15 n28_15
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_14 X_15 n14_15 n28_carry_15
+-11 1
+1-1 1
+11- 1
+.names n28_carry_15 X_16 n14_16 n28_16
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_15 X_16 n14_16 n28_carry_16
+-11 1
+1-1 1
+11- 1
+.names n28_carry_16 X_17 n14_17 n28_17
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_16 X_17 n14_17 n28_carry_17
+-11 1
+1-1 1
+11- 1
+.names n28_carry_17 X_18 n14_18 n28_18
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_17 X_18 n14_18 n28_carry_18
+-11 1
+1-1 1
+11- 1
+.names n28_carry_18 X_19 n14_19 n28_19
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_18 X_19 n14_19 n28_carry_19
+-11 1
+1-1 1
+11- 1
+.names n28_carry_19 X_20 n14_20 n28_20
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_19 X_20 n14_20 n28_carry_20
+-11 1
+1-1 1
+11- 1
+.names n28_carry_20 X_21 n14_21 n28_21
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_20 X_21 n14_21 n28_carry_21
+-11 1
+1-1 1
+11- 1
+.names n28_carry_21 X_22 n14_22 n28_22
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_21 X_22 n14_22 n28_carry_22
+-11 1
+1-1 1
+11- 1
+.names n28_carry_22 X_23 n14_23 n28_23
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_22 X_23 n14_23 n28_carry_23
+-11 1
+1-1 1
+11- 1
+.names n28_carry_23 X_24 n14_24 n28_24
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_23 X_24 n14_24 n28_carry_24
+-11 1
+1-1 1
+11- 1
+.names n28_carry_24 X_25 n14_25 n28_25
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_24 X_25 n14_25 n28_carry_25
+-11 1
+1-1 1
+11- 1
+.names n28_carry_25 X_26 n14_26 n28_26
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_25 X_26 n14_26 n28_carry_26
+-11 1
+1-1 1
+11- 1
+.names n28_carry_26 X_27 n14_27 n28_27
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_26 X_27 n14_27 n28_carry_27
+-11 1
+1-1 1
+11- 1
+.names n28_carry_27 X_28 n14_28 n28_28
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_27 X_28 n14_28 n28_carry_28
+-11 1
+1-1 1
+11- 1
+.names n28_carry_28 X_29 n14_29 n28_29
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_28 X_29 n14_29 n28_carry_29
+-11 1
+1-1 1
+11- 1
+.names n28_carry_29 X_30 n14_30 n28_30
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_29 X_30 n14_30 n28_carry_30
+-11 1
+1-1 1
+11- 1
+.names n28_carry_30 X_31 n14_31 n28_31
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_30 X_31 n14_31 n28_carry_31
+-11 1
+1-1 1
+11- 1
+.names n28_carry_31 X_32 n14_32 n28_32
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_31 X_32 n14_32 n28_carry_32
+-11 1
+1-1 1
+11- 1
+.names n28_carry_32 X_33 n14_33 n28_33
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_32 X_33 n14_33 n28_carry_33
+-11 1
+1-1 1
+11- 1
+.names n28_carry_33 X_34 n14_34 n28_34
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_33 X_34 n14_34 n28_carry_34
+-11 1
+1-1 1
+11- 1
+.names n28_carry_34 X_35 n14_35 n28_35
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_34 X_35 n14_35 n28_carry_35
+-11 1
+1-1 1
+11- 1
+.names n28_carry_35 X_36 n14_36 n28_36
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_35 X_36 n14_36 n28_carry_36
+-11 1
+1-1 1
+11- 1
+.names n28_carry_36 X_37 n14_37 n28_37
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_36 X_37 n14_37 n28_carry_37
+-11 1
+1-1 1
+11- 1
+.names n28_carry_37 X_38 n14_38 n28_38
+100 1
+010 1
+001 1
+111 1
+.names n28_carry_37 X_38 n14_38 n28_carry_38
+-11 1
+1-1 1
+11- 1
+.names n28_carry_38 X_39 n14_39 n28_39
+100 1
+010 1
+001 1
+111 1
+
+# OpInst: n29=n27 ? n28 : Y
+.names n27 n28_0 Y_0 n29_0
+11- 1
+0-1 1
+.names n27 n28_1 Y_1 n29_1
+11- 1
+0-1 1
+.names n27 n28_2 Y_2 n29_2
+11- 1
+0-1 1
+.names n27 n28_3 Y_3 n29_3
+11- 1
+0-1 1
+.names n27 n28_4 Y_4 n29_4
+11- 1
+0-1 1
+.names n27 n28_5 Y_5 n29_5
+11- 1
+0-1 1
+.names n27 n28_6 Y_6 n29_6
+11- 1
+0-1 1
+.names n27 n28_7 Y_7 n29_7
+11- 1
+0-1 1
+.names n27 n28_8 Y_8 n29_8
+11- 1
+0-1 1
+.names n27 n28_9 Y_9 n29_9
+11- 1
+0-1 1
+.names n27 n28_10 Y_10 n29_10
+11- 1
+0-1 1
+.names n27 n28_11 Y_11 n29_11
+11- 1
+0-1 1
+.names n27 n28_12 Y_12 n29_12
+11- 1
+0-1 1
+.names n27 n28_13 Y_13 n29_13
+11- 1
+0-1 1
+.names n27 n28_14 Y_14 n29_14
+11- 1
+0-1 1
+.names n27 n28_15 Y_15 n29_15
+11- 1
+0-1 1
+.names n27 n28_16 Y_16 n29_16
+11- 1
+0-1 1
+.names n27 n28_17 Y_17 n29_17
+11- 1
+0-1 1
+.names n27 n28_18 Y_18 n29_18
+11- 1
+0-1 1
+.names n27 n28_19 Y_19 n29_19
+11- 1
+0-1 1
+.names n27 n28_20 Y_20 n29_20
+11- 1
+0-1 1
+.names n27 n28_21 Y_21 n29_21
+11- 1
+0-1 1
+.names n27 n28_22 Y_22 n29_22
+11- 1
+0-1 1
+.names n27 n28_23 Y_23 n29_23
+11- 1
+0-1 1
+.names n27 n28_24 Y_24 n29_24
+11- 1
+0-1 1
+.names n27 n28_25 Y_25 n29_25
+11- 1
+0-1 1
+.names n27 n28_26 Y_26 n29_26
+11- 1
+0-1 1
+.names n27 n28_27 Y_27 n29_27
+11- 1
+0-1 1
+.names n27 n28_28 Y_28 n29_28
+11- 1
+0-1 1
+.names n27 n28_29 Y_29 n29_29
+11- 1
+0-1 1
+.names n27 n28_30 Y_30 n29_30
+11- 1
+0-1 1
+.names n27 n28_31 Y_31 n29_31
+11- 1
+0-1 1
+.names n27 n28_32 Y_32 n29_32
+11- 1
+0-1 1
+.names n27 n28_33 Y_33 n29_33
+11- 1
+0-1 1
+.names n27 n28_34 Y_34 n29_34
+11- 1
+0-1 1
+.names n27 n28_35 Y_35 n29_35
+11- 1
+0-1 1
+.names n27 n28_36 Y_36 n29_36
+11- 1
+0-1 1
+.names n27 n28_37 Y_37 n29_37
+11- 1
+0-1 1
+.names n27 n28_38 Y_38 n29_38
+11- 1
+0-1 1
+.names n27 n28_39 Y_39 n29_39
+11- 1
+0-1 1
+
+# OpInst: n30=n25 ? X : n29
+.names n25 X_0 n29_0 n30_0
+11- 1
+0-1 1
+.names n25 X_1 n29_1 n30_1
+11- 1
+0-1 1
+.names n25 X_2 n29_2 n30_2
+11- 1
+0-1 1
+.names n25 X_3 n29_3 n30_3
+11- 1
+0-1 1
+.names n25 X_4 n29_4 n30_4
+11- 1
+0-1 1
+.names n25 X_5 n29_5 n30_5
+11- 1
+0-1 1
+.names n25 X_6 n29_6 n30_6
+11- 1
+0-1 1
+.names n25 X_7 n29_7 n30_7
+11- 1
+0-1 1
+.names n25 X_8 n29_8 n30_8
+11- 1
+0-1 1
+.names n25 X_9 n29_9 n30_9
+11- 1
+0-1 1
+.names n25 X_10 n29_10 n30_10
+11- 1
+0-1 1
+.names n25 X_11 n29_11 n30_11
+11- 1
+0-1 1
+.names n25 X_12 n29_12 n30_12
+11- 1
+0-1 1
+.names n25 X_13 n29_13 n30_13
+11- 1
+0-1 1
+.names n25 X_14 n29_14 n30_14
+11- 1
+0-1 1
+.names n25 X_15 n29_15 n30_15
+11- 1
+0-1 1
+.names n25 X_16 n29_16 n30_16
+11- 1
+0-1 1
+.names n25 X_17 n29_17 n30_17
+11- 1
+0-1 1
+.names n25 X_18 n29_18 n30_18
+11- 1
+0-1 1
+.names n25 X_19 n29_19 n30_19
+11- 1
+0-1 1
+.names n25 X_20 n29_20 n30_20
+11- 1
+0-1 1
+.names n25 X_21 n29_21 n30_21
+11- 1
+0-1 1
+.names n25 X_22 n29_22 n30_22
+11- 1
+0-1 1
+.names n25 X_23 n29_23 n30_23
+11- 1
+0-1 1
+.names n25 X_24 n29_24 n30_24
+11- 1
+0-1 1
+.names n25 X_25 n29_25 n30_25
+11- 1
+0-1 1
+.names n25 X_26 n29_26 n30_26
+11- 1
+0-1 1
+.names n25 X_27 n29_27 n30_27
+11- 1
+0-1 1
+.names n25 X_28 n29_28 n30_28
+11- 1
+0-1 1
+.names n25 X_29 n29_29 n30_29
+11- 1
+0-1 1
+.names n25 X_30 n29_30 n30_30
+11- 1
+0-1 1
+.names n25 X_31 n29_31 n30_31
+11- 1
+0-1 1
+.names n25 X_32 n29_32 n30_32
+11- 1
+0-1 1
+.names n25 X_33 n29_33 n30_33
+11- 1
+0-1 1
+.names n25 X_34 n29_34 n30_34
+11- 1
+0-1 1
+.names n25 X_35 n29_35 n30_35
+11- 1
+0-1 1
+.names n25 X_36 n29_36 n30_36
+11- 1
+0-1 1
+.names n25 X_37 n29_37 n30_37
+11- 1
+0-1 1
+.names n25 X_38 n29_38 n30_38
+11- 1
+0-1 1
+.names n25 X_39 n29_39 n30_39
+11- 1
+0-1 1
+
+# OpInst: n31=n9 ? n24 : n30
+.names n9 n24_0 n30_0 n31_0
+11- 1
+0-1 1
+.names n9 n24_1 n30_1 n31_1
+11- 1
+0-1 1
+.names n9 n24_2 n30_2 n31_2
+11- 1
+0-1 1
+.names n9 n24_3 n30_3 n31_3
+11- 1
+0-1 1
+.names n9 n24_4 n30_4 n31_4
+11- 1
+0-1 1
+.names n9 n24_5 n30_5 n31_5
+11- 1
+0-1 1
+.names n9 n24_6 n30_6 n31_6
+11- 1
+0-1 1
+.names n9 n24_7 n30_7 n31_7
+11- 1
+0-1 1
+.names n9 n24_8 n30_8 n31_8
+11- 1
+0-1 1
+.names n9 n24_9 n30_9 n31_9
+11- 1
+0-1 1
+.names n9 n24_10 n30_10 n31_10
+11- 1
+0-1 1
+.names n9 n24_11 n30_11 n31_11
+11- 1
+0-1 1
+.names n9 n24_12 n30_12 n31_12
+11- 1
+0-1 1
+.names n9 n24_13 n30_13 n31_13
+11- 1
+0-1 1
+.names n9 n24_14 n30_14 n31_14
+11- 1
+0-1 1
+.names n9 n24_15 n30_15 n31_15
+11- 1
+0-1 1
+.names n9 n24_16 n30_16 n31_16
+11- 1
+0-1 1
+.names n9 n24_17 n30_17 n31_17
+11- 1
+0-1 1
+.names n9 n24_18 n30_18 n31_18
+11- 1
+0-1 1
+.names n9 n24_19 n30_19 n31_19
+11- 1
+0-1 1
+.names n9 n24_20 n30_20 n31_20
+11- 1
+0-1 1
+.names n9 n24_21 n30_21 n31_21
+11- 1
+0-1 1
+.names n9 n24_22 n30_22 n31_22
+11- 1
+0-1 1
+.names n9 n24_23 n30_23 n31_23
+11- 1
+0-1 1
+.names n9 n24_24 n30_24 n31_24
+11- 1
+0-1 1
+.names n9 n24_25 n30_25 n31_25
+11- 1
+0-1 1
+.names n9 n24_26 n30_26 n31_26
+11- 1
+0-1 1
+.names n9 n24_27 n30_27 n31_27
+11- 1
+0-1 1
+.names n9 n24_28 n30_28 n31_28
+11- 1
+0-1 1
+.names n9 n24_29 n30_29 n31_29
+11- 1
+0-1 1
+.names n9 n24_30 n30_30 n31_30
+11- 1
+0-1 1
+.names n9 n24_31 n30_31 n31_31
+11- 1
+0-1 1
+.names n9 n24_32 n30_32 n31_32
+11- 1
+0-1 1
+.names n9 n24_33 n30_33 n31_33
+11- 1
+0-1 1
+.names n9 n24_34 n30_34 n31_34
+11- 1
+0-1 1
+.names n9 n24_35 n30_35 n31_35
+11- 1
+0-1 1
+.names n9 n24_36 n30_36 n31_36
+11- 1
+0-1 1
+.names n9 n24_37 n30_37 n31_37
+11- 1
+0-1 1
+.names n9 n24_38 n30_38 n31_38
+11- 1
+0-1 1
+.names n9 n24_39 n30_39 n31_39
+11- 1
+0-1 1
+
+.latch n31_0 X_0 0
+.latch n31_1 X_1 0
+.latch n31_2 X_2 0
+.latch n31_3 X_3 0
+.latch n31_4 X_4 0
+.latch n31_5 X_5 0
+.latch n31_6 X_6 0
+.latch n31_7 X_7 0
+.latch n31_8 X_8 0
+.latch n31_9 X_9 0
+.latch n31_10 X_10 0
+.latch n31_11 X_11 0
+.latch n31_12 X_12 0
+.latch n31_13 X_13 0
+.latch n31_14 X_14 0
+.latch n31_15 X_15 0
+.latch n31_16 X_16 0
+.latch n31_17 X_17 0
+.latch n31_18 X_18 0
+.latch n31_19 X_19 0
+.latch n31_20 X_20 0
+.latch n31_21 X_21 0
+.latch n31_22 X_22 0
+.latch n31_23 X_23 0
+.latch n31_24 X_24 0
+.latch n31_25 X_25 0
+.latch n31_26 X_26 0
+.latch n31_27 X_27 0
+.latch n31_28 X_28 0
+.latch n31_29 X_29 0
+.latch n31_30 X_30 0
+.latch n31_31 X_31 0
+.latch n31_32 X_32 0
+.latch n31_33 X_33 0
+.latch n31_34 X_34 0
+.latch n31_35 X_35 0
+.latch n31_36 X_36 0
+.latch n31_37 X_37 0
+.latch n31_38 X_38 0
+.latch n31_39 X_39 0
+
+.end
