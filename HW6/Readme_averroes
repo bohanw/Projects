@@ -1,0 +1,8 @@
+To run Averroes, follow these steps:
+-> Run ./averroes <benchmark-name> inside top directory
+    Example: 
+        cd HW6/
+        ./averroes diagonal
+
+This is the preliminary version of Averroes. It is possible that Averroes may run past the timeout.
+If you are planning to run averroes in some other path, remember to make changes to .fconfig file appropriately.

@@ -1,0 +1,13 @@
+#!/bin/csh -f
+set tb_name = `echo $1|sed "s/\///"`
+#echo "$1 -> $tb_name"
+mkdir -p work_$tb_name
+cp ./$tb_name/* work_$tb_name
+cp $tb_name/$tb_name.fconfig work_$tb_name/fconfig
+
+./avr/vwn work_$tb_name avr > work_$tb_name/vwn.output
+./avr/dpa work_$tb_name avr > work_$tb_name/dpa.output
+./avr/reach work_$tb_name avr 
+
+rm -r work_$tb_name
+

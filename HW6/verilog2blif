@@ -1,0 +1,15 @@
+#!/bin/csh -f
+set tb_name = `echo $1|sed "s/\///"`
+#echo "$1 -> $tb_name"
+mkdir -p v2b_$tb_name
+cp ./$tb_name/* v2b_$tb_name
+cp $tb_name/$tb_name.fconfig v2b_$tb_name/fconfig
+
+./v2blif/vwn v2b_$tb_name v2blif > v2b_$tb_name/vwn.output
+./v2blif/dpa v2b_$tb_name v2blif > v2b_$tb_name/dpa.output
+./v2blif/reach v2b_$tb_name v2blif 
+
+cp v2b_$tb_name/"seqx_0.blif" $tb_name".blif"
+
+rm -r v2b_$tb_name
+

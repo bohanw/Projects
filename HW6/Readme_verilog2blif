@@ -1,0 +1,9 @@
+To convert a verilog file to blif, follow these steps:
+-> Run ./verilog2blif <benchmark-name> inside top directory
+    Example: 
+        cd HW6/
+        ./verilog2blif diagonal
+
+A blif file would be created in top directory with name <benchmark-name>.blif
+If you are planning to run verilog2blif in some other path, remember to make changes to .fconfig file appropriately.
+
