@@ -1,0 +1,5 @@
+\THEOREM EXTRACT_ind string
+|- ∀P.
+     (∀s i. P (s,i,NONE)) ∧ (∀s i n. P (s,i,SOME n)) ⇒
+     ∀v v1 v2. P (v,v1,v2)
+\ENDTHEOREM

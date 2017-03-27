@@ -1,0 +1,2346 @@
+
+state 0:
+
+	SigFile : . SIGNATURE LocUnitName EQUALS SIG KWSpec_seq END SemiEof 
+	SigFile : . KWSpec_seq EOF 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	SIGNATURE	shift 11
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 7
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	SigFile	goto 195
+	KWSpec	goto 2
+	KWSpec_seq	goto 1
+
+	.	reduce by rule 73
+
+
+state 1:
+
+	SigFile : KWSpec_seq . EOF 
+
+	EOF	shift 16
+
+
+	.	error
+
+
+state 2:
+
+	KWSpec_seq : KWSpec . KWSpec_seq 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 7
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	KWSpec	goto 2
+	KWSpec_seq	goto 17
+
+	.	reduce by rule 73
+
+
+state 3:
+
+	KWSpec : PRIM_REFTYPE . TypDesc 
+
+	LPAREN	shift 23
+	TYVAR	shift 22
+
+	TyVar	goto 21
+	TypDesc	goto 20
+	TyVarSeq	goto 19
+	TyVarSeq1	goto 18
+
+	.	reduce by rule 64
+
+
+state 4:
+
+	KWSpec : PRIM_VAL . PrimValBind 
+
+	OP	shift 29
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 26
+	OpIdent	goto 25
+	PrimValBind	goto 24
+
+	.	error
+
+
+state 5:
+
+	KWSpec : INCLUDE . ModId_seq2 
+	KWSpec : INCLUDE . SigExp 
+
+	SIG	shift 35
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 34
+	IdentWithLoc	goto 33
+	ModId	goto 32
+	ModId_seq2	goto 31
+	SigExp	goto 30
+
+	.	error
+
+
+state 6:
+
+	KWSpec : OPEN . ModId_seq1 
+
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 34
+	IdentWithLoc	goto 33
+	ModId	goto 37
+	ModId_seq1	goto 36
+
+	.	error
+
+
+state 7:
+
+	KWSpec_seq : SEMICOLON . KWSpec_seq 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 7
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	KWSpec	goto 2
+	KWSpec_seq	goto 38
+
+	.	reduce by rule 73
+
+
+state 8:
+
+	KWSpec : VAL . ValDesc 
+
+	OP	shift 44
+	EQUALS	shift 43
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 42
+	EqIdent	goto 41
+	OpEqIdent	goto 40
+	ValDesc	goto 39
+
+	.	error
+
+
+state 9:
+
+	KWSpec : TYPE . TypBind 
+	KWSpec : TYPE . TypDesc 
+
+	LPAREN	shift 23
+	TYVAR	shift 22
+
+	TyVar	goto 21
+	TypBind	goto 47
+	TypDesc	goto 46
+	TyVarSeq	goto 45
+	TyVarSeq1	goto 18
+
+	.	reduce by rule 64
+
+
+state 10:
+
+	KWSpec : STRUCTURE . ModDesc 
+
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 34
+	IdentWithLoc	goto 33
+	ModId	goto 49
+	ModDesc	goto 48
+
+	.	error
+
+
+state 11:
+
+	SigFile : SIGNATURE . LocUnitName EQUALS SIG KWSpec_seq END SemiEof 
+
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 34
+	IdentWithLoc	goto 51
+	LocUnitName	goto 50
+
+	.	error
+
+
+state 12:
+
+	KWSpec : LOCAL . Spec IN Spec END 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 54
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	Spec	goto 53
+	KWSpec	goto 52
+
+	.	reduce by rule 76
+
+
+state 13:
+
+	KWSpec : EXCEPTION . ExDesc 
+
+	OP	shift 29
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 26
+	OpIdent	goto 56
+	ExDesc	goto 55
+
+	.	error
+
+
+state 14:
+
+	KWSpec : EQTYPE . TypDesc 
+
+	LPAREN	shift 23
+	TYVAR	shift 22
+
+	TyVar	goto 21
+	TypDesc	goto 57
+	TyVarSeq	goto 19
+	TyVarSeq1	goto 18
+
+	.	reduce by rule 64
+
+
+state 15:
+
+	KWSpec : DATATYPE . DatBind_0 WithType_opt 
+	KWSpec : DATATYPE . DatBind_n WithType_opt 
+	KWSpec : DATATYPE . TypeIdent EQUALS DATATYPE LongTypeIdent 
+
+	LPAREN	shift 23
+	ID	shift 62
+	TYVAR	shift 22
+
+	TypeIdent	goto 61
+	TyVar	goto 21
+	DatBind_0	goto 60
+	DatBind_n	goto 59
+	TyVarSeq1	goto 58
+
+	.	error
+
+
+state 16:
+
+	SigFile : KWSpec_seq EOF .  (reduce by rule 70)
+
+
+
+	.	reduce by rule 70
+
+
+state 17:
+
+	KWSpec_seq : KWSpec KWSpec_seq .  (reduce by rule 71)
+
+
+
+	.	reduce by rule 71
+
+
+state 18:
+
+	TyVarSeq : TyVarSeq1 .  (reduce by rule 63)
+
+
+
+	.	reduce by rule 63
+
+
+state 19:
+
+	TypDesc : TyVarSeq . TypeIdent AndTypDesc_opt 
+
+	ID	shift 62
+
+	TypeIdent	goto 63
+
+	.	error
+
+
+state 20:
+
+	KWSpec : PRIM_REFTYPE TypDesc .  (reduce by rule 82)
+
+
+
+	.	reduce by rule 82
+
+
+state 21:
+
+	TyVarSeq1 : TyVar .  (reduce by rule 65)
+
+
+
+	.	reduce by rule 65
+
+
+state 22:
+
+	TyVar : TYVAR .  (reduce by rule 13)
+
+
+
+	.	reduce by rule 13
+
+
+state 23:
+
+	TyVarSeq1 : LPAREN . TyVarComma_seq1 RPAREN 
+
+	TYVAR	shift 22
+
+	TyVar	goto 65
+	TyVarComma_seq1	goto 64
+
+	.	error
+
+
+state 24:
+
+	KWSpec : PRIM_VAL PrimValBind .  (reduce by rule 78)
+
+
+
+	.	reduce by rule 78
+
+
+state 25:
+
+	PrimValBind : OpIdent . COLON Ty EQUALS Arity STRING AndPrimValBind_opt 
+
+	COLON	shift 66
+
+
+	.	error
+
+
+state 26:
+
+	OpIdent : Ident .  (reduce by rule 3)
+
+
+
+	.	reduce by rule 3
+
+
+state 27:
+
+	Ident : ID .  (reduce by rule 0)
+
+
+
+	.	reduce by rule 0
+
+
+state 28:
+
+	Ident : STAR .  (reduce by rule 1)
+
+
+
+	.	reduce by rule 1
+
+
+state 29:
+
+	OpIdent : OP . Ident 
+
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 67
+
+	.	error
+
+
+state 30:
+
+	KWSpec : INCLUDE SigExp .  (reduce by rule 90)
+
+
+
+	.	reduce by rule 90
+
+
+state 31:
+
+	KWSpec : INCLUDE ModId_seq2 .  (reduce by rule 89)
+
+
+
+	.	reduce by rule 89
+
+
+state 32:
+
+	ModId_seq2 : ModId . ModId 
+	ModId_seq2 : ModId . ModId_seq2 
+	SigExp : ModId .  (reduce by rule 99)
+	SigExp : ModId . WHERE SigModTypBind 
+
+	WHERE	shift 70
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 34
+	IdentWithLoc	goto 33
+	ModId	goto 69
+	ModId_seq2	goto 68
+
+	.	reduce by rule 99
+
+
+state 33:
+
+	ModId : IdentWithLoc .  (reduce by rule 104)
+
+
+
+	.	reduce by rule 104
+
+
+state 34:
+
+	IdentWithLoc : Ident .  (reduce by rule 2)
+
+
+
+	.	reduce by rule 2
+
+
+state 35:
+
+	SigExp : SIG . KWSpec_seq END 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 7
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	KWSpec	goto 2
+	KWSpec_seq	goto 71
+
+	.	reduce by rule 73
+
+
+state 36:
+
+	KWSpec : OPEN ModId_seq1 .  (reduce by rule 88)
+
+
+
+	.	reduce by rule 88
+
+
+state 37:
+
+	ModId_seq1 : ModId .  (reduce by rule 105)
+	ModId_seq1 : ModId . ModId_seq1 
+
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 34
+	IdentWithLoc	goto 33
+	ModId	goto 37
+	ModId_seq1	goto 72
+
+	.	reduce by rule 105
+
+
+state 38:
+
+	KWSpec_seq : SEMICOLON KWSpec_seq .  (reduce by rule 72)
+
+
+
+	.	reduce by rule 72
+
+
+state 39:
+
+	KWSpec : VAL ValDesc .  (reduce by rule 77)
+
+
+
+	.	reduce by rule 77
+
+
+state 40:
+
+	ValDesc : OpEqIdent . COLON Ty AndValDesc_opt 
+
+	COLON	shift 73
+
+
+	.	error
+
+
+state 41:
+
+	OpEqIdent : EqIdent .  (reduce by rule 5)
+
+
+
+	.	reduce by rule 5
+
+
+state 42:
+
+	EqIdent : Ident .  (reduce by rule 7)
+
+
+
+	.	reduce by rule 7
+
+
+state 43:
+
+	EqIdent : EQUALS .  (reduce by rule 8)
+
+
+
+	.	reduce by rule 8
+
+
+state 44:
+
+	OpEqIdent : OP . Ident 
+
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 74
+
+	.	error
+
+
+state 45:
+
+	TypBind : TyVarSeq . TypeIdent EQUALS Ty AndTypBind_opt 
+	TypDesc : TyVarSeq . TypeIdent AndTypDesc_opt 
+
+	ID	shift 62
+
+	TypeIdent	goto 75
+
+	.	error
+
+
+state 46:
+
+	KWSpec : TYPE TypDesc .  (reduce by rule 80)
+
+
+
+	.	reduce by rule 80
+
+
+state 47:
+
+	KWSpec : TYPE TypBind .  (reduce by rule 79)
+
+
+
+	.	reduce by rule 79
+
+
+state 48:
+
+	KWSpec : STRUCTURE ModDesc .  (reduce by rule 91)
+
+
+
+	.	reduce by rule 91
+
+
+state 49:
+
+	ModDesc : ModId . COLON SigExp 
+
+	COLON	shift 76
+
+
+	.	error
+
+
+state 50:
+
+	SigFile : SIGNATURE LocUnitName . EQUALS SIG KWSpec_seq END SemiEof 
+
+	EQUALS	shift 77
+
+
+	.	error
+
+
+state 51:
+
+	LocUnitName : IdentWithLoc .  (reduce by rule 9)
+
+
+
+	.	reduce by rule 9
+
+
+state 52:
+
+	Spec : KWSpec . Spec 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 54
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	Spec	goto 78
+	KWSpec	goto 52
+
+	.	reduce by rule 76
+
+
+state 53:
+
+	KWSpec : LOCAL Spec . IN Spec END 
+
+	IN	shift 79
+
+
+	.	error
+
+
+state 54:
+
+	Spec : SEMICOLON . Spec 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 54
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	Spec	goto 80
+	KWSpec	goto 52
+
+	.	reduce by rule 76
+
+
+state 55:
+
+	KWSpec : EXCEPTION ExDesc .  (reduce by rule 86)
+
+
+
+	.	reduce by rule 86
+
+
+state 56:
+
+	ExDesc : OpIdent . OfTy_opt AndExDesc_opt 
+
+	OF	shift 82
+
+	OfTy_opt	goto 81
+
+	.	reduce by rule 44
+
+
+state 57:
+
+	KWSpec : EQTYPE TypDesc .  (reduce by rule 81)
+
+
+
+	.	reduce by rule 81
+
+
+state 58:
+
+	DatBind_n : TyVarSeq1 . TypeIdent EQUALS ConBind AndDatBind_opt 
+
+	ID	shift 62
+
+	TypeIdent	goto 83
+
+	.	error
+
+
+state 59:
+
+	KWSpec : DATATYPE DatBind_n . WithType_opt 
+
+	WITHTYPE	shift 85
+
+	WithType_opt	goto 84
+
+	.	reduce by rule 39
+
+
+state 60:
+
+	KWSpec : DATATYPE DatBind_0 . WithType_opt 
+
+	WITHTYPE	shift 85
+
+	WithType_opt	goto 86
+
+	.	reduce by rule 39
+
+
+state 61:
+
+	DatBind_0 : TypeIdent . EQUALS ConBind AndDatBind_opt 
+	KWSpec : DATATYPE TypeIdent . EQUALS DATATYPE LongTypeIdent 
+
+	EQUALS	shift 87
+
+
+	.	error
+
+
+state 62:
+
+	TypeIdent : ID .  (reduce by rule 10)
+
+
+
+	.	reduce by rule 10
+
+
+state 63:
+
+	TypDesc : TyVarSeq TypeIdent . AndTypDesc_opt 
+
+	AND	shift 89
+
+	AndTypDesc_opt	goto 88
+
+	.	reduce by rule 97
+
+
+state 64:
+
+	TyVarSeq1 : LPAREN TyVarComma_seq1 . RPAREN 
+
+	RPAREN	shift 90
+
+
+	.	error
+
+
+state 65:
+
+	TyVarComma_seq1 : TyVar . COMMA TyVarComma_seq1 
+	TyVarComma_seq1 : TyVar .  (reduce by rule 68)
+
+	COMMA	shift 91
+
+
+	.	reduce by rule 68
+
+
+state 66:
+
+	PrimValBind : OpIdent COLON . Ty EQUALS Arity STRING AndPrimValBind_opt 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 95
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+
+	.	error
+
+
+state 67:
+
+	OpIdent : OP Ident .  (reduce by rule 4)
+
+
+
+	.	reduce by rule 4
+
+
+state 68:
+
+	ModId_seq2 : ModId ModId_seq2 .  (reduce by rule 108)
+
+
+
+	.	reduce by rule 108
+
+
+state 69:
+
+	ModId_seq2 : ModId . ModId 
+	ModId_seq2 : ModId ModId .  (reduce by rule 107)
+	ModId_seq2 : ModId . ModId_seq2 
+
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 34
+	IdentWithLoc	goto 33
+	ModId	goto 69
+	ModId_seq2	goto 68
+
+	.	reduce by rule 107
+
+
+state 70:
+
+	SigExp : ModId WHERE . SigModTypBind 
+
+	TYPE	shift 103
+
+	SigModTypBind	goto 102
+
+	.	error
+
+
+state 71:
+
+	SigExp : SIG KWSpec_seq . END 
+
+	END	shift 104
+
+
+	.	error
+
+
+state 72:
+
+	ModId_seq1 : ModId ModId_seq1 .  (reduce by rule 106)
+
+
+
+	.	reduce by rule 106
+
+
+state 73:
+
+	ValDesc : OpEqIdent COLON . Ty AndValDesc_opt 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 105
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+
+	.	error
+
+
+state 74:
+
+	OpEqIdent : OP Ident .  (reduce by rule 6)
+
+
+
+	.	reduce by rule 6
+
+
+state 75:
+
+	TypBind : TyVarSeq TypeIdent . EQUALS Ty AndTypBind_opt 
+	TypDesc : TyVarSeq TypeIdent . AndTypDesc_opt 
+
+	AND	shift 89
+	EQUALS	shift 106
+
+	AndTypDesc_opt	goto 88
+
+	.	reduce by rule 97
+
+
+state 76:
+
+	ModDesc : ModId COLON . SigExp 
+
+	SIG	shift 35
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 34
+	IdentWithLoc	goto 33
+	ModId	goto 108
+	SigExp	goto 107
+
+	.	error
+
+
+state 77:
+
+	SigFile : SIGNATURE LocUnitName EQUALS . SIG KWSpec_seq END SemiEof 
+
+	SIG	shift 109
+
+
+	.	error
+
+
+state 78:
+
+	Spec : KWSpec Spec .  (reduce by rule 74)
+
+
+
+	.	reduce by rule 74
+
+
+state 79:
+
+	KWSpec : LOCAL Spec IN . Spec END 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 54
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	Spec	goto 110
+	KWSpec	goto 52
+
+	.	reduce by rule 76
+
+
+state 80:
+
+	Spec : SEMICOLON Spec .  (reduce by rule 75)
+
+
+
+	.	reduce by rule 75
+
+
+state 81:
+
+	ExDesc : OpIdent OfTy_opt . AndExDesc_opt 
+
+	AND	shift 112
+
+	AndExDesc_opt	goto 111
+
+	.	reduce by rule 42
+
+
+state 82:
+
+	OfTy_opt : OF . Ty 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 113
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+
+	.	error
+
+
+state 83:
+
+	DatBind_n : TyVarSeq1 TypeIdent . EQUALS ConBind AndDatBind_opt 
+
+	EQUALS	shift 114
+
+
+	.	error
+
+
+state 84:
+
+	KWSpec : DATATYPE DatBind_n WithType_opt .  (reduce by rule 84)
+
+
+
+	.	reduce by rule 84
+
+
+state 85:
+
+	WithType_opt : WITHTYPE . TypBind 
+
+	LPAREN	shift 23
+	TYVAR	shift 22
+
+	TyVar	goto 21
+	TypBind	goto 116
+	TyVarSeq	goto 115
+	TyVarSeq1	goto 18
+
+	.	reduce by rule 64
+
+
+state 86:
+
+	KWSpec : DATATYPE DatBind_0 WithType_opt .  (reduce by rule 83)
+
+
+
+	.	reduce by rule 83
+
+
+state 87:
+
+	DatBind_0 : TypeIdent EQUALS . ConBind AndDatBind_opt 
+	KWSpec : DATATYPE TypeIdent EQUALS . DATATYPE LongTypeIdent 
+
+	DATATYPE	shift 119
+	OP	shift 29
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 26
+	OpIdent	goto 118
+	ConBind	goto 117
+
+	.	error
+
+
+state 88:
+
+	TypDesc : TyVarSeq TypeIdent AndTypDesc_opt .  (reduce by rule 95)
+
+
+
+	.	reduce by rule 95
+
+
+state 89:
+
+	AndTypDesc_opt : AND . TypDesc 
+
+	LPAREN	shift 23
+	TYVAR	shift 22
+
+	TyVar	goto 21
+	TypDesc	goto 120
+	TyVarSeq	goto 19
+	TyVarSeq1	goto 18
+
+	.	reduce by rule 64
+
+
+state 90:
+
+	TyVarSeq1 : LPAREN TyVarComma_seq1 RPAREN .  (reduce by rule 66)
+
+
+
+	.	reduce by rule 66
+
+
+state 91:
+
+	TyVarComma_seq1 : TyVar COMMA . TyVarComma_seq1 
+
+	TYVAR	shift 22
+
+	TyVar	goto 65
+	TyVarComma_seq1	goto 121
+
+	.	error
+
+
+state 92:
+
+	Ty : TupleTy . ARROW Ty 
+	Ty : TupleTy .  (reduce by rule 46)
+
+	ARROW	shift 122
+
+
+	.	reduce by rule 46
+
+
+state 93:
+
+	Ty_sans_STAR : AtomicTy .  (reduce by rule 51)
+
+
+
+	.	reduce by rule 51
+
+
+state 94:
+
+	Ty_sans_STAR : Ty_sans_STAR . LongTypeIdent 
+	TupleTy : Ty_sans_STAR .  (reduce by rule 47)
+	TupleTy : Ty_sans_STAR . STAR TupleTy 
+
+	STAR	shift 124
+	ID	shift 62
+	QUAL_ID	shift 99
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 123
+
+	.	reduce by rule 47
+
+
+state 95:
+
+	PrimValBind : OpIdent COLON Ty . EQUALS Arity STRING AndPrimValBind_opt 
+
+	EQUALS	shift 125
+
+
+	.	error
+
+
+state 96:
+
+	AtomicTy : TyVar .  (reduce by rule 55)
+
+
+
+	.	reduce by rule 55
+
+
+state 97:
+
+	AtomicTy : LongTypeIdent .  (reduce by rule 54)
+
+
+
+	.	reduce by rule 54
+
+
+state 98:
+
+	LongTypeIdent : TypeIdent .  (reduce by rule 11)
+
+
+
+	.	reduce by rule 11
+
+
+state 99:
+
+	LongTypeIdent : QUAL_ID .  (reduce by rule 12)
+
+
+
+	.	reduce by rule 12
+
+
+state 100:
+
+	Ty_sans_STAR : LPAREN . TyComma_seq2 RPAREN LongTypeIdent 
+	AtomicTy : LPAREN . Ty RPAREN 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 127
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+	TyComma_seq2	goto 126
+
+	.	error
+
+
+state 101:
+
+	AtomicTy : LBRACE . TyRow_opt RBRACE 
+
+	STAR	shift 28
+	ID	shift 27
+	NZDIGIT	shift 134
+	NZPOSINT2	shift 133
+
+	Ident	goto 132
+	NumLabel	goto 131
+	Label	goto 130
+	TyRow_opt	goto 129
+	TyRow	goto 128
+
+	.	reduce by rule 59
+
+
+state 102:
+
+	SigExp : ModId WHERE SigModTypBind .  (reduce by rule 100)
+
+
+
+	.	reduce by rule 100
+
+
+state 103:
+
+	SigModTypBind : TYPE . TyVarSeq TypeIdent EQUALS Ty 
+	SigModTypBind : TYPE . TyVarSeq TypeIdent EQUALS Ty AND SigModTypBind 
+
+	LPAREN	shift 23
+	TYVAR	shift 22
+
+	TyVar	goto 21
+	TyVarSeq	goto 135
+	TyVarSeq1	goto 18
+
+	.	reduce by rule 64
+
+
+state 104:
+
+	SigExp : SIG KWSpec_seq END .  (reduce by rule 101)
+
+
+
+	.	reduce by rule 101
+
+
+state 105:
+
+	ValDesc : OpEqIdent COLON Ty . AndValDesc_opt 
+
+	AND	shift 137
+
+	AndValDesc_opt	goto 136
+
+	.	reduce by rule 94
+
+
+state 106:
+
+	TypBind : TyVarSeq TypeIdent EQUALS . Ty AndTypBind_opt 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 138
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+
+	.	error
+
+
+state 107:
+
+	ModDesc : ModId COLON SigExp .  (reduce by rule 98)
+
+
+
+	.	reduce by rule 98
+
+
+state 108:
+
+	SigExp : ModId .  (reduce by rule 99)
+	SigExp : ModId . WHERE SigModTypBind 
+
+	WHERE	shift 70
+
+
+	.	reduce by rule 99
+
+
+state 109:
+
+	SigFile : SIGNATURE LocUnitName EQUALS SIG . KWSpec_seq END SemiEof 
+
+	DATATYPE	shift 15
+	EQTYPE	shift 14
+	EXCEPTION	shift 13
+	LOCAL	shift 12
+	STRUCTURE	shift 10
+	TYPE	shift 9
+	VAL	shift 8
+	SEMICOLON	shift 7
+	OPEN	shift 6
+	INCLUDE	shift 5
+	PRIM_VAL	shift 4
+	PRIM_REFTYPE	shift 3
+
+	KWSpec	goto 2
+	KWSpec_seq	goto 139
+
+	.	reduce by rule 73
+
+
+state 110:
+
+	KWSpec : LOCAL Spec IN Spec . END 
+
+	END	shift 140
+
+
+	.	error
+
+
+state 111:
+
+	ExDesc : OpIdent OfTy_opt AndExDesc_opt .  (reduce by rule 40)
+
+
+
+	.	reduce by rule 40
+
+
+state 112:
+
+	AndExDesc_opt : AND . ExDesc 
+
+	OP	shift 29
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 26
+	OpIdent	goto 56
+	ExDesc	goto 141
+
+	.	error
+
+
+state 113:
+
+	OfTy_opt : OF Ty .  (reduce by rule 43)
+
+
+
+	.	reduce by rule 43
+
+
+state 114:
+
+	DatBind_n : TyVarSeq1 TypeIdent EQUALS . ConBind AndDatBind_opt 
+
+	OP	shift 29
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 26
+	OpIdent	goto 118
+	ConBind	goto 142
+
+	.	error
+
+
+state 115:
+
+	TypBind : TyVarSeq . TypeIdent EQUALS Ty AndTypBind_opt 
+
+	ID	shift 62
+
+	TypeIdent	goto 143
+
+	.	error
+
+
+state 116:
+
+	WithType_opt : WITHTYPE TypBind .  (reduce by rule 38)
+
+
+
+	.	reduce by rule 38
+
+
+state 117:
+
+	DatBind_0 : TypeIdent EQUALS ConBind . AndDatBind_opt 
+
+	AND	shift 145
+
+	AndDatBind_opt	goto 144
+
+	.	reduce by rule 34
+
+
+state 118:
+
+	ConBind : OpIdent . OfTy_opt BarConBind_opt 
+
+	OF	shift 82
+
+	OfTy_opt	goto 146
+
+	.	reduce by rule 44
+
+
+state 119:
+
+	KWSpec : DATATYPE TypeIdent EQUALS DATATYPE . LongTypeIdent 
+
+	ID	shift 62
+	QUAL_ID	shift 99
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 147
+
+	.	error
+
+
+state 120:
+
+	AndTypDesc_opt : AND TypDesc .  (reduce by rule 96)
+
+
+
+	.	reduce by rule 96
+
+
+state 121:
+
+	TyVarComma_seq1 : TyVar COMMA TyVarComma_seq1 .  (reduce by rule 67)
+
+
+
+	.	reduce by rule 67
+
+
+state 122:
+
+	Ty : TupleTy ARROW . Ty 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 148
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+
+	.	error
+
+
+state 123:
+
+	Ty_sans_STAR : Ty_sans_STAR LongTypeIdent .  (reduce by rule 50)
+
+
+
+	.	reduce by rule 50
+
+
+state 124:
+
+	TupleTy : Ty_sans_STAR STAR . TupleTy 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 149
+
+	.	error
+
+
+state 125:
+
+	PrimValBind : OpIdent COLON Ty EQUALS . Arity STRING AndPrimValBind_opt 
+
+	ZDIGIT	shift 154
+	NZDIGIT	shift 153
+	ZPOSINT2	shift 152
+	NZPOSINT2	shift 151
+
+	Arity	goto 150
+
+	.	error
+
+
+state 126:
+
+	Ty_sans_STAR : LPAREN TyComma_seq2 . RPAREN LongTypeIdent 
+
+	RPAREN	shift 155
+
+
+	.	error
+
+
+state 127:
+
+	AtomicTy : LPAREN Ty . RPAREN 
+	TyComma_seq2 : Ty . COMMA TyComma_seq2 
+	TyComma_seq2 : Ty . COMMA Ty 
+
+	COMMA	shift 157
+	RPAREN	shift 156
+
+
+	.	error
+
+
+state 128:
+
+	TyRow_opt : TyRow .  (reduce by rule 58)
+
+
+
+	.	reduce by rule 58
+
+
+state 129:
+
+	AtomicTy : LBRACE TyRow_opt . RBRACE 
+
+	RBRACE	shift 158
+
+
+	.	error
+
+
+state 130:
+
+	TyRow : Label . COLON Ty CommaTyRow_opt 
+
+	COLON	shift 159
+
+
+	.	error
+
+
+state 131:
+
+	Label : NumLabel .  (reduce by rule 17)
+
+
+
+	.	reduce by rule 17
+
+
+state 132:
+
+	Label : Ident .  (reduce by rule 16)
+
+
+
+	.	reduce by rule 16
+
+
+state 133:
+
+	NumLabel : NZPOSINT2 .  (reduce by rule 14)
+
+
+
+	.	reduce by rule 14
+
+
+state 134:
+
+	NumLabel : NZDIGIT .  (reduce by rule 15)
+
+
+
+	.	reduce by rule 15
+
+
+state 135:
+
+	SigModTypBind : TYPE TyVarSeq . TypeIdent EQUALS Ty 
+	SigModTypBind : TYPE TyVarSeq . TypeIdent EQUALS Ty AND SigModTypBind 
+
+	ID	shift 62
+
+	TypeIdent	goto 160
+
+	.	error
+
+
+state 136:
+
+	ValDesc : OpEqIdent COLON Ty AndValDesc_opt .  (reduce by rule 92)
+
+
+
+	.	reduce by rule 92
+
+
+state 137:
+
+	AndValDesc_opt : AND . ValDesc 
+
+	OP	shift 44
+	EQUALS	shift 43
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 42
+	EqIdent	goto 41
+	OpEqIdent	goto 40
+	ValDesc	goto 161
+
+	.	error
+
+
+state 138:
+
+	TypBind : TyVarSeq TypeIdent EQUALS Ty . AndTypBind_opt 
+
+	AND	shift 163
+
+	AndTypBind_opt	goto 162
+
+	.	reduce by rule 29
+
+
+state 139:
+
+	SigFile : SIGNATURE LocUnitName EQUALS SIG KWSpec_seq . END SemiEof 
+
+	END	shift 164
+
+
+	.	error
+
+
+state 140:
+
+	KWSpec : LOCAL Spec IN Spec END .  (reduce by rule 87)
+
+
+
+	.	reduce by rule 87
+
+
+state 141:
+
+	AndExDesc_opt : AND ExDesc .  (reduce by rule 41)
+
+
+
+	.	reduce by rule 41
+
+
+state 142:
+
+	DatBind_n : TyVarSeq1 TypeIdent EQUALS ConBind . AndDatBind_opt 
+
+	AND	shift 145
+
+	AndDatBind_opt	goto 165
+
+	.	reduce by rule 34
+
+
+state 143:
+
+	TypBind : TyVarSeq TypeIdent . EQUALS Ty AndTypBind_opt 
+
+	EQUALS	shift 106
+
+
+	.	error
+
+
+state 144:
+
+	DatBind_0 : TypeIdent EQUALS ConBind AndDatBind_opt .  (reduce by rule 30)
+
+
+
+	.	reduce by rule 30
+
+
+state 145:
+
+	AndDatBind_opt : AND . DatBind 
+
+	LPAREN	shift 23
+	TYVAR	shift 22
+
+	TyVar	goto 21
+	DatBind	goto 167
+	TyVarSeq	goto 166
+	TyVarSeq1	goto 18
+
+	.	reduce by rule 64
+
+
+state 146:
+
+	ConBind : OpIdent OfTy_opt . BarConBind_opt 
+
+	BAR	shift 169
+
+	BarConBind_opt	goto 168
+
+	.	reduce by rule 37
+
+
+state 147:
+
+	KWSpec : DATATYPE TypeIdent EQUALS DATATYPE LongTypeIdent .  (reduce by rule 85)
+
+
+
+	.	reduce by rule 85
+
+
+state 148:
+
+	Ty : TupleTy ARROW Ty .  (reduce by rule 45)
+
+
+
+	.	reduce by rule 45
+
+
+state 149:
+
+	TupleTy : Ty_sans_STAR STAR TupleTy .  (reduce by rule 48)
+
+
+
+	.	reduce by rule 48
+
+
+state 150:
+
+	PrimValBind : OpIdent COLON Ty EQUALS Arity . STRING AndPrimValBind_opt 
+
+	STRING	shift 170
+
+
+	.	error
+
+
+state 151:
+
+	Arity : NZPOSINT2 .  (reduce by rule 19)
+
+
+
+	.	reduce by rule 19
+
+
+state 152:
+
+	Arity : ZPOSINT2 .  (reduce by rule 18)
+
+
+
+	.	reduce by rule 18
+
+
+state 153:
+
+	Arity : NZDIGIT .  (reduce by rule 21)
+
+
+
+	.	reduce by rule 21
+
+
+state 154:
+
+	Arity : ZDIGIT .  (reduce by rule 20)
+
+
+
+	.	reduce by rule 20
+
+
+state 155:
+
+	Ty_sans_STAR : LPAREN TyComma_seq2 RPAREN . LongTypeIdent 
+
+	ID	shift 62
+	QUAL_ID	shift 99
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 171
+
+	.	error
+
+
+state 156:
+
+	AtomicTy : LPAREN Ty RPAREN .  (reduce by rule 57)
+
+
+
+	.	reduce by rule 57
+
+
+state 157:
+
+	TyComma_seq2 : Ty COMMA . TyComma_seq2 
+	TyComma_seq2 : Ty COMMA . Ty 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 173
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+	TyComma_seq2	goto 172
+
+	.	error
+
+
+state 158:
+
+	AtomicTy : LBRACE TyRow_opt RBRACE .  (reduce by rule 56)
+
+
+
+	.	reduce by rule 56
+
+
+state 159:
+
+	TyRow : Label COLON . Ty CommaTyRow_opt 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 174
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+
+	.	error
+
+
+state 160:
+
+	SigModTypBind : TYPE TyVarSeq TypeIdent . EQUALS Ty 
+	SigModTypBind : TYPE TyVarSeq TypeIdent . EQUALS Ty AND SigModTypBind 
+
+	EQUALS	shift 175
+
+
+	.	error
+
+
+state 161:
+
+	AndValDesc_opt : AND ValDesc .  (reduce by rule 93)
+
+
+
+	.	reduce by rule 93
+
+
+state 162:
+
+	TypBind : TyVarSeq TypeIdent EQUALS Ty AndTypBind_opt .  (reduce by rule 27)
+
+
+
+	.	reduce by rule 27
+
+
+state 163:
+
+	AndTypBind_opt : AND . TypBind 
+
+	LPAREN	shift 23
+	TYVAR	shift 22
+
+	TyVar	goto 21
+	TypBind	goto 176
+	TyVarSeq	goto 115
+	TyVarSeq1	goto 18
+
+	.	reduce by rule 64
+
+
+state 164:
+
+	SigFile : SIGNATURE LocUnitName EQUALS SIG KWSpec_seq END . SemiEof 
+
+	SEMICOLON	shift 179
+	EOF	shift 178
+
+	SemiEof	goto 177
+
+	.	error
+
+
+state 165:
+
+	DatBind_n : TyVarSeq1 TypeIdent EQUALS ConBind AndDatBind_opt .  (reduce by rule 31)
+
+
+
+	.	reduce by rule 31
+
+
+state 166:
+
+	DatBind : TyVarSeq . TypeIdent EQUALS ConBind AndDatBind_opt 
+
+	ID	shift 62
+
+	TypeIdent	goto 180
+
+	.	error
+
+
+state 167:
+
+	AndDatBind_opt : AND DatBind .  (reduce by rule 33)
+
+
+
+	.	reduce by rule 33
+
+
+state 168:
+
+	ConBind : OpIdent OfTy_opt BarConBind_opt .  (reduce by rule 35)
+
+
+
+	.	reduce by rule 35
+
+
+state 169:
+
+	BarConBind_opt : BAR . ConBind 
+
+	OP	shift 29
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 26
+	OpIdent	goto 118
+	ConBind	goto 181
+
+	.	error
+
+
+state 170:
+
+	PrimValBind : OpIdent COLON Ty EQUALS Arity STRING . AndPrimValBind_opt 
+
+	AND	shift 183
+
+	AndPrimValBind_opt	goto 182
+
+	.	reduce by rule 26
+
+
+state 171:
+
+	Ty_sans_STAR : LPAREN TyComma_seq2 RPAREN LongTypeIdent .  (reduce by rule 49)
+
+
+
+	.	reduce by rule 49
+
+
+state 172:
+
+	TyComma_seq2 : Ty COMMA TyComma_seq2 .  (reduce by rule 52)
+
+
+
+	.	reduce by rule 52
+
+
+state 173:
+
+	TyComma_seq2 : Ty . COMMA TyComma_seq2 
+	TyComma_seq2 : Ty . COMMA Ty 
+	TyComma_seq2 : Ty COMMA Ty .  (reduce by rule 53)
+
+	COMMA	shift 157
+
+
+	.	reduce by rule 53
+
+
+state 174:
+
+	TyRow : Label COLON Ty . CommaTyRow_opt 
+
+	COMMA	shift 185
+
+	CommaTyRow_opt	goto 184
+
+	.	reduce by rule 62
+
+
+state 175:
+
+	SigModTypBind : TYPE TyVarSeq TypeIdent EQUALS . Ty 
+	SigModTypBind : TYPE TyVarSeq TypeIdent EQUALS . Ty AND SigModTypBind 
+
+	LBRACE	shift 101
+	LPAREN	shift 100
+	ID	shift 62
+	QUAL_ID	shift 99
+	TYVAR	shift 22
+
+	TypeIdent	goto 98
+	LongTypeIdent	goto 97
+	TyVar	goto 96
+	Ty	goto 186
+	Ty_sans_STAR	goto 94
+	AtomicTy	goto 93
+	TupleTy	goto 92
+
+	.	error
+
+
+state 176:
+
+	AndTypBind_opt : AND TypBind .  (reduce by rule 28)
+
+
+
+	.	reduce by rule 28
+
+
+state 177:
+
+	SigFile : SIGNATURE LocUnitName EQUALS SIG KWSpec_seq END SemiEof .  (reduce by rule 69)
+
+
+
+	.	reduce by rule 69
+
+
+state 178:
+
+	SemiEof : EOF .  (reduce by rule 23)
+
+
+
+	.	reduce by rule 23
+
+
+state 179:
+
+	SemiEof : SEMICOLON . SemiEof 
+
+	SEMICOLON	shift 179
+	EOF	shift 178
+
+	SemiEof	goto 187
+
+	.	error
+
+
+state 180:
+
+	DatBind : TyVarSeq TypeIdent . EQUALS ConBind AndDatBind_opt 
+
+	EQUALS	shift 188
+
+
+	.	error
+
+
+state 181:
+
+	BarConBind_opt : BAR ConBind .  (reduce by rule 36)
+
+
+
+	.	reduce by rule 36
+
+
+state 182:
+
+	PrimValBind : OpIdent COLON Ty EQUALS Arity STRING AndPrimValBind_opt .  (reduce by rule 24)
+
+
+
+	.	reduce by rule 24
+
+
+state 183:
+
+	AndPrimValBind_opt : AND . PrimValBind 
+
+	OP	shift 29
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 26
+	OpIdent	goto 25
+	PrimValBind	goto 189
+
+	.	error
+
+
+state 184:
+
+	TyRow : Label COLON Ty CommaTyRow_opt .  (reduce by rule 60)
+
+
+
+	.	reduce by rule 60
+
+
+state 185:
+
+	CommaTyRow_opt : COMMA . TyRow 
+
+	STAR	shift 28
+	ID	shift 27
+	NZDIGIT	shift 134
+	NZPOSINT2	shift 133
+
+	Ident	goto 132
+	NumLabel	goto 131
+	Label	goto 130
+	TyRow	goto 190
+
+	.	error
+
+
+state 186:
+
+	SigModTypBind : TYPE TyVarSeq TypeIdent EQUALS Ty .  (reduce by rule 102)
+	SigModTypBind : TYPE TyVarSeq TypeIdent EQUALS Ty . AND SigModTypBind 
+
+	AND	shift 191
+
+
+	.	reduce by rule 102
+
+
+state 187:
+
+	SemiEof : SEMICOLON SemiEof .  (reduce by rule 22)
+
+
+
+	.	reduce by rule 22
+
+
+state 188:
+
+	DatBind : TyVarSeq TypeIdent EQUALS . ConBind AndDatBind_opt 
+
+	OP	shift 29
+	STAR	shift 28
+	ID	shift 27
+
+	Ident	goto 26
+	OpIdent	goto 118
+	ConBind	goto 192
+
+	.	error
+
+
+state 189:
+
+	AndPrimValBind_opt : AND PrimValBind .  (reduce by rule 25)
+
+
+
+	.	reduce by rule 25
+
+
+state 190:
+
+	CommaTyRow_opt : COMMA TyRow .  (reduce by rule 61)
+
+
+
+	.	reduce by rule 61
+
+
+state 191:
+
+	SigModTypBind : TYPE TyVarSeq TypeIdent EQUALS Ty AND . SigModTypBind 
+
+	TYPE	shift 103
+
+	SigModTypBind	goto 193
+
+	.	error
+
+
+state 192:
+
+	DatBind : TyVarSeq TypeIdent EQUALS ConBind . AndDatBind_opt 
+
+	AND	shift 145
+
+	AndDatBind_opt	goto 194
+
+	.	reduce by rule 34
+
+
+state 193:
+
+	SigModTypBind : TYPE TyVarSeq TypeIdent EQUALS Ty AND SigModTypBind .  (reduce by rule 103)
+
+
+
+	.	reduce by rule 103
+
+
+state 194:
+
+	DatBind : TyVarSeq TypeIdent EQUALS ConBind AndDatBind_opt .  (reduce by rule 32)
+
+
+
+	.	reduce by rule 32
+
+
+state 195:
+
+
+	EOF	accept
+
+
+	.	error
+
+133 of 508 action table entries left after compaction
+238 goto table entries

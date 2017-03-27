@@ -1,0 +1,678 @@
+
+state 0:
+
+	theoryfile : . ids_section types_section terms_section theorems 
+
+	IDS	shift 2
+
+	theoryfile	goto 64
+	ids_section	goto 1
+
+	.	error
+
+
+state 1:
+
+	theoryfile : ids_section . types_section terms_section theorems 
+
+	TYPES	shift 4
+
+	types_section	goto 3
+
+	.	error
+
+
+state 2:
+
+	ids_section : IDS . idsize_spec idpair_list 
+
+	NUMBER	shift 6
+
+	idsize_spec	goto 5
+
+	.	error
+
+
+state 3:
+
+	theoryfile : ids_section types_section . terms_section theorems 
+
+	TERMS	shift 8
+
+	terms_section	goto 7
+
+	.	error
+
+
+state 4:
+
+	types_section : TYPES . tysize_spec typedecl_list 
+
+	NUMBER	shift 10
+
+	tysize_spec	goto 9
+
+	.	error
+
+
+state 5:
+
+	ids_section : IDS idsize_spec . idpair_list 
+
+
+	idpair_list	goto 11
+
+	.	reduce by rule 3
+
+
+state 6:
+
+	idsize_spec : NUMBER .  (reduce by rule 2)
+
+
+
+	.	reduce by rule 2
+
+
+state 7:
+
+	theoryfile : ids_section types_section terms_section . theorems 
+
+	THEOREMS	shift 13
+
+	theorems	goto 12
+
+	.	error
+
+
+state 8:
+
+	terms_section : TERMS . tmsize_spec termdecl_list 
+
+	NUMBER	shift 15
+
+	tmsize_spec	goto 14
+
+	.	error
+
+
+state 9:
+
+	types_section : TYPES tysize_spec . typedecl_list 
+
+
+	typedecl_list	goto 16
+
+	.	reduce by rule 8
+
+
+state 10:
+
+	tysize_spec : NUMBER .  (reduce by rule 7)
+
+
+
+	.	reduce by rule 7
+
+
+state 11:
+
+	ids_section : IDS idsize_spec idpair_list .  (reduce by rule 1)
+	idpair_list : idpair_list . idpair 
+
+	ID	shift 18
+
+	idpair	goto 17
+
+	.	reduce by rule 1
+
+
+state 12:
+
+	theoryfile : ids_section types_section terms_section theorems .  (reduce by rule 0)
+
+
+
+	.	reduce by rule 0
+
+
+state 13:
+
+	theorems : THEOREMS . namethm_list 
+
+	ID	shift 21
+
+	namethm_list	goto 20
+	namethm	goto 19
+
+	.	reduce by rule 21
+
+
+state 14:
+
+	terms_section : TERMS tmsize_spec . termdecl_list 
+
+
+	termdecl_list	goto 22
+
+	.	reduce by rule 16
+
+
+state 15:
+
+	tmsize_spec : NUMBER .  (reduce by rule 15)
+
+
+
+	.	reduce by rule 15
+
+
+state 16:
+
+	types_section : TYPES tysize_spec typedecl_list .  (reduce by rule 6)
+	typedecl_list : typedecl_list . typedecl 
+
+	TYV	shift 25
+	TYOP	shift 24
+
+	typedecl	goto 23
+
+	.	reduce by rule 6
+
+
+state 17:
+
+	idpair_list : idpair_list idpair .  (reduce by rule 4)
+
+
+
+	.	reduce by rule 4
+
+
+state 18:
+
+	idpair : ID . DOLLAR ID 
+
+	DOLLAR	shift 26
+
+
+	.	error
+
+
+state 19:
+
+	namethm_list : namethm . namethm_list 
+
+	ID	shift 21
+
+	namethm_list	goto 27
+	namethm	goto 19
+
+	.	reduce by rule 21
+
+
+state 20:
+
+	theorems : THEOREMS namethm_list .  (reduce by rule 20)
+
+
+
+	.	reduce by rule 20
+
+
+state 21:
+
+	namethm : ID . termlist 
+
+	LPAREN	shift 30
+
+	term	goto 29
+	termlist	goto 28
+
+	.	error
+
+
+state 22:
+
+	terms_section : TERMS tmsize_spec termdecl_list .  (reduce by rule 14)
+	termdecl_list : termdecl_list . termdecl 
+
+	TMV	shift 33
+	TMC	shift 32
+
+	termdecl	goto 31
+
+	.	reduce by rule 14
+
+
+state 23:
+
+	typedecl_list : typedecl_list typedecl .  (reduce by rule 9)
+
+
+
+	.	reduce by rule 9
+
+
+state 24:
+
+	typedecl : TYOP . LBRACKET intlist_ne RBRACKET 
+
+	LBRACKET	shift 34
+
+
+	.	error
+
+
+state 25:
+
+	typedecl : TYV . ID 
+
+	ID	shift 35
+
+
+	.	error
+
+
+state 26:
+
+	idpair : ID DOLLAR . ID 
+
+	ID	shift 36
+
+
+	.	error
+
+
+state 27:
+
+	namethm_list : namethm namethm_list .  (reduce by rule 22)
+
+
+
+	.	reduce by rule 22
+
+
+state 28:
+
+	namethm : ID termlist .  (reduce by rule 23)
+
+
+
+	.	reduce by rule 23
+
+
+state 29:
+
+	termlist : term .  (reduce by rule 24)
+	termlist : term . termlist 
+
+	LPAREN	shift 30
+
+	term	goto 29
+	termlist	goto 37
+
+	.	reduce by rule 24
+
+
+state 30:
+
+	term : LPAREN . term_a RPAREN 
+
+	LPAREN	shift 44
+	BACKSLASH	shift 43
+	NUMBER	shift 42
+
+	term_a	goto 41
+	term_c	goto 40
+	base_term	goto 39
+	tmid	goto 38
+
+	.	error
+
+
+state 31:
+
+	termdecl_list : termdecl_list termdecl .  (reduce by rule 17)
+
+
+
+	.	reduce by rule 17
+
+
+state 32:
+
+	termdecl : TMC . LBRACKET NUMBER NUMBER RBRACKET 
+
+	LBRACKET	shift 45
+
+
+	.	error
+
+
+state 33:
+
+	termdecl : TMV . LBRACKET ID NUMBER RBRACKET 
+
+	LBRACKET	shift 46
+
+
+	.	error
+
+
+state 34:
+
+	typedecl : TYOP LBRACKET . intlist_ne RBRACKET 
+
+	NUMBER	shift 48
+
+	intlist_ne	goto 47
+
+	.	error
+
+
+state 35:
+
+	typedecl : TYV ID .  (reduce by rule 10)
+
+
+
+	.	reduce by rule 10
+
+
+state 36:
+
+	idpair : ID DOLLAR ID .  (reduce by rule 5)
+
+
+
+	.	reduce by rule 5
+
+
+state 37:
+
+	termlist : term termlist .  (reduce by rule 25)
+
+
+
+	.	reduce by rule 25
+
+
+state 38:
+
+	base_term : tmid .  (reduce by rule 32)
+
+
+
+	.	reduce by rule 32
+
+
+state 39:
+
+	term_c : base_term .  (reduce by rule 30)
+
+
+
+	.	reduce by rule 30
+
+
+state 40:
+
+	term_a : term_c .  (reduce by rule 28)
+	term_c : term_c . base_term 
+
+	LPAREN	shift 44
+	NUMBER	shift 42
+
+	base_term	goto 49
+	tmid	goto 38
+
+	.	reduce by rule 28
+
+
+state 41:
+
+	term : LPAREN term_a . RPAREN 
+
+	RPAREN	shift 50
+
+
+	.	error
+
+
+state 42:
+
+	tmid : NUMBER .  (reduce by rule 33)
+
+
+
+	.	reduce by rule 33
+
+
+state 43:
+
+	term_a : BACKSLASH . tmid FULLSTOP term_a 
+
+	NUMBER	shift 42
+
+	tmid	goto 51
+
+	.	error
+
+
+state 44:
+
+	base_term : LPAREN . term_a RPAREN 
+
+	LPAREN	shift 44
+	BACKSLASH	shift 43
+	NUMBER	shift 42
+
+	term_a	goto 52
+	term_c	goto 40
+	base_term	goto 39
+	tmid	goto 38
+
+	.	error
+
+
+state 45:
+
+	termdecl : TMC LBRACKET . NUMBER NUMBER RBRACKET 
+
+	NUMBER	shift 53
+
+
+	.	error
+
+
+state 46:
+
+	termdecl : TMV LBRACKET . ID NUMBER RBRACKET 
+
+	ID	shift 54
+
+
+	.	error
+
+
+state 47:
+
+	typedecl : TYOP LBRACKET intlist_ne . RBRACKET 
+
+	RBRACKET	shift 55
+
+
+	.	error
+
+
+state 48:
+
+	intlist_ne : NUMBER .  (reduce by rule 12)
+	intlist_ne : NUMBER . intlist_ne 
+
+	NUMBER	shift 48
+
+	intlist_ne	goto 56
+
+	.	reduce by rule 12
+
+
+state 49:
+
+	term_c : term_c base_term .  (reduce by rule 29)
+
+
+
+	.	reduce by rule 29
+
+
+state 50:
+
+	term : LPAREN term_a RPAREN .  (reduce by rule 26)
+
+
+
+	.	reduce by rule 26
+
+
+state 51:
+
+	term_a : BACKSLASH tmid . FULLSTOP term_a 
+
+	FULLSTOP	shift 57
+
+
+	.	error
+
+
+state 52:
+
+	base_term : LPAREN term_a . RPAREN 
+
+	RPAREN	shift 58
+
+
+	.	error
+
+
+state 53:
+
+	termdecl : TMC LBRACKET NUMBER . NUMBER RBRACKET 
+
+	NUMBER	shift 59
+
+
+	.	error
+
+
+state 54:
+
+	termdecl : TMV LBRACKET ID . NUMBER RBRACKET 
+
+	NUMBER	shift 60
+
+
+	.	error
+
+
+state 55:
+
+	typedecl : TYOP LBRACKET intlist_ne RBRACKET .  (reduce by rule 11)
+
+
+
+	.	reduce by rule 11
+
+
+state 56:
+
+	intlist_ne : NUMBER intlist_ne .  (reduce by rule 13)
+
+
+
+	.	reduce by rule 13
+
+
+state 57:
+
+	term_a : BACKSLASH tmid FULLSTOP . term_a 
+
+	LPAREN	shift 44
+	BACKSLASH	shift 43
+	NUMBER	shift 42
+
+	term_a	goto 61
+	term_c	goto 40
+	base_term	goto 39
+	tmid	goto 38
+
+	.	error
+
+
+state 58:
+
+	base_term : LPAREN term_a RPAREN .  (reduce by rule 31)
+
+
+
+	.	reduce by rule 31
+
+
+state 59:
+
+	termdecl : TMC LBRACKET NUMBER NUMBER . RBRACKET 
+
+	RBRACKET	shift 62
+
+
+	.	error
+
+
+state 60:
+
+	termdecl : TMV LBRACKET ID NUMBER . RBRACKET 
+
+	RBRACKET	shift 63
+
+
+	.	error
+
+
+state 61:
+
+	term_a : BACKSLASH tmid FULLSTOP term_a .  (reduce by rule 27)
+
+
+
+	.	reduce by rule 27
+
+
+state 62:
+
+	termdecl : TMC LBRACKET NUMBER NUMBER RBRACKET .  (reduce by rule 19)
+
+
+
+	.	reduce by rule 19
+
+
+state 63:
+
+	termdecl : TMV LBRACKET ID NUMBER RBRACKET .  (reduce by rule 18)
+
+
+
+	.	reduce by rule 18
+
+
+state 64:
+
+
+	EOF	accept
+
+
+	.	error
+
+40 of 112 action table entries left after compaction
+39 goto table entries

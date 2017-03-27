@@ -1,0 +1,1 @@
+selftest.uo: /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbnum.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui PPBackEnd.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Portable.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui base_tokens.ui qbuf.ui term_tokens.ui 

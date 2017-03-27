@@ -1,0 +1,10 @@
+\THEOREM FIELDS_def string
+|- (∀P. FIELDS P "" = [""]) ∧
+   ∀t h P.
+     FIELDS P (STRING h t) =
+     (let (l,r) = SPLITP P (STRING h t)
+      in
+        if NULL l then ""::FIELDS P (TL r)
+        else if NULL r then [l]
+        else l::FIELDS P (TL r))
+\ENDTHEOREM

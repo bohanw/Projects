@@ -1,0 +1,3 @@
+\THEOREM CHR_ONTO string
+|- ∀a. ∃r. (a = CHR r) ∧ r < 256
+\ENDTHEOREM

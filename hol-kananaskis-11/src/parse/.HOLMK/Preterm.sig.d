@@ -1,0 +1,1 @@
+Preterm.ui: Overload.ui Pretype.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/locn.ui 

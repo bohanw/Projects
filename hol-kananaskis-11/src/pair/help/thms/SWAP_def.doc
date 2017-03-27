@@ -1,0 +1,3 @@
+\THEOREM SWAP_def pair
+|- ∀a. SWAP a = (SND a,FST a)
+\ENDTHEOREM

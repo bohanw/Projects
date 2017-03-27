@@ -1,0 +1,1 @@
+basicSizeSyntax.uo: basicSizeSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Abbrev.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui basicSizeTheory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui 

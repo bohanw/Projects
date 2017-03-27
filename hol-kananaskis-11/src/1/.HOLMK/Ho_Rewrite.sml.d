@@ -1,0 +1,1 @@
+Ho_Rewrite.uo: Ho_Rewrite.ui Abbrev.ui Conv.ui Drule.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HOLset.ui Ho_Net.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui Tactic.ui Tactical.ui boolSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolTheory.ui 

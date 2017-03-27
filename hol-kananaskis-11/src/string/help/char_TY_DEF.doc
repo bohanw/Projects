@@ -1,0 +1,3 @@
+\THEOREM char_TY_DEF string
+|- ∃rep. TYPE_DEFINITION (λn. n < 256) rep
+\ENDTHEOREM

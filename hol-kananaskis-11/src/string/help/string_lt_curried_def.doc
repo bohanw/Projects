@@ -1,0 +1,3 @@
+\THEOREM string_lt_curried_def string
+|- ∀x x1. x < x1 ⇔ string_lt_tupled (x,x1)
+\ENDTHEOREM

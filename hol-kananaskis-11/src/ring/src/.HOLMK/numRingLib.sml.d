@@ -1,0 +1,1 @@
+numRingLib.uo: numRingLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/arithmeticTheory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui numRingTheory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/numSyntax.ui ringLib.ui 

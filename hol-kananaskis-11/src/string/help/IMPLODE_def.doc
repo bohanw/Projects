@@ -1,0 +1,4 @@
+\THEOREM IMPLODE_def string
+|- (IMPLODE "" = "") ∧
+   ∀c cs. IMPLODE (STRING c cs) = STRING c (IMPLODE cs)
+\ENDTHEOREM

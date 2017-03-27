@@ -1,0 +1,11 @@
+\THEOREM string_lt_tupled_primitive_def string
+|- string_lt_tupled =
+   WFREC
+     (@R. WF R ∧ ∀c2 c1 s2 s1. R (s1,s2) (STRING c1 s1,STRING c2 s2))
+     (λstring_lt_tupled a.
+        case a of
+          (s,"") => I F
+        | ("",STRING c s') => I T
+        | (STRING c1 s1,STRING c s') =>
+            I (c1 < c ∨ (c1 = c) ∧ string_lt_tupled (s1,s')))
+\ENDTHEOREM

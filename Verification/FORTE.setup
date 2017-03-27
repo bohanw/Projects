@@ -1,0 +1,21 @@
+if [ ! $FORTE ] 
+then
+  FORTE=/home/wbh/forte
+fi
+
+# setenv TCL_LIBRARY /usr/lib/tcl8.6
+# setenv TK_LIBRARY  /usr/lib/tcltk/i386-linux-gnu/tk8.6/
+# setenv TIX_LIBRARY 
+#
+export LD_LIBRARY_PATH=/home/wbh/lib
+export TCL_LIBRARY=/usr/share/tcltk/tcl8.6
+export TK_LIBRARY=/usr/share/tcltk/tk8.6/
+export ITCL_LIBRARY=/usr/share/itcl3.2
+export TIX_LIBRARY=/usr/lib/Tix8.4.3
+#
+# setenv LD_LIBRARY_PATH ...
+#
+#setenv FLLIB	$FORTE/methlib
+#setenv PATH	${PATH}:$FORTE/bin/Linux
+export FLLIB=$FORTE/methlib
+export PATH=$PATH:$FORTE/bin/Linux

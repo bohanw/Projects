@@ -1,0 +1,22 @@
+\THEOREM FIELDS_tupled_primitive_def string
+|- FIELDS_tupled =
+   WFREC
+     (@R.
+        WF R ∧
+        (∀t h P l r.
+           ((l,r) = SPLITP P (STRING h t)) ∧ NULL l ⇒
+           R (P,TL r) (P,STRING h t)) ∧
+        ∀t h P l r.
+          ((l,r) = SPLITP P (STRING h t)) ∧ ¬NULL l ∧ ¬NULL r ⇒
+          R (P,TL r) (P,STRING h t))
+     (λFIELDS_tupled a.
+        case a of
+          (P,"") => I [""]
+        | (P,STRING h t) =>
+            I
+              (let (l,r) = SPLITP P (STRING h t)
+               in
+                 if NULL l then ""::FIELDS_tupled (P,TL r)
+                 else if NULL r then [l]
+                 else l::FIELDS_tupled (P,TL r)))
+\ENDTHEOREM

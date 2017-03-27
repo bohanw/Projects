@@ -1,0 +1,1 @@
+Term_coeffs.uo: Term_coeffs.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbint.ui Arith_cons.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Rsyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui 

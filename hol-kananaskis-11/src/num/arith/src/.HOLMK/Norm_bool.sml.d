@@ -1,0 +1,1 @@
+Norm_bool.uo: Norm_bool.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbint.ui Arith_cons.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Canon.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui RJBConv.ui Thm_convs.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolSyntax.ui 

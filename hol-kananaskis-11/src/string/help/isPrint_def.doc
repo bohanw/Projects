@@ -1,0 +1,3 @@
+\THEOREM isPrint_def string
+|- ∀c. isPrint c ⇔ 32 ≤ ORD c ∧ ORD c < 127
+\ENDTHEOREM

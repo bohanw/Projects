@@ -1,0 +1,3 @@
+\THEOREM prod_TY_DEF pair
+|- ∃rep. TYPE_DEFINITION (λp. ∃x y. p = (λa b. (a = x) ∧ (b = y))) rep
+\ENDTHEOREM

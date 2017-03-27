@@ -1,0 +1,1 @@
+BoundedRewrites.uo: BoundedRewrites.ui Drule.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HOLset.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui boolSyntax.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolTheory.ui 

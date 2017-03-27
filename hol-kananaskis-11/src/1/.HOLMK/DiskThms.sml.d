@@ -1,0 +1,1 @@
+DiskThms.uo: DiskThms.ui AssembleDiskFiles.ui DiskFilesHeader.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HOLset.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Portable.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/SharingTables.ui 

@@ -1,0 +1,1 @@
+holyHammer.uo: holyHammer.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Theory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui hhReconstruct.ui hhWriter.ui 

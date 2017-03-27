@@ -1,0 +1,3 @@
+\THEOREM CHR_ORD string
+|- ∀a. CHR (ORD a) = a
+\ENDTHEOREM

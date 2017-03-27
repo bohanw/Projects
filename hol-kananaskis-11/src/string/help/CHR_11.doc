@@ -1,0 +1,3 @@
+\THEOREM CHR_11 string
+|- ∀r r'. r < 256 ⇒ r' < 256 ⇒ ((CHR r = CHR r') ⇔ (r = r'))
+\ENDTHEOREM

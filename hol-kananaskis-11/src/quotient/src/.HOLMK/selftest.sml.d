@@ -1,0 +1,1 @@
+selftest.uo: /home/wbh/Downloads/hol-kananaskis-11/sigobj/BasicProvers.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/bossLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/numLib.ui quotient.ui 

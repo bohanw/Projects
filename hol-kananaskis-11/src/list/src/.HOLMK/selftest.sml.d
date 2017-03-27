@@ -1,0 +1,1 @@
+selftest.uo: /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui ListConv1.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui listSimps.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/testutils.ui 

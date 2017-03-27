@@ -1,0 +1,3 @@
+\THEOREM ORD_ONTO string
+|- ∀r. r < 256 ⇔ ∃a. r = ORD a
+\ENDTHEOREM

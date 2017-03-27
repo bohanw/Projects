@@ -1,0 +1,1 @@
+bagLib.uo: bagLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui bagSimpleLib.ui bagSimps.ui bagSyntax.ui bagTheory.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/bossLib.ui 

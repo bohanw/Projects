@@ -1,0 +1,5 @@
+\THEOREM DEST_STRING_LEMS string
+|- ∀s.
+     ((DEST_STRING s = NONE) ⇔ (s = "")) ∧
+     ((DEST_STRING s = SOME (c,t)) ⇔ (s = STRING c t))
+\ENDTHEOREM

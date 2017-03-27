@@ -1,0 +1,3 @@
+\THEOREM string_lt_nonrefl string
+|- ∀s. ¬(s < s)
+\ENDTHEOREM

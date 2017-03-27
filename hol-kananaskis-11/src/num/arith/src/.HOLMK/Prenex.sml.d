@@ -1,0 +1,1 @@
+Prenex.uo: Prenex.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbint.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Conv.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui RJBConv.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolLib.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/boolTheory.ui 

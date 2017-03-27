@@ -1,0 +1,1 @@
+quantHeuristicsLib.uo: quantHeuristicsLib.ui quantHeuristicsLibBase.ui quantHeuristicsLibFunRemove.ui quantHeuristicsLibParameters.ui 

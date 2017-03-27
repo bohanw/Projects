@@ -1,0 +1,9 @@
+\THEOREM TOCHAR_primitive_def string
+|- TOCHAR =
+   WFREC (@R. WF R)
+     (λTOCHAR a.
+        case a of
+          "" => ARB
+        | STRING c "" => I c
+        | STRING c (STRING v2 v3) => ARB)
+\ENDTHEOREM

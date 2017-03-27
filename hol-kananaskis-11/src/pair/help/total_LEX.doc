@@ -1,0 +1,3 @@
+\THEOREM total_LEX pair
+|- total R1 ∧ total R2 ⇒ total (R1 LEX R2)
+\ENDTHEOREM

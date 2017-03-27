@@ -1,0 +1,3 @@
+\THEOREM char_gt_def string
+|- ∀a b. a > b ⇔ ORD a > ORD b
+\ENDTHEOREM

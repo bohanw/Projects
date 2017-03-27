@@ -1,0 +1,1 @@
+pairSimps.uo: pairSimps.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/BasicProvers.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui PairedLambda.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Parse.ui pairTheory.ui pairTools.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/simpLib.ui 

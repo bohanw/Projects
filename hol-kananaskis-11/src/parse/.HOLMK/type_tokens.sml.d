@@ -1,0 +1,1 @@
+type_tokens.uo: type_tokens.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Arbnum.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/UTF8.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/UnicodeChars.ui base_tokens.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/locn.ui qbuf.ui 

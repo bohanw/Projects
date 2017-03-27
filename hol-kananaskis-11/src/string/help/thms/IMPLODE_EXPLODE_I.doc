@@ -1,0 +1,3 @@
+\THEOREM IMPLODE_EXPLODE_I string
+|- (EXPLODE s = s) ∧ (IMPLODE s = s)
+\ENDTHEOREM

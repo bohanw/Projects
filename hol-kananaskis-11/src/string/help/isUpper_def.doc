@@ -1,0 +1,3 @@
+\THEOREM isUpper_def string
+|- ∀c. isUpper c ⇔ 65 ≤ ORD c ∧ ORD c ≤ 90
+\ENDTHEOREM

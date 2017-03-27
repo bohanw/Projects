@@ -1,0 +1,6 @@
+\THEOREM string_lt_ind string
+|- ∀P.
+     (∀s. P s "") ∧ (∀c s. P "" (STRING c s)) ∧
+     (∀c1 s1 c2 s2. P s1 s2 ⇒ P (STRING c1 s1) (STRING c2 s2)) ⇒
+     ∀v v1. P v v1
+\ENDTHEOREM

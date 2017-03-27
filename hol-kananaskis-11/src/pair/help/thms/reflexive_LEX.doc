@@ -1,0 +1,3 @@
+\THEOREM reflexive_LEX pair
+|- reflexive (R1 LEX R2) ⇔ reflexive R1 ∨ reflexive R2
+\ENDTHEOREM

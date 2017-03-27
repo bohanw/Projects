@@ -1,0 +1,5 @@
+\THEOREM IMPLODE_EQ_THM string
+|- ∀c s l.
+     ((STRING c s = IMPLODE l) ⇔ (l = STRING c (EXPLODE s))) ∧
+     ((IMPLODE l = STRING c s) ⇔ (l = STRING c (EXPLODE s)))
+\ENDTHEOREM

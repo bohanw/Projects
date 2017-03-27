@@ -1,0 +1,3 @@
+\THEOREM ORD_11 string
+|- ∀a a'. (ORD a = ORD a') ⇔ (a = a')
+\ENDTHEOREM

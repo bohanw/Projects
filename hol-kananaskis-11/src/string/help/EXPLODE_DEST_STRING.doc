@@ -1,0 +1,7 @@
+\THEOREM EXPLODE_DEST_STRING string
+|- ∀s.
+     EXPLODE s =
+     case DEST_STRING s of
+       NONE => ""
+     | SOME (c,t) => STRING c (EXPLODE t)
+\ENDTHEOREM

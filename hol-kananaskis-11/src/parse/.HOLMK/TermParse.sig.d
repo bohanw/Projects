@@ -1,0 +1,1 @@
+TermParse.ui: Absyn.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Portable.ui Preterm.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Term.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui term_grammar.ui type_grammar.ui 

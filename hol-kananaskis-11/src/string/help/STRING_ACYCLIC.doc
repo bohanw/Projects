@@ -1,0 +1,3 @@
+\THEOREM STRING_ACYCLIC string
+|- ∀s c. STRING c s ≠ s ∧ s ≠ STRING c s
+\ENDTHEOREM

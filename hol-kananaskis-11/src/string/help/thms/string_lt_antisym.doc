@@ -1,0 +1,3 @@
+\THEOREM string_lt_antisym string
+|- ∀s t. ¬(s < t ∧ t < s)
+\ENDTHEOREM

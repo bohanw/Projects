@@ -1,0 +1,3 @@
+\THEOREM char_size_def string
+|- ∀c. char_size c = 0
+\ENDTHEOREM

@@ -1,0 +1,6 @@
+\THEOREM TOCHAR_ind string
+|- ∀P.
+     (∀c. P (STRING c "")) ∧ P "" ∧
+     (∀v6 v4 v5. P (STRING v6 (STRING v4 v5))) ⇒
+     ∀v. P v
+\ENDTHEOREM

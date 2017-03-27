@@ -1,0 +1,1 @@
+../minisat/Global.h

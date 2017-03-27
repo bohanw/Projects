@@ -1,0 +1,1 @@
+GrammarSpecials.uo: GrammarSpecials.ui Coding.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Feedback.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/HolKernel.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Lib.ui 

@@ -1,0 +1,1 @@
+type_grammar.ui: HOLgrammars.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/KernelSig.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Portable.ui /home/wbh/Downloads/hol-kananaskis-11/sigobj/Type.ui 

@@ -1,0 +1,3 @@
+\THEOREM isCntrl_def string
+|- ∀c. isCntrl c ⇔ ORD c < 32 ∨ 127 ≤ ORD c
+\ENDTHEOREM

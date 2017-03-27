@@ -1,0 +1,4 @@
+\THEOREM EXTRACT_def string
+|- (EXTRACT (s,i,NONE) = SUBSTRING (s,i,STRLEN s − i)) ∧
+   (EXTRACT (s,i,SOME n) = SUBSTRING (s,i,n))
+\ENDTHEOREM

@@ -1,0 +1,10 @@
+\THEOREM isPREFIX_IND string
+|- ∀P.
+     (∀s1 s2.
+        (∀c t1 t2.
+           (DEST_STRING s1 = SOME (c,t1)) ∧
+           (DEST_STRING s2 = SOME (c,t2)) ⇒
+           P t1 t2) ⇒
+        P s1 s2) ⇒
+     ∀v v1. P v v1
+\ENDTHEOREM
