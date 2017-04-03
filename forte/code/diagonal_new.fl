@@ -1,0 +1,22 @@
+let diag= load_exe "/home/wbh/forte/code/diagonal_new.exe";
+let clk = variable "clk";
+let reset = variable "reset"; 
+
+ let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),
+(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]
+",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",T,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+//let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
