@@ -1,0 +1,19 @@
+let cnt = load_exe "cnt.exe";
+let clk = variable "clk";
+let reset = variable "rst"; 
+
+//let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"rst",T,0,2),(T,"rst",F,3,9)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+let tr_list = [("cnt[0]",0,9),("cnt[1]",0,9),("cnt[2]",0,9),("cnt[3]",0,9),("n_cnt[0]",0,9),("n_cnt[1]",0,9),("prop",0,9)];
+//let tr_list = [("prop",0,9)];
+STE "" cnt [] ant cons tr_list;
+get_trace_val cnt "prop" 0;
+get_trace_val cnt "prop" 1;
+get_trace_val cnt "prop" 2;
+get_trace_val cnt "prop" 3;
+get_trace_val cnt "prop" 4;
+get_trace_val cnt "prop" 7;
+get_trace_val cnt "prop" 8;
+get_trace_val cnt "prop" 9;
