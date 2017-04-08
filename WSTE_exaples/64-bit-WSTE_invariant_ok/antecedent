@@ -1,0 +1,22 @@
+T; clk ; 0b1; 0 ; 1
+T; clk ; 0b0; 1 ; 2
+T; clk ; 0b1; 2 ; 3
+T; clk ; 0b0; 3 ; 4
+T; clk ; 0b1; 4 ; 5
+T; clk ; 0b0; 5 ; 6
+T; clk ; 0b1; 6 ; 7
+T; clk ; 0b0; 7 ; 8
+T; clk ; 0b1; 8 ; 9
+T; clk ; 0b0; 9 ; 10
+T; clk ; 0b1; 10 ; 11
+T; clk ; 0b0; 11 ; 12
+T; reset101H; reset101H@1; 1; 2
+T; valid101H; valid101H@1; 1; 2
+T; ff_c/o[63:0]; final_c103H@3_63_0; 3; 4
+T; ff_s/o[63:0]; final_s103H@3_63_0; 3; 4
+T; ff_f/o[63:0]; res104H@5_63_0; 5; 6
+T; ff102_r/o; reset103H@3; 3; 4
+T; final_c103H[63:0]; final_c103H@5_63_0; 5; 6
+T; final_s103H[63:0]; final_s103H@5_63_0; 5; 6
+T; reset103H; reset103H@5; 5; 6
+

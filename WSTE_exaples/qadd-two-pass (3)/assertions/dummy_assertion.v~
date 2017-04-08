@@ -1,0 +1,6 @@
+module dummy_assertion (
+			input logic [31:0] result,
+			output logic 	   ok
+			);
+   assign ok = 1;
+endmodule

@@ -1,0 +1,23 @@
+(assumptions/state_invariant.v
+	[
+	  ("reset103H", "reset103H", 8),
+	  ("final_c103H[63:0]", "final_c103H[63:0]", 8),
+	  ("final_s103H[63:0]", "final_s103H[63:0]", 8),
+	  ("res104H[63:0]", "res104H[63:0]", 6)
+	]
+	[
+	  (T,"ok",T,12,13)
+	]
+)
+
+(assertions/state_invariant.v
+	[
+	  ("reset103H", "reset103H", 6),
+	  ("final_c103H[63:0]", "final_c103H[63:0]", 6),
+	  ("final_s103H[63:0]", "final_s103H[63:0]", 6),
+	  ("res104H[63:0]", "res104H[63:0]", 4)
+	]
+	[
+	  (T,"ok",T,12,13)
+	]
+)

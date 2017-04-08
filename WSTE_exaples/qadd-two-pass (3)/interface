@@ -1,0 +1,18 @@
+(assumptions/input_assumption.v
+	[
+	]
+	[
+	  (T, "ok", T, 1, 2)
+	]
+)
+
+(assertions/assertion.v
+	[
+	  ("input1[31:0]", "a[31:0]", 1)
+	  ("input2[31:0]", "b[31:0]", 1)
+	  ("result[31:0]", "c[31:0]", 1)
+	]
+	[
+	  (T, "ok", T, 1, 2)
+	]
+)
