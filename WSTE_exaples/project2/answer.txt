@@ -1,0 +1,12 @@
+(1) (a)cycle time is 4.5 ns
+    (b) total latency 4.5*8 = 36ns, total time to complete one multiplciation operation by eight pipelined stages
+
+(2) For four stage, cycle time is 6.9ns, latency is 6.9*4 = 27.6 ns
+    For two stage, cycle time is 11.3ns, and latency is 22.6ns
+
+(3) In theory inserting more pipeline registers should increase throughput, which is demonstrated by faster cycle time, but inserting register will increase total delay for one computation, which agrees with the numbers from (1) and (2).
+
+(4) clock period is 4.7ns for ISR  with eight stage pipeline multiplier
+
+(5) It takes about 320 cycles (10ns for each cycle) to compute sqrt(1001). I would expect gain given the experiment from question (2) .
+
