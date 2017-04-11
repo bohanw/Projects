@@ -1,0 +1,651 @@
+let qadd = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/qadd2.exe";
+
+let a[0] = variable "a[0]";
+let b[0] = variable "b[0]";
+let a[1] = variable "a[1]";
+let b[1] = variable "b[1]";
+let a[2] = variable "a[2]";
+let b[2] = variable "b[2]";
+let a[3] = variable "a[3]";
+let b[3] = variable "b[3]";
+let a[4] = variable "a[4]";
+let b[4] = variable "b[4]";
+let a[5] = variable "a[5]";
+let b[5] = variable "b[5]";
+let a[6] = variable "a[6]";
+let b[6] = variable "b[6]";
+let a[7] = variable "a[7]";
+let b[7] = variable "b[7]";
+let a[8] = variable "a[8]";
+let b[8] = variable "b[8]";
+let a[9] = variable "a[9]";
+let b[9] = variable "b[9]";
+
+let a[10] = variable "a[10]";
+let b[10] = variable "b[10]";
+let a[11] = variable "a[11]";
+let b[11] = variable "b[11]";
+let a[12] = variable "a[12]";
+let b[12] = variable "b[12]";
+let a[13] = variable "a[13]";
+let b[13] = variable "b[13]";
+let a[14] = variable "a[14]";
+let b[14] = variable "b[14]";
+let a[15] = variable "a[15]";
+let b[15] = variable "b[15]";
+let a[16] = variable "a[16]";
+let b[16] = variable "b[16]";
+let a[17] = variable "a[17]";
+let b[17] = variable "b[17]";
+let a[18] = variable "a[18]";
+let b[18] = variable "b[18]";
+let a[19] = variable "a[19]";
+let b[19] = variable "b[19]";
+let a[20] = variable "a[20]";
+let b[20] = variable "b[20]";
+let a[21] = variable "a[21]";
+let b[21] = variable "b[21]";
+let a[22] = variable "a[22]";
+let b[22] = variable "b[22]";
+let a[23] = variable "a[23]";
+let b[23] = variable "b[23]";
+let a[24] = variable "a[24]";
+let b[24] = variable "b[24]";
+let a[25] = variable "a[25]";
+let b[25] = variable "b[25]";
+let a[26] = variable "a[26]";
+let b[26] = variable "b[26]";
+let a[27] = variable "a[27]";
+let b[27] = variable "b[27]";
+let a[28] = variable "a[28]";
+let b[28] = variable "b[28]";
+let a[29] = variable "a[29]";
+let b[29] = variable "b[29]";
+let a[30] = variable "a[30]";
+let b[30] = variable "b[30]";
+let a[31] = variable "a[31]";
+let b[31] = variable "b[31]";
+let a[32] = variable "a[32]";
+let b[32] = variable "b[32]";
+let a[33] = variable "a[33]";
+let b[33] = variable "b[33]";
+let a[34] = variable "a[34]";
+let b[34] = variable "b[34]";
+let a[35] = variable "a[35]";
+let b[35] = variable "b[35]";
+let a[36] = variable "a[36]";
+let b[36] = variable "b[36]";
+let a[37] = variable "a[37]";
+let b[37] = variable "b[37]";
+let a[38] = variable "a[38]";
+let b[38] = variable "b[38]";
+let a[39] = variable "a[39]";
+let b[39] = variable "b[39]";
+let a[40] = variable "a[40]";
+let b[40] = variable "b[40]";
+let a[41] = variable "a[41]";
+let b[41] = variable "b[41]";
+let a[42] = variable "a[42]";
+let b[42] = variable "b[42]";
+let a[43] = variable "a[43]";
+let b[43] = variable "b[43]";
+let a[44] = variable "a[44]";
+let b[44] = variable "b[44]";
+let a[45] = variable "a[45]";
+let b[45] = variable "b[45]";
+let a[46] = variable "a[46]";
+let b[46] = variable "b[46]";
+let a[47] = variable "a[47]";
+let b[47] = variable "b[47]";
+let a[48] = variable "a[48]";
+let b[48] = variable "b[48]";
+let a[49] = variable "a[49]";
+let b[49] = variable "b[49]";
+let a[50] = variable "a[50]";
+let b[50] = variable "b[50]";
+let a[51] = variable "a[51]";
+let b[51] = variable "b[51]";
+let a[52] = variable "a[52]";
+let b[52] = variable "b[52]";
+let a[53] = variable "a[53]";
+let b[53] = variable "b[53]";
+let a[54] = variable "a[54]";
+let b[54] = variable "b[54]";
+let a[55] = variable "a[55]";
+let b[55] = variable "b[55]";
+let a[56] = variable "a[56]";
+let b[56] = variable "b[56]";
+let a[57] = variable "a[57]";
+let b[57] = variable "b[57]";
+let a[58] = variable "a[58]";
+let b[58] = variable "b[58]";
+let a[59] = variable "a[59]";
+let b[59] = variable "b[59]";
+let a[60] = variable "a[60]";
+let b[60] = variable "b[60]";
+let a[61] = variable "a[61]";
+let b[61] = variable "b[61]";
+let a[62] = variable "a[62]";
+let b[62] = variable "b[62]";
+let a[63] = variable "a[63]";
+let b[63] = variable "b[63]";
+let a[64] = variable "a[64]";
+let b[64] = variable "b[64]";
+let a[65] = variable "a[65]";
+let b[65] = variable "b[65]";
+let a[66] = variable "a[66]";
+let b[66] = variable "b[66]";
+let a[67] = variable "a[67]";
+let b[67] = variable "b[67]";
+let a[68] = variable "a[68]";
+let b[68] = variable "b[68]";
+let a[69] = variable "a[69]";
+let b[69] = variable "b[69]";
+let a[70] = variable "a[70]";
+let b[70] = variable "b[70]";
+let a[71] = variable "a[71]";
+let b[71] = variable "b[71]";
+let a[72] = variable "a[72]";
+let b[72] = variable "b[72]";
+let a[73] = variable "a[73]";
+let b[73] = variable "b[73]";
+let a[74] = variable "a[74]";
+let b[74] = variable "b[74]";
+let a[75] = variable "a[75]";
+let b[75] = variable "b[75]";
+let a[76] = variable "a[76]";
+let b[76] = variable "b[76]";
+let a[77] = variable "a[77]";
+let b[77] = variable "b[77]";
+let a[78] = variable "a[78]";
+let b[78] = variable "b[78]";
+let a[79] = variable "a[79]";
+let b[79] = variable "b[79]";
+let a[80] = variable "a[80]";
+let b[80] = variable "b[80]";
+let a[81] = variable "a[81]";
+let b[81] = variable "b[81]";
+let a[82] = variable "a[82]";
+let b[82] = variable "b[82]";
+let a[83] = variable "a[83]";
+let b[83] = variable "b[83]";
+let a[84] = variable "a[84]";
+let b[84] = variable "b[84]";
+let a[85] = variable "a[85]";
+let b[85] = variable "b[85]";
+let a[86] = variable "a[86]";
+let b[86] = variable "b[86]";
+let a[87] = variable "a[87]";
+let b[87] = variable "b[87]";
+let a[88] = variable "a[88]";
+let b[88] = variable "b[88]";
+let a[89] = variable "a[89]";
+let b[89] = variable "b[89]";
+let a[90] = variable "a[90]";
+let b[90] = variable "b[90]";
+let a[91] = variable "a[91]";
+let b[91] = variable "b[91]";
+let a[92] = variable "a[92]";
+let b[92] = variable "b[92]";
+let a[93] = variable "a[93]";
+let b[93] = variable "b[93]";
+let a[94] = variable "a[94]";
+let b[94] = variable "b[94]";
+let a[95] = variable "a[95]";
+let b[95] = variable "b[95]";
+let a[96] = variable "a[96]";
+let b[96] = variable "b[96]";
+let a[97] = variable "a[97]";
+let b[97] = variable "b[97]";
+let a[98] = variable "a[98]";
+let b[98] = variable "b[98]";
+let a[99] = variable "a[99]";
+let b[99] = variable "b[99]";
+let a[100] = variable "a[100]";
+let b[100] = variable "b[100]";
+let a[101] = variable "a[101]";
+let b[101] = variable "b[101]";
+let a[102] = variable "a[102]";
+let b[102] = variable "b[102]";
+let a[103] = variable "a[103]";
+let b[103] = variable "b[103]";
+let a[104] = variable "a[104]";
+let b[104] = variable "b[104]";
+let a[105] = variable "a[105]";
+let b[105] = variable "b[105]";
+let a[106] = variable "a[106]";
+let b[106] = variable "b[106]";
+let a[107] = variable "a[107]";
+let b[107] = variable "b[107]";
+let a[108] = variable "a[108]";
+let b[108] = variable "b[108]";
+let a[109] = variable "a[109]";
+let b[109] = variable "b[109]";
+let a[110] = variable "a[110]";
+let b[110] = variable "b[110]";
+let a[111] = variable "a[111]";
+let b[111] = variable "b[111]";
+let a[112] = variable "a[112]";
+let b[112] = variable "b[112]";
+let a[113] = variable "a[113]";
+let b[113] = variable "b[113]";
+let a[114] = variable "a[114]";
+let b[114] = variable "b[114]";
+let a[115] = variable "a[115]";
+let b[115] = variable "b[115]";
+let a[116] = variable "a[116]";
+let b[116] = variable "b[116]";
+let a[117] = variable "a[117]";
+let b[117] = variable "b[117]";
+let a[118] = variable "a[118]";
+let b[118] = variable "b[118]";
+let a[119] = variable "a[119]";
+let b[119] = variable "b[119]";
+let a[120] = variable "a[120]";
+let b[120] = variable "b[120]";
+let a[121] = variable "a[121]";
+let b[121] = variable "b[121]";
+let a[122] = variable "a[122]";
+let b[122] = variable "b[122]";
+let a[123] = variable "a[123]";
+let b[123] = variable "b[123]";
+let a[124] = variable "a[124]";
+let b[124] = variable "b[124]";
+let a[125] = variable "a[125]";
+let b[125] = variable "b[125]";
+let a[126] = variable "a[126]";
+let b[126] = variable "b[126]";
+let a[127] = variable "a[127]";
+let b[127] = variable "b[127]";
+let ant = [(T,"a[0]",T,0,2),
+(T,"b[0]",T,0,1),
+(T,"a[1]",T,0,2),
+(T,"b[1]",T,0,1),
+(T,"a[2]",F,0,2),
+(T,"b[2]",F,0,1),
+(T,"a[3]",F,0,2),
+(T,"b[3]",F,0,1),
+(T,"a[4]",F,0,2),
+(T,"b[4]",F,0,1),
+(T,"a[5]",T,0,2),
+(T,"b[5]",F,0,1),
+(T,"a[6]",F,0,2),
+(T,"b[6]",F,0,1),
+(T,"a[7]",F,0,2),
+(T,"b[7]",F,0,1),
+(T,"a[8]",F,0,2),
+(T,"b[8]",F,0,1),
+(T,"a[9]",F,0,2),
+(T,"b[9]",F,0,1),
+(T,"a[10]",F,0,2),
+(T,"b[10]",F,0,1),
+(T,"a[11]",F,0,2),
+(T,"b[11]",F,0,1),
+(T,"a[12]",F,0,2),
+(T,"b[12]",F,0,1),
+(T,"a[13]",F,0,2),
+(T,"b[13]",F,0,1),
+(T,"a[14]",F,0,2),
+(T,"b[14]",F,0,1),
+(T,"a[15]",F,0,2),
+(T,"b[15]",F,0,1),
+(T,"a[16]",F,0,2),
+(T,"b[16]",F,0,1),
+(T,"a[17]",F,0,2),
+(T,"b[17]",F,0,1),
+(T,"a[18]",F,0,2),
+(T,"b[18]",F,0,1),
+(T,"a[19]",F,0,2),
+(T,"b[19]",F,0,1),
+(T,"a[20]",F,0,2),
+(T,"b[20]",F,0,1),
+(T,"a[21]",F,0,2),
+(T,"b[21]",F,0,1),
+(T,"a[22]",F,0,2),
+(T,"b[22]",F,0,1),
+(T,"a[23]",F,0,2),
+(T,"b[23]",F,0,1),
+(T,"a[24]",F,0,2),
+(T,"b[24]",F,0,1),
+(T,"a[25]",F,0,2),
+(T,"b[25]",F,0,1),
+(T,"a[26]",F,0,2),
+(T,"b[26]",F,0,1),
+(T,"a[27]",F,0,2),
+(T,"b[27]",F,0,1),
+(T,"a[28]",F,0,2),
+(T,"b[28]",F,0,1),
+(T,"a[29]",F,0,2),
+(T,"b[29]",F,0,1),
+(T,"a[30]",F,0,2),
+(T,"b[30]",F,0,1),
+(T,"a[31]",F,0,2),
+(T,"b[31]",F,0,1),
+(T,"a[32]",F,0,2),
+(T,"b[32]",F,0,1),
+(T,"a[33]",F,0,2),
+(T,"b[33]",F,0,1),
+(T,"a[34]",F,0,2),
+(T,"b[34]",F,0,1),
+(T,"a[35]",F,0,2),
+(T,"b[35]",F,0,1),
+(T,"a[36]",F,0,2),
+(T,"b[36]",F,0,1),
+(T,"a[37]",F,0,2),
+(T,"b[37]",F,0,1),
+(T,"a[38]",F,0,2),
+(T,"b[38]",F,0,1),
+(T,"a[39]",F,0,2),
+(T,"b[39]",F,0,1),
+(T,"a[40]",F,0,2),
+(T,"b[40]",F,0,1),
+(T,"a[41]",F,0,2),
+(T,"b[41]",F,0,1),
+(T,"a[42]",F,0,2),
+(T,"b[42]",F,0,1),
+(T,"a[43]",F,0,2),
+(T,"b[43]",F,0,1),
+(T,"a[44]",F,0,2),
+(T,"b[44]",F,0,1),
+(T,"a[45]",F,0,2),
+(T,"b[45]",F,0,1),
+(T,"a[46]",F,0,2),
+(T,"b[46]",F,0,1),
+(T,"a[47]",F,0,2),
+(T,"b[47]",F,0,1),
+(T,"a[48]",F,0,2),
+(T,"b[48]",F,0,1),
+(T,"a[49]",F,0,2),
+(T,"b[49]",F,0,1),
+(T,"a[50]",F,0,2),
+(T,"b[50]",F,0,1),
+(T,"a[51]",F,0,2),
+(T,"b[51]",F,0,1),
+(T,"a[52]",F,0,2),
+(T,"b[52]",F,0,1),
+(T,"a[53]",F,0,2),
+(T,"b[53]",F,0,1),
+(T,"a[54]",F,0,2),
+(T,"b[54]",F,0,1),
+(T,"a[55]",F,0,2),
+(T,"b[55]",F,0,1),
+(T,"a[56]",F,0,2),
+(T,"b[56]",F,0,1),
+(T,"a[57]",F,0,2),
+(T,"b[57]",F,0,1),
+(T,"a[58]",F,0,2),
+(T,"b[58]",F,0,1),
+(T,"a[59]",F,0,2),
+(T,"b[59]",F,0,1),
+(T,"a[60]",F,0,2),
+(T,"b[60]",F,0,1),
+(T,"a[61]",F,0,2),
+(T,"b[61]",F,0,1),
+(T,"a[62]",F,0,2),
+(T,"b[62]",F,0,1),
+(T,"a[63]",F,0,2),
+(T,"b[63]",F,0,1),
+(T,"a[64]",F,0,2),
+(T,"b[64]",F,0,1),
+(T,"a[65]",F,0,2),
+(T,"b[65]",F,0,1),
+(T,"a[66]",F,0,2),
+(T,"b[66]",F,0,1),
+(T,"a[67]",F,0,2),
+(T,"b[67]",F,0,1),
+(T,"a[68]",F,0,2),
+(T,"b[68]",F,0,1),
+(T,"a[69]",F,0,2),
+(T,"b[69]",F,0,1),
+(T,"a[70]",F,0,2),
+(T,"b[70]",F,0,1),
+(T,"a[71]",F,0,2),
+(T,"b[71]",F,0,1),
+(T,"a[72]",F,0,2),
+(T,"b[72]",F,0,1),
+(T,"a[73]",F,0,2),
+(T,"b[73]",F,0,1),
+(T,"a[74]",F,0,2),
+(T,"b[74]",F,0,1),
+(T,"a[75]",F,0,2),
+(T,"b[75]",F,0,1),
+(T,"a[76]",F,0,2),
+(T,"b[76]",F,0,1),
+(T,"a[77]",F,0,2),
+(T,"b[77]",F,0,1),
+(T,"a[78]",F,0,2),
+(T,"b[78]",F,0,1),
+(T,"a[79]",F,0,2),
+(T,"b[79]",F,0,1),
+(T,"a[80]",F,0,2),
+(T,"b[80]",F,0,1),
+(T,"a[81]",F,0,2),
+(T,"b[81]",F,0,1),
+(T,"a[82]",F,0,2),
+(T,"b[82]",F,0,1),
+(T,"a[83]",F,0,2),
+(T,"b[83]",F,0,1),
+(T,"a[84]",F,0,2),
+(T,"b[84]",F,0,1),
+(T,"a[85]",F,0,2),
+(T,"b[85]",F,0,1),
+(T,"a[86]",F,0,2),
+(T,"b[86]",F,0,1),
+(T,"a[87]",F,0,2),
+(T,"b[87]",F,0,1),
+(T,"a[88]",F,0,2),
+(T,"b[88]",F,0,1),
+(T,"a[89]",F,0,2),
+(T,"b[89]",F,0,1),
+(T,"a[90]",F,0,2),
+(T,"b[90]",F,0,1),
+(T,"a[91]",F,0,2),
+(T,"b[91]",F,0,1),
+(T,"a[92]",F,0,2),
+(T,"b[92]",F,0,1),
+(T,"a[93]",F,0,2),
+(T,"b[93]",F,0,1),
+(T,"a[94]",F,0,2),
+(T,"b[94]",F,0,1),
+(T,"a[95]",F,0,2),
+(T,"b[95]",F,0,1),
+(T,"a[96]",F,0,2),
+(T,"b[96]",F,0,1),
+(T,"a[97]",F,0,2),
+(T,"b[97]",F,0,1),
+(T,"a[98]",F,0,2),
+(T,"b[98]",F,0,1),
+(T,"a[99]",F,0,2),
+(T,"b[99]",F,0,1),
+(T,"a[100]",F,0,2),
+(T,"b[100]",F,0,1),
+(T,"a[101]",F,0,2),
+(T,"b[101]",F,0,1),
+(T,"a[102]",F,0,2),
+(T,"b[102]",F,0,1),
+(T,"a[103]",F,0,2),
+(T,"b[103]",F,0,1),
+(T,"a[104]",F,0,2),
+(T,"b[104]",F,0,1),
+(T,"a[105]",F,0,2),
+(T,"b[105]",F,0,1),
+(T,"a[106]",F,0,2),
+(T,"b[106]",F,0,1),
+(T,"a[107]",F,0,2),
+(T,"b[107]",F,0,1),
+(T,"a[108]",F,0,2),
+(T,"b[108]",F,0,1),
+(T,"a[109]",F,0,2),
+(T,"b[109]",F,0,1),
+(T,"a[110]",F,0,2),
+(T,"b[110]",F,0,1),
+(T,"a[111]",F,0,2),
+(T,"b[111]",F,0,1),
+(T,"a[112]",F,0,2),
+(T,"b[112]",F,0,1),
+(T,"a[113]",F,0,2),
+(T,"b[113]",F,0,1),
+(T,"a[114]",F,0,2),
+(T,"b[114]",F,0,1),
+(T,"a[115]",F,0,2),
+(T,"b[115]",F,0,1),
+(T,"a[116]",F,0,2),
+(T,"b[116]",F,0,1),
+(T,"a[117]",F,0,2),
+(T,"b[117]",F,0,1),
+(T,"a[118]",F,0,2),
+(T,"b[118]",F,0,1),
+(T,"a[119]",F,0,2),
+(T,"b[119]",F,0,1),
+(T,"a[120]",F,0,2),
+(T,"b[120]",F,0,1),
+(T,"a[121]",F,0,2),
+(T,"b[121]",F,0,1),
+(T,"a[122]",F,0,2),
+(T,"b[122]",F,0,1),
+(T,"a[123]",F,0,2),
+(T,"b[123]",F,0,1),
+(T,"a[124]",F,0,2),
+(T,"b[124]",F,0,1),
+(T,"a[125]",F,0,2),
+(T,"b[125]",F,0,1),
+(T,"a[126]",F,0,2),
+(T,"b[126]",F,0,1),
+(T,"a[127]",F,0,2),
+(T,"b[127]",T,0,1),
+(T,"b[0]",F,1,2),
+(T,"b[1]",F,1,2),
+(T,"b[2]",F,1,2),
+(T,"b[3]",F,1,2),
+(T,"b[4]",F,1,2),
+(T,"b[5]",F,1,2),
+(T,"b[6]",F,1,2),
+(T,"b[7]",F,1,2),
+(T,"b[8]",F,1,2),
+(T,"b[9]",F,1,2),
+(T,"b[10]",F,1,2),
+(T,"b[11]",F,1,2),
+(T,"b[12]",F,1,2),
+(T,"b[13]",F,1,2),
+(T,"b[14]",F,1,2),
+(T,"b[15]",F,1,2),
+(T,"b[16]",F,1,2),
+(T,"b[17]",F,1,2),
+(T,"b[18]",F,1,2),
+(T,"b[19]",F,1,2),
+(T,"b[20]",F,1,2),
+(T,"b[21]",F,1,2),
+(T,"b[22]",F,1,2),
+(T,"b[23]",F,1,2),
+(T,"b[24]",F,1,2),
+(T,"b[25]",F,1,2),
+(T,"b[26]",F,1,2),
+(T,"b[27]",F,1,2),
+(T,"b[28]",F,1,2),
+(T,"b[29]",F,1,2),
+(T,"b[30]",F,1,2),
+(T,"b[31]",F,1,2),
+(T,"b[32]",F,1,2),
+(T,"b[33]",F,1,2),
+(T,"b[34]",F,1,2),
+(T,"b[35]",F,1,2),
+(T,"b[36]",F,1,2),
+(T,"b[37]",F,1,2),
+(T,"b[38]",F,1,2),
+(T,"b[39]",F,1,2),
+(T,"b[40]",F,1,2),
+(T,"b[41]",F,1,2),
+(T,"b[42]",F,1,2),
+(T,"b[43]",F,1,2),
+(T,"b[44]",F,1,2),
+(T,"b[45]",F,1,2),
+(T,"b[46]",F,1,2),
+(T,"b[47]",F,1,2),
+(T,"b[48]",F,1,2),
+(T,"b[49]",F,1,2),
+(T,"b[50]",F,1,2),
+(T,"b[51]",F,1,2),
+(T,"b[52]",F,1,2),
+(T,"b[53]",F,1,2),
+(T,"b[54]",F,1,2),
+(T,"b[55]",F,1,2),
+(T,"b[56]",F,1,2),
+(T,"b[57]",F,1,2),
+(T,"b[58]",F,1,2),
+(T,"b[59]",F,1,2),
+(T,"b[60]",F,1,2),
+(T,"b[61]",F,1,2),
+(T,"b[62]",F,1,2),
+(T,"b[63]",F,1,2),
+(T,"b[64]",F,1,2),
+(T,"b[65]",F,1,2),
+(T,"b[66]",F,1,2),
+(T,"b[67]",F,1,2),
+(T,"b[68]",F,1,2),
+(T,"b[69]",F,1,2),
+(T,"b[70]",F,1,2),
+(T,"b[71]",F,1,2),
+(T,"b[72]",F,1,2),
+(T,"b[73]",F,1,2),
+(T,"b[74]",F,1,2),
+(T,"b[75]",F,1,2),
+(T,"b[76]",F,1,2),
+(T,"b[77]",F,1,2),
+(T,"b[78]",F,1,2),
+(T,"b[79]",F,1,2),
+(T,"b[80]",F,1,2),
+(T,"b[81]",F,1,2),
+(T,"b[82]",F,1,2),
+(T,"b[83]",F,1,2),
+(T,"b[84]",F,1,2),
+(T,"b[85]",F,1,2),
+(T,"b[86]",F,1,2),
+(T,"b[87]",F,1,2),
+(T,"b[88]",F,1,2),
+(T,"b[89]",F,1,2),
+(T,"b[90]",F,1,2),
+(T,"b[91]",F,1,2),
+(T,"b[92]",F,1,2),
+(T,"b[93]",F,1,2),
+(T,"b[94]",F,1,2),
+(T,"b[95]",F,1,2),
+(T,"b[96]",F,1,2),
+(T,"b[97]",F,1,2),
+(T,"b[98]",F,1,2),
+(T,"b[99]",F,1,2),
+(T,"b[100]",F,1,2),
+(T,"b[101]",F,1,2),
+(T,"b[102]",F,1,2),
+(T,"b[103]",F,1,2),
+(T,"b[104]",F,1,2),
+(T,"b[105]",F,1,2),
+(T,"b[106]",F,1,2),
+(T,"b[107]",F,1,2),
+(T,"b[108]",F,1,2),
+(T,"b[109]",F,1,2),
+(T,"b[110]",F,1,2),
+(T,"b[111]",F,1,2),
+(T,"b[112]",F,1,2),
+(T,"b[113]",F,1,2),
+(T,"b[114]",F,1,2),
+(T,"b[115]",F,1,2),
+(T,"b[116]",F,1,2),
+(T,"b[117]",F,1,2),
+(T,"b[118]",F,1,2),
+(T,"b[119]",F,1,2),
+(T,"b[120]",F,1,2),
+(T,"b[121]",F,1,2),
+(T,"b[122]",F,1,2),
+(T,"b[123]",F,1,2),
+(T,"b[124]",F,1,2),
+(T,"b[125]",F,1,2),
+(T,"b[126]",F,1,2),
+(T,"b[127]",T,1,2)];
+
+
+let cons = [(T,"ok", T,0,2)];
+
+let tr_list = [("ok",0,2)];
+
+STE " -i -y " qadd [] ant cons tr_list;
+get_trace_val qadd "b[126]" 2;

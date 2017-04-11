@@ -1,0 +1,597 @@
+// fl version 6..1 
+// invoked in directory /home/bohan/Documents/Projects/WSTE_exaples/qadd
+load "/usr/tmp/FL_INIT_L85T41";
+load "/home/bohan/Documents/Projects/WSTE_exaples/qadd/qadd.fl";
+load "/home/bohan/Documents/Projects/WSTE_exaples/qadd/qadd.fl";
+load "/home/bohan/Documents/Projects/WSTE_exaples/qadd/qadd.fl";
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, a[0] AND a[1] AND a[2] AND a[3] AND A[4], variable "b",0,2)];
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, a[0] AND a[1] AND a[2] AND a[3] AND a[4], variable "b",0,2)];
+
+let tr_list [("b",0,2)];
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, a[0] AND a[1] AND a[2] AND a[3] AND a[4], variable "b",0,2)];
+
+let tr_list [(variable "b",0,2)];
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+l//et b = variable "b";
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+//et b = variable "b";
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, "b",a[0] AND a[1] AND a[2] AND a[3] AND a[4],,0,2)];
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, "b",a[0] AND a[1] AND a[2] AND a[3] AND a[4],0,2)];
+
+let tr_list [("b",0,2)];
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, "b",a[0] AND a[1] AND a[2] AND a[3] AND a[4],0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, "b",F,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let a[0] = variable "a[0]";
+
+let a[1] = variable "a[1]";
+
+let a[2] = variable "a[2]";
+
+let a[3] = variable "a[3]";
+
+let a[4] = variable "a[4]";
+
+let a[5] = variable "a[5]";
+
+let a[6] = variable "a[6]";
+
+let a[7] = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, "b",a[0] AND a[1],0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, "b",q AND w,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1), (T,"a[1]",T,0,1),(T,"a[1]",T,1,2)];
+
+let cons = [(T, "b",q AND w,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1), (T,"a[1]",T,0,1),(T,"a[1]",T,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",T,0,1), (T,"a[1]",T,0,1),(T,"a[1]",T,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[1]",T,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[1]",T,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i AND y AND u,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[1]",i,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i AND y AND u,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[2]",e,0,1),(T,"a[3]",r,0,1)(T,"a[4]",t,0,1),(T,"a[5]",y,0,1),(T,"a[6]",u,0,1)(T,"a[7]",i,0,1),(T,"a[1]",F,1,2)];
+
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[2]",e,0,1),(T,"a[3]",r,0,1)(T,"a[4]",t,0,1),(T,"a[5]",y,0,1),(T,"a[6]",u,0,1),(T,"a[7]",i,0,1),(T,"a[1]",F,1,2)];
+
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[2]",e,0,1),(T,"a[3]",r,0,1),(T,"a[4]",t,0,1),(T,"a[5]",y,0,1),(T,"a[6]",u,0,1),(T,"a[7]",i,0,1),(T,"a[1]",F,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i AND y AND u,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[2]",e,0,1),(T,"a[3]",r,0,1),(T,"a[4]",t,0,1),(T,"a[5]",y,0,1),(T,"a[6]",u,0,1),(T,"a[7]",i,0,1),(T,"a[1]",F,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i AND y AND u,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let a = get_trace_value and "b" 1;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[2]",e,0,1),(T,"a[3]",r,0,1),(T,"a[4]",t,0,1),(T,"a[5]",y,0,1),(T,"a[6]",u,0,1),(T,"a[7]",i,0,1),(T,"a[1]",F,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i AND y AND u,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let a = get_trace_val and "b" 1;
+a;
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[2]",e,0,1),(T,"a[3]",r,0,1),(T,"a[4]",t,0,1),(T,"a[5]",y,0,1),(T,"a[6]",u,0,1),(T,"a[7]",i,0,1),(T,"a[1]",F,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i AND y AND u,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let a = get_trace_val and "b" 0;
+a;
+load "/home/bohan/Documents/Projects/WSTE_exaples/qadd/qadd.fl";
+load "/home/bohan/Documents/Projects/WSTE_exaples/qadd/qadd.fl";
+load "/home/bohan/Documents/Projects/WSTE_exaples/qadd/qadd.fl";
+let and = load_exe "/home/bohan/Documents/Projects/WSTE_exaples/qadd/and.exe";
+let q = variable "a[0]";
+
+let w = variable "a[1]";
+
+let e = variable "a[2]";
+
+let r = variable "a[3]";
+
+let t = variable "a[4]";
+
+let y = variable "a[5]";
+
+let u = variable "a[6]";
+
+let i = variable "a[7]";
+
+
+let ant = [(T,"a[0]",q,0,1), (T,"a[1]",w,0,1),(T,"a[2]",e,0,1),(T,"a[3]",r,0,1),(T,"a[4]",t,0,1),(T,"a[5]",y,0,1),(T,"a[6]",u,0,1),(T,"a[7]",i,0,1),(T,"a[1]",F,1,2)];
+
+let wk = [(T, "b",0,1)];
+let cons = [(T, "b",q AND w AND e AND r AND t AND i AND y AND u,0,2)];
+
+let tr_list=  [("b",0,2)];
+
+STE " -i -y " and [] ant cons tr_list;
+let a = get_trace_val and "b" 0;
+a;
+let model = load_exe "/home/bohan/forte/code_new/verilog/diag.exe";
+let model_outputs ckt = filter (is_output ckt) (nodes ckt);
+let model_latches ckt = filter (is_latch ckt) (nodes ckt);
+let model_inputs ckt = filter (is_input ckt) (nodes ckt);
+let outs  = (model_outputs model) @ (model_latches model);
+let inps  = (model_inputs  model) @ (model_latches model);
+
+let ant_list   =
+    (map (\node. (T, node, variable node,0, 1)) inps) @
+    (map (\node. (T, node, bdd_current_next (variable node), 1, 2)) inps) ;
+
+let weak_list  = map (\node.(T,node,0,2)) inps;
+let trace_list = map (\node.(node, 1,2)) outs;
+STE "-s -w -y" model weak_list ant_list [] trace_list;
+
+let report_func model node =
+    val (Vh,Vl) = get_excitation_trace_val model node 1 in
+    (Vh == (NOT Vl)) =>
+      print ("The NSF for node : " ^ node ^ " is : " ^
+            (bool2str 1000 Vh) ^ "\n")
+    | print ("The NSF for node : " ^ node ^ " is : UNKNOWN \n")
+;
+
+map (report_func model) outs;

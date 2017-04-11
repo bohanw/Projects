@@ -1,0 +1,192 @@
+(T,"a[0]",T,0,2),
+(T,"b[0]",T,0,1),
+(T,"a[1]",F,0,2),
+(T,"b[1]",T,0,1),
+(T,"a[2]",F,0,2),
+(T,"b[2]",F,0,1),
+(T,"a[3]",F,0,2),
+(T,"b[3]",F,0,1),
+(T,"a[4]",F,0,2),
+(T,"b[4]",F,0,1),
+(T,"a[5]",F,0,2),
+(T,"b[5]",F,0,1),
+(T,"a[6]",F,0,2),
+(T,"b[6]",F,0,1),
+(T,"a[7]",F,0,2),
+(T,"b[7]",F,0,1),
+(T,"a[8]",F,0,2),
+(T,"b[8]",F,0,1),
+(T,"a[9]",F,0,2),
+(T,"b[9]",F,0,1),
+(T,"a[10]",F,0,2),
+(T,"b[10]",F,0,1),
+(T,"a[11]",F,0,2),
+(T,"b[11]",F,0,1),
+(T,"a[12]",F,0,2),
+(T,"b[12]",F,0,1),
+(T,"a[13]",F,0,2),
+(T,"b[13]",F,0,1),
+(T,"a[14]",F,0,2),
+(T,"b[14]",F,0,1),
+(T,"a[15]",F,0,2),
+(T,"b[15]",F,0,1),
+(T,"a[16]",F,0,2),
+(T,"b[16]",F,0,1),
+(T,"a[17]",F,0,2),
+(T,"b[17]",F,0,1),
+(T,"a[18]",F,0,2),
+(T,"b[18]",F,0,1),
+(T,"a[19]",F,0,2),
+(T,"b[19]",F,0,1),
+(T,"a[20]",F,0,2),
+(T,"b[20]",F,0,1),
+(T,"a[21]",F,0,2),
+(T,"b[21]",F,0,1),
+(T,"a[22]",F,0,2),
+(T,"b[22]",F,0,1),
+(T,"a[23]",F,0,2),
+(T,"b[23]",F,0,1),
+(T,"a[24]",F,0,2),
+(T,"b[24]",F,0,1),
+(T,"a[25]",F,0,2),
+(T,"b[25]",F,0,1),
+(T,"a[26]",F,0,2),
+(T,"b[26]",F,0,1),
+(T,"a[27]",F,0,2),
+(T,"b[27]",F,0,1),
+(T,"a[28]",F,0,2),
+(T,"b[28]",F,0,1),
+(T,"a[29]",F,0,2),
+(T,"b[29]",F,0,1),
+(T,"a[30]",F,0,2),
+(T,"b[30]",F,0,1),
+(T,"a[31]",F,0,2),
+(T,"b[31]",T,0,1),
+(T,"b[0]",F,1,2),
+(T,"b[1]",F,1,2),
+(T,"b[2]",F,1,2),
+(T,"b[3]",F,1,2),
+(T,"b[4]",F,1,2),
+(T,"b[5]",F,1,2),
+(T,"b[6]",F,1,2),
+(T,"b[7]",F,1,2),
+(T,"b[8]",F,1,2),
+(T,"b[9]",F,1,2),
+(T,"b[10]",F,1,2),
+(T,"b[11]",F,1,2),
+(T,"b[12]",F,1,2),
+(T,"b[13]",F,1,2),
+(T,"b[14]",F,1,2),
+(T,"b[15]",F,1,2),
+(T,"b[16]",F,1,2),
+(T,"b[17]",F,1,2),
+(T,"b[18]",F,1,2),
+(T,"b[19]",F,1,2),
+(T,"b[20]",F,1,2),
+(T,"b[21]",F,1,2),
+(T,"b[22]",F,1,2),
+(T,"b[23]",F,1,2),
+(T,"b[24]",F,1,2),
+(T,"b[25]",F,1,2),
+(T,"b[26]",F,1,2),
+(T,"b[27]",F,1,2),
+(T,"b[28]",F,1,2),
+(T,"b[29]",F,1,2),
+(T,"b[30]",F,1,2),
+(T,"b[31]",F,1,2),
+let a[0] = variable "a[0]";
+let b[0] = variable "b[0]";
+let c[0] = variable "c[0]";
+let a[1] = variable "a[1]";
+let b[1] = variable "b[1]";
+let c[1] = variable "c[1]";
+let a[2] = variable "a[2]";
+let b[2] = variable "b[2]";
+let c[2] = variable "c[2]";
+let a[3] = variable "a[3]";
+let b[3] = variable "b[3]";
+let c[3] = variable "c[3]";
+let a[4] = variable "a[4]";
+let b[4] = variable "b[4]";
+let c[4] = variable "c[4]";
+let a[5] = variable "a[5]";
+let b[5] = variable "b[5]";
+let c[5] = variable "c[5]";
+let a[6] = variable "a[6]";
+let b[6] = variable "b[6]";
+let c[6] = variable "c[6]";
+let a[7] = variable "a[7]";
+let b[7] = variable "b[7]";
+let c[7] = variable "c[7]";
+let a[8] = variable "a[8]";
+let b[8] = variable "b[8]";
+let c[8] = variable "c[8]";
+let a[9] = variable "a[9]";
+let b[9] = variable "b[9]";
+let c[9] = variable "c[9]";
+let a[10] = variable "a[10]";
+let b[10] = variable "b[10]";
+let c[10] = variable "c[10]";
+let a[11] = variable "a[11]";
+let b[11] = variable "b[11]";
+let c[11] = variable "c[11]";
+let a[12] = variable "a[12]";
+let b[12] = variable "b[12]";
+let c[12] = variable "c[12]";
+let a[13] = variable "a[13]";
+let b[13] = variable "b[13]";
+let c[13] = variable "c[13]";
+let a[14] = variable "a[14]";
+let b[14] = variable "b[14]";
+let c[14] = variable "c[14]";
+let a[15] = variable "a[15]";
+let b[15] = variable "b[15]";
+let c[15] = variable "c[15]";
+let a[16] = variable "a[16]";
+let b[16] = variable "b[16]";
+let c[16] = variable "c[16]";
+let a[17] = variable "a[17]";
+let b[17] = variable "b[17]";
+let c[17] = variable "c[17]";
+let a[18] = variable "a[18]";
+let b[18] = variable "b[18]";
+let c[18] = variable "c[18]";
+let a[19] = variable "a[19]";
+let b[19] = variable "b[19]";
+let c[19] = variable "c[19]";
+let a[20] = variable "a[20]";
+let b[20] = variable "b[20]";
+let c[20] = variable "c[20]";
+let a[21] = variable "a[21]";
+let b[21] = variable "b[21]";
+let c[21] = variable "c[21]";
+let a[22] = variable "a[22]";
+let b[22] = variable "b[22]";
+let c[22] = variable "c[22]";
+let a[23] = variable "a[23]";
+let b[23] = variable "b[23]";
+let c[23] = variable "c[23]";
+let a[24] = variable "a[24]";
+let b[24] = variable "b[24]";
+let c[24] = variable "c[24]";
+let a[25] = variable "a[25]";
+let b[25] = variable "b[25]";
+let c[25] = variable "c[25]";
+let a[26] = variable "a[26]";
+let b[26] = variable "b[26]";
+let c[26] = variable "c[26]";
+let a[27] = variable "a[27]";
+let b[27] = variable "b[27]";
+let c[27] = variable "c[27]";
+let a[28] = variable "a[28]";
+let b[28] = variable "b[28]";
+let c[28] = variable "c[28]";
+let a[29] = variable "a[29]";
+let b[29] = variable "b[29]";
+let c[29] = variable "c[29]";
+let a[30] = variable "a[30]";
+let b[30] = variable "b[30]";
+let c[30] = variable "c[30]";
+let a[31] = variable "a[31]";
+let b[31] = variable "b[31]";
+let c[31] = variable "c[31]";
