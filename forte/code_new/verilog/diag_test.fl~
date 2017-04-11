@@ -1,0 +1,25 @@
+let model = load_exe "diag.exe";
+let model_outputs ckt = filter (is_output ckt) (nodes ckt);
+let model_latches ckt = filter (is_latch ckt) (nodes ckt);
+let model_inputs ckt = filter (is_input ckt) (nodes ckt);
+let outs  = (model_outputs model) @ (model_latches model);
+let inps  = (model_inputs  model) @ (model_latches model);
+
+let ant_list   =
+    (map (\node. (T, node, variable node,0, 1)) inps) @
+    (map (\node. (T, node, bdd_current_next (variable node), 1, 2)) inps) ;
+
+let weak_list  = map (\node.(T,node,0,2)) inps;
+let trace_list = map (\node.(node, 1,2)) outs;
+STE "-s -w -y" model weak_list ant_list [] trace_list;
+
+let report_func model node =
+    val (Vh,Vl) = get_excitation_trace_val model node 1 in
+    (Vh == (NOT Vl)) =>
+      print ("The NSF for node : " ^ node ^ " is : " ^
+            (bool2str 1000 Vh) ^ "\n")
+    | print ("The NSF for node : " ^ node ^ " is : UNKNOWN \n")
+;
+
+map (report_func model) outs;
+

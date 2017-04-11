@@ -1,0 +1,26 @@
+let model = load_exe "/home/bohan/forte/code_new/verilog/diag.exe";
+let outs  = (model_outputs model) @ (model_latches model);
+let inps  = (model_inputs  model) @ (model_latches model);
+
+let bant_list   =
+    (map (\node. (bT, node, bvariable node      , 0, 1)) inps) @
+    (map (\node. (bT, node, bvariable (node^"_n"), 1, 2)) inps) ;
+
+let bweak_list  = map (\node.(bT,node,0,2)) inps;
+let btrace_list = map (\node.(node, 1,2)) outs;
+
+bSTE "-s -w -y" model bweak_list bant_list [] btrace_list;
+
+
+let report_func model node =
+    let dual_bexpr_func = get_excitation_btrace_val model node 1 in
+    val (success, bdd) = bexpr2bool (valH dual_bexpr_func) 1000 in
+
+    success == T =>
+      print ("The NSF for node : " ^ node ^ " is : " ^ 
+      (bool2str 1000 bdd) ^"\n")
+    | print ("The NSF for node : " ^ node ^ " is : UNKNOWN \n")
+;
+
+
+map (report_func model) outs;

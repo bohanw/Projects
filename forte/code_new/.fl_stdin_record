@@ -1,0 +1,321 @@
+// fl version 6..1 
+// invoked in directory /home/wbh/forte/code
+load "/usr/tmp/FL_INIT_QQIPPo";
+load "steSymReduc.fl"
+;
+load "steSymReduc.fl";
+load "steSymReduc.fl";
+load "steSymReduc.fl";
+load "sum.fl";
+load "sum.fl";
+let x  = 1;
+let y = 2;
+sum x y;
+load "steSymReduc.fl";
+load "steSymReduc.fl";
+let spec = load_exe "./example/dxdx.exe"
+
+
+;
+spec;
+spec;
+let s = load_exe "../example/dxdx.exe"
+;
+s;
+load "../code/steSymReduc.fl";
+load "../code/steSymReduc.fl";
+let s = load_exe "../example/designn.exe";
+s;
+let s = load_exe "../example/designn.exe";
+let a = load_exe "../example/designn.exe";
+a;
+print_fsm a;
+print_fsm s;
+let a = load_exe "../example/dxdx.exe";
+print_fsm s;
+print_fsm a;
+load "sum.fl";
+nexlif2exe "../example/dxdx.exlif";
+nexlif2exe "../example/dxdx.exlif";
+nexlif2exe dxdx.exlif;
+nexlif2exe dxdx.exlif;
+nexlif2exe dxdx.exlif;
+nexlif2exe "./dxdx.exlif";
+// fl version 6..1 
+// invoked in directory /home/bohan/forte/code_new
+load "/usr/tmp/FL_INIT_Na0RCc";
+load "./diagonal_new.fl";
+load "diagonal_new.fl";
+load "diagonal_new.fl";
+load "diagonal_new.fl";
+load "diagonal_new.fl";
+let diag= load_exe "diagonal.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",T,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+let cons = [(T,"prop",(variable "prop"),0,9)];
+let tr_list = [("prop",0,9)];
+
+: 
+: 
+: STE "" diag weak_list ant cons tr_list;
+
+:
+: STE "" diag weak_list ant cons tr_list;
+
+:
+: STE "" diag weak_list ant cons tr_list;
+let diag= load_exe "diagonal.exe";
+
+: let diag= load_exe "diagonal.exe";
+ let diag= load_exe "diagonal.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+
+ let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",T,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+load "diagonal_new.fl";
+
+: let diag= load_exe "diagonal.exe";
+
+let diag= load_exe "diagonal.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",T,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+
+ let diag= load_exe "diagonal.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+let diag= load_exe "diagonal.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+let diag= load_exe "diagonal_test1.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+
+let diag= load_exe "diagonal_test2.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+
+let diag= load_exe "diagonal_test2.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",(variable "prop"),0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+get_trace_val diag "prop" 11;
+get_trace_val diag "prop" 12;
+
+let diag= load_exe "diagonal_test2.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",T,0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+let diag= load_exe "diagonal_test2.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",F,0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+
+let diag= load_exe "diagonal_test2.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",F,0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag weak_list ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+ let diag= load_exe "diagonal_test2.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+//let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1)];
+ let cons = [(T,"prop",F,0,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag [] ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+let diag= load_exe "diagonal_test2.exe";
+let clk = variable "clk";
+let reset = variable "reset";
+ 
+//let weak_list = [(T,"X[0]",0,1),(T,"X[1]",0,1),(T,"X[2]",0,1),(T,"X[3]",0,1),(T,"Y[0]",0,1),(T,"Y[1]",0,1),(T,"Y[2]",0,1),(T,"Y[3]",0,1)];
+//let weak_list = [(T,"X[0]",0,1),(T,"Y[0]",0,1)];
+ let ant = [(T,"clk",F,0,1),(T,"clk",T,1,2),(T,"clk",F,2,3),(T,"clk",T,3,4),(T,"clk",F,4,5),(T,"clk",T,5,6),(T,"clk",F,6,7),(T,"clk",T,7,8),(T,"clk",F,8,9),(T,"clk",T,9,10),(T,"reset",T,0,3),(T,"reset",F,3,9),(T,"X[0]",F,0,1),(T,"Y[0]",F,0,1),(T,"X[1]",F,0,1),(T,"X[2]",F,0,1),(T,"X[3]",F,0,1),(T,"Y[1]",F,0,1),(T,"Y[2]",F,0,1),(T,"Y[3]",F,0,1),(T,"prop",F,0,1)];
+ let cons = [(T,"prop",F,8,9)];
+//let tr_list = [("X[0]",0,9),("X[1]",0,9),("X[2]",0,9),("X[3]",0,9),("Y[0]",0,9),("Y[1]",0,9),("prop",0,9)];
+let tr_list = [("prop",0,9)];
+STE "" diag [] ant cons tr_list;
+get_trace_val diag "prop" 0;
+get_trace_val diag "prop" 1;
+get_trace_val diag "prop" 2;
+get_trace_val diag "prop" 3;
+get_trace_val diag "prop" 4;
+get_trace_val diag "prop" 7;
+get_trace_val diag "prop" 8;
+get_trace_val diag "prop" 9;
+get_trace_val diag "prop" 10;
+let diag = load_exe "d.exe";

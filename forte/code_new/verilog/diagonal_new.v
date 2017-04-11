@@ -1,0 +1,52 @@
+`define W    4
+`define Kmax 4'b1111
+`define WS1  3                          // WS1 = (W - 1) 
+
+module diagonal_new(clk, reset, prop);
+
+	input wire clk,reset;
+	reg [`W-1:0] X, Y;
+
+	output  wire prop;
+	 
+	reg[`W-1:0] next_x, next_y;
+
+	initial begin	X = `W'd1;
+	 	Y = `W'd0;
+	end
+	/*
+	always @(posedge clk) begin
+		X <= (reset && (X > Y)) ? ((`Kmax >> 1) + (X >> 1)) : (X < Y) ? X : ((Y == X) || (X != `Kmax)) ? (X + `W'd1) : Y;
+		Y <= (reset && (X > Y)) ? Y  : (!(X > Y) || (X != `Kmax)) ? (Y + `W'd1) : X;
+	end
+
+	assign prop = !(X < Y);
+	*/
+	always @(*) begin
+		next_x = X;
+		if(reset && X > Y)
+			next_x = `Kmax >> 1 + X >> 1;
+		else if( X<Y)
+			next_x = X;
+		else if ((Y==X )|| (X != `Kmax))
+			next_x = X + 1;
+		else 
+			next_x = Y;
+	end
+
+	always @(*) begin
+		next_y = Y;
+		if(reset && X > Y)
+			next_y = Y;
+		else if (!(X > Y) || (X!=`Kmax)) 
+			next_y= Y + 1;
+		else 
+			next_y = X; 
+	end
+	always @(posedge clk) begin
+		X <= next_x;
+		Y <= next_y;
+	end
+
+	assign prop = !(X < Y);
+endmodule

@@ -1,0 +1,67 @@
+ #!/usr/bin/perl
+
+use strict;
+use warnings;
+use Getopt::Long;
+
+my $fh;
+my $fh2;
+my $iteration = 10000; # cycle iteration
+my $width = 12; #bus width
+GetOptions{"size=i" => \$iteration};
+
+
+open ( $fh, ">", "clock.txt");
+open ($fh2,">","io.txt");
+open (my $fh3, ">","in.txt");
+
+for (my $i = 0; $i < 32;$i++) {
+	print $fh3 "\(T\,\"a\[$i\]\"\,F\,0,2)\,\n";
+	print $fh3 "\(T\,\"b\[$i\]\"\,F\,0,1)\,\n";
+	print $fh3 "\(T\,\"b\[$i\]\"\,F\,1,2)\,\n";
+}
+
+for (my $i = 0; $i < 32;$i++) {
+	print $fh3 "let a\[$i\] = variable \"a\[$i\]\"\;\n";
+	print $fh3 "let b\[$i\] = variable \"b\[$i\]\"\;\n";
+	print $fh3 "let c\[$i\] = variable \"c\[$i\]\"\;\n";
+}
+#print clock antecedents
+
+for (my $i = 0; $i < $iteration;$i++) {
+	my $j = $i +1;
+	if($i % 2 == 0) {
+		print $fh "\(T\,\"clk\"\,T\,$i,$j)\,\n";
+	}
+	else {
+		print $fh "\(T\,\"clk\"\,F\,$i\,$j)\,\n";
+	}
+}
+
+
+# antecedent
+print $fh2 "\/\/ant\n";
+
+for (my $i = 0; $i < $width;$i++) {
+	print $fh2 "\(T,\"X\[$i\]\",F,0,1\),";	
+	print $fh2 "\(T,\"Y\[$i\]\",F,0,1\),";	
+}
+print $fh2 "\n";
+
+# weaklist
+print $fh2 "\/\/weaklist\n";
+for (my $i = 0; $i < $width;$i++) {
+	print $fh2 "\(T,\"X\[$i\]\",0,1\),";	
+	print $fh2 "\(T,\"Y\[$i\]\",0,1\),";	
+}
+print $fh2 "\n";
+
+# trace
+for (my $i = 0; $i < $iteration;$i++) {
+	print $fh2 "get_trace_val diag \"prop\" $i\;\n";
+}
+
+
+
+
+
