@@ -20,12 +20,9 @@ parameter [1:0] RESULTAVAIL = 2'b10;
 
 reg  [1:0] ctrl_ps, ctrl_ns;
 reg[7:0] data_ph1, data_ph2, data_ph1_nxt, data_ph2_nxt;
-reg corrup_result;
 
-assign data_ph1_nxt = put & (ctrl_ps == W4PUT) ? idata[7:0] : data_ph1; 
-assign data_ph2_nxt = put & (ctrl_ps == DATA2) ? idata[7:0] : data_ph2; 
-assign corrup_result = ({data_ph1, data_ph2 } == 16'hBADD);
 
+assign ctrl_ps_nxt = (rst_b==1'b0) ? W4PUT:ctrl_ns;
 assign result = (ctrl_ps == RESULTAVAIL) ? (data_ph1 * data_ph2) : 0;
 assign ready  = (ctrl_ps != RESULTAVAIL);
 assign result_valid  = (ctrl_ps == RESULTAVAIL);
@@ -39,20 +36,30 @@ begin
      endcase
 end
 
+always @(*) begin
+	if(rst_b) begin
+		data_ph1_nxt = 0;
+	end
+	else if(put & ctrl_ps == W4PUT)
+		data_ph1_nxt = idata;
+	else 
+		data_ph1_nxt = data_ph1;
+end
+
+always @(*) begin
+	if(rst_b)	data_ph2_nxt = 0;
+	else if (ctrl_ps == DATA2 & put) data_ph2_nxt = idata;
+	else	data_ph2_nxt = data_ph2;
+end
+
 always @(posedge clk or negedge rst_b) 
 begin
-
-  if ( rst_b == 1'b0 ) begin
-      ctrl_ps <= W4PUT; 
-      data_ph1 <= 0;
-      data_ph2 <= 0;
-  end
-  else begin
-      ctrl_ps <= ctrl_ns; 
+      ctrl_ps <= ctrl_ps_nxt; 
       data_ph1 <= data_ph1_nxt;
       data_ph2 <= data_ph2_nxt;
-  end
+  
 
 end
+
 
 endmodule
