@@ -1,0 +1,60 @@
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /home/bohanw/win17/598_verif/Projects/WSTE_exaples/8-bit-serial-mult/designs/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpHbu0Mu
+synUtils::sendTool -active {_icl_start_rpc -version "K-2015.09_Full64" -sync_file /tmp/vcs_dve_rpc.bohanw.13401}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.bohanw.13401}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+ucliGUI::vpdAddHierarchy -scope dut.m0 -depth 1 -file /home/bohanw/win17/598_verif/Projects/WSTE_exaples/8-bit-serial-mult/designs/inter.vpd; synopsys::dump -flush VPD0
+synopsys::dump -add {dut.m0.clk dut.m0.corrup_result dut.m0.ctrl_ns dut.m0.ctrl_ps dut.m0.data_ph1 dut.m0.data_ph1_nxt dut.m0.data_ph2 dut.m0.data_ph2_nxt dut.m0.get dut.m0.idata dut.m0.put dut.m0.ready dut.m0.result dut.m0.result_valid dut.m0.rst_b } -aggregates  -fid VPD0
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set synopsys::env(time) 81922205
+ucliCore::getToolPID
+ucliCore::stopTool -no_signal
+set ucliGUI::state
+set ucliGUI::state
+# DVE Simulation Rebuild/Restart Options
+# Saved on Fri Apr 7 22:48:41 2017
+set SIMSETUP::REBUILDOPTION 0
+set SIMSETUP::REBUILDCMD {}
+set SIMSETUP::REBUILDDIR {}
+set SIMSETUP::RESTOREBP 1
+set SIMSETUP::RESTOREDUMP 1
+set SIMSETUP::RESTOREFORCE 1
+set SIMSETUP::RESTORESPECMAN 0
+# DVE Simulation Rebuild/Restart Options
+# Saved on Fri Apr 7 22:48:41 2017
+set SIMSETUP::REBUILDOPTION 0
+set SIMSETUP::REBUILDCMD {}
+set SIMSETUP::REBUILDDIR {}
+set SIMSETUP::RESTOREBP 1
+set SIMSETUP::RESTOREDUMP 1
+set SIMSETUP::RESTOREFORCE 1
+set SIMSETUP::RESTORESPECMAN 0
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+# DVE Simulation Rebuild/Restart Options
+# Saved on Fri Apr 7 22:48:41 2017
+set SIMSETUP::REBUILDOPTION 0
+set SIMSETUP::REBUILDCMD {}
+set SIMSETUP::REBUILDDIR {}
+set SIMSETUP::RESTOREBP 1
+set SIMSETUP::RESTOREDUMP 1
+set SIMSETUP::RESTOREFORCE 1
+set SIMSETUP::RESTORESPECMAN 0
